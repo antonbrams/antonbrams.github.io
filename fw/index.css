@@ -1,0 +1,174 @@
+
+:root {
+	/* Achromatics */
+	--dark-back		: hsla(210, 8%,  0%, 1.0);
+	--dark-middle	: hsla(360, 0%,  0%, 0.5);
+	--dark-surface	: hsla(360, 0%,  0%, 0.1);
+	--light-surface	: hsla(360, 0%,100%, 0.1);
+	--light-middle	: hsla(360, 0%,100%, 0.6);
+	--light-back	: hsla(360, 0%,100%, 1.0);
+	/* Chromatics */
+	/* http://jxnblk.com/colorable/demos/text/ */
+	/* rgb(235, 45, 55) */
+	--light-orange	: hsl( 45,100%,29%); --dark-orange	: hsl( 45,100%,50%);
+	--light-yellow	: hsl( 55,100%,25%); --dark-yellow	: hsl( 55,100%,50%);
+	--light-green	: hsl( 90,100%,26%); --dark-green	: hsl( 90,100%,50%);
+	--light-cyan	: hsl(160,100%,20%); --dark-cyan	: hsl(160,100%,50%);
+	--light-blue	: hsl(190,100%,26%); --dark-blue	: hsl(190,100%,50%);
+	--light-purple	: hsl(260,100%,66%); --dark-purple	: hsl(260,100%,75%);
+	--light-magenta	: hsl(330,100%,45%); --dark-magenta	: hsl(330,100%,65%);
+	--light-red		: hsl(355, 80%,50%); --dark-red		: hsl(355, 80%,60%);
+	/* Ratios */
+	--ratio-H  : 1.5;
+	--ratio-lh : 1.5rem;
+	/* Spacings */
+	--space-03 : calc(var(--ratio-lh) / 8);
+	--space-02 : calc(var(--ratio-lh) / 4);
+	--space-01 : calc(var(--ratio-lh) / 2);
+	--space-00 : var(--ratio-lh);
+	--space-10 : calc(var(--ratio-lh) * 2);
+	--space-20 : calc(var(--ratio-lh) * 4);
+	--space-30 : calc(var(--ratio-lh) * 8);
+	/* Border Sizes */
+	--border-width         : 2px;
+	--border-radius-small  : var(--space-03);
+	--border-radius-big    : var(--space-00);
+	--border-radius-circle : 9999px;
+	/* Font Size */
+	--size-caption : calc(1rem / var(--ratio-H));
+	--size-body    : 1rem;
+	--size-H6      : calc(var(--ratio-H) * 1rem);
+	--size-H5      : calc(var(--ratio-H) * var(--size-H6));
+	/* Line Height */
+	--lh-caption : calc(var(--ratio-lh) * 1);
+	--lh-body    : calc(var(--ratio-lh) * 1);
+	--lh-H6      : calc(var(--ratio-lh) * 1);
+	--lh-H5      : calc(var(--ratio-lh) * 2);
+	/* Families */
+	--family-caption : Helvetica Neue, Sans-Serif;
+	--family-body    : Helvetica Neue, Sans-Serif;
+	--family-H       : Helvetica Neue, Sans-Serif;
+	/* Animation */
+	--time-0 : 0.2s ease-out;
+	--time-1 : 0.4s ease-out;
+	--time-2 : 1.0s ease-out;
+}
+
+/* Themes */
+.light {
+	--orange  : var(--light-orange);
+	--yellow  : var(--light-yellow);
+	--green   : var(--light-green);
+	--cyan    : var(--light-cyan);
+	--blue    : var(--light-blue);
+	--purple  : var(--light-purple);
+	--magenta : var(--light-magenta);
+	--red     : var(--light-red);
+	--key     : var(--light-red);
+}
+
+.dark {
+	--orange  : var(--dark-orange);
+	--yellow  : var(--dark-yellow);
+	--green   : var(--dark-green);
+	--cyan    : var(--dark-cyan);
+	--blue    : var(--dark-blue);
+	--purple  : var(--dark-purple);
+	--magenta : var(--dark-magenta);
+	--red     : var(--dark-red);
+	--key     : var(--dark-red);
+}
+
+.dark {
+	--front   : var(--light-back);
+	--surface : var(--light-surface);
+	--middle  : var(--light-middle);
+	--back    : var(--dark-back);
+}
+
+.light {
+	--front   : var(--dark-back);
+	--surface : var(--dark-surface);
+	--middle  : var(--dark-middle);
+	--back    : var(--light-back);
+}
+
+/* Initial Setup */
+* {
+	margin : 0px;
+}
+
+html {
+	-webkit-app-region : drag;
+	font-size : 12pt;
+}
+
+body {
+	font-family : var(--family-body);
+	font-size   : var(--size-body);
+	line-height : var(--lh-body);
+	color       : var(--front);
+	background-color : var(--back);
+}
+
+h1 {
+	font-family : var(--family-H);
+	font-size   : 3rem;
+	line-height : calc(var(--lh-body) * 5);
+}
+
+h5 {
+	font-family : var(--family-H);
+	font-size   : var(--size-H5);
+	line-height : var(--lh-H5);
+}
+
+h6 {
+	font-family : var(--family-H);
+	font-size   : var(--size-H6);
+	line-height : var(--lh-H6);
+}
+
+a {
+	color           : var(--front);
+	text-decoration : none;
+	/* font-weight     : bold; */
+	border-bottom   : var(--border-width) solid var(--front);
+}
+
+a:hover {
+	color : var(--key);
+	border-bottom-color : var(--key);
+}
+
+.caption {
+	font-family : var(--family-caption);
+	font-size   : var(--size-caption);
+	line-height : var(--lh-caption);
+	color 		: var(--middle);
+}
+
+/* Dev */
+body.dev {
+	position : relative;
+}
+
+body.dev * { 
+	box-shadow : inset 0 0 0 1px rgba(241,  72, 128, .4);
+}
+
+body.dev:before {
+	content  : '';
+	position : absolute;
+	z-index  : 100;
+	left     : 0px;
+	top      : 0px;
+	width    : 100%;
+	height   : 100%;
+	background : linear-gradient(0, 
+		rgba(56,219,255,.3) 2px,
+		transparent 2px);
+	background-size     : auto var(--lh-body);
+	background-position : 0 1px;
+	pointer-events      : none;
+}
