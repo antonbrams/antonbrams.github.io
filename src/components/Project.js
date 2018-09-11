@@ -102,7 +102,7 @@ let Project = {
 					onmouseover  = "this.play()"
 					onmouseout   = "this.pause()"
 					ontouchstart = "this.play()"
-					ontouchend   = "this.pause()"
+					ontouchend   = "setTimeout(() => this.pause(), 5)"
 					playsinline	 = "true"
 					onloadeddata = "this.parentNode.classList.add('loaded')"
 					toload       = "${src}"/></video>
