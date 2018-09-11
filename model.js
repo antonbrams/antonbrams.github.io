@@ -5,7 +5,7 @@ let intro = 'https://www.youtube-nocookie.com/embed/HMAyucUVoSo?rel=0&amp;contro
 let projects = [[
 		'YanFeng',
 		'Futuristic selfdriving Show Car, UI programming',
-		'JS, vvvv',
+		'JavaScript, vvvv',
 		'[--|]1.mp4 [-]2.mp4 4.mp4 H [-|]3.mp4',
 		'https://meso.design/en/projects/yanfeng-kinetic-seat-and-media-elements-for-autonomous-car-concept'
 	],[

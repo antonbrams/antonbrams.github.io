@@ -99,7 +99,7 @@ let onViewPortChange = e => {
 		.project .video video`)
 	for (let i = 0; i < content.length; i ++) {
 		let rect   = content[i].parentNode.getBoundingClientRect()
-		let offset = window.innerHeight * .5
+		let offset = window.innerHeight
 		// if the content is in the viewport
 		if (rect.top - offset < window.innerHeight 
 		&&	rect.bottom + offset > 0) {
