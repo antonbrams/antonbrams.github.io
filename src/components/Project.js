@@ -56,7 +56,7 @@ fw.css`
 		opacity : 0;
 	}
 	
-	.project .item .info {
+	.project .info {
 		padding : var(--space-00);
 	}
 	
