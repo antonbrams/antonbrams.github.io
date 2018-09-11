@@ -1,7 +1,7 @@
 
 fw.css`
 	body {
-		display : grid;
+		display  : grid;
 		grid-gap : var(--space-30) 0;
 		padding  : var(--space-30) 0;
 		grid-template-columns : 
@@ -68,15 +68,13 @@ projects.forEach(([title, notes, tools, content, more], i, list) => {
 		.split(' ')
 		.map(link => {
 			// insert title
-			if (/H/.test(link)) {
+			if (/H/.test(link))
 				return Project.title(
 					title, notes, 
 					tools.split(', ').map(Badge).join(' '), 
 					more)
-			} else if (/C/.test(link)) {
-				return Project.number(i, list.length)
 			// insert item
-			} else {
+			else {
 				let size = []
 				if (/\|\|/.test(link)) size.push('supertall')
 				if (/--/.test(link))  size.push('superwide')
@@ -118,11 +116,13 @@ let onViewPortChange = e => {
 			// mark as unloaded if it's video
 			if (content[i].style.display == 'block'
 			&&	content[i].tagName == 'VIDEO')
-				content[i].classList.remove('loaded')
+				content[i].parentNode.classList.remove('loaded')
 			// hide the content
 			content[i].style.display = 'none'
 		}
 	}
 }
+
+window.addEventListener('load', onViewPortChange)
 window.addEventListener('resize', onViewPortChange)
 window.addEventListener('scroll', onViewPortChange)

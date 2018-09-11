@@ -7,23 +7,12 @@ fw.css`
 		grid-gap       : var(--space-01);
 	}
 	
-	.project .image,
-	.project .video {
+	.project .item {
 		position         : relative;
 		overflow         : hidden;
 		border-radius    : var(--border-radius-big);
 		background-color : var(--surface);
 		transform        : translate(0, 0);
-	}
-	
-	@keyframes loadedAnimation {
-		from {opacity : 0;}
-		to   {opacity : 1;}
-	}
-	
-	.project .image img.loaded,
-	.project .video video.loaded {
-		animation : var(--time-2) loadedAnimation forwards;
 	}
 	
 	.project .image img,
@@ -40,51 +29,43 @@ fw.css`
 		filter : grayscale(0) contrast(.85);
 	}
 	
-	.project .live {
-		position  : absolute;
-		z-index   : 1;
-		right     : var(--space-00);
-		bottom    : var(--space-00);
-		width     : var(--space-01);
-		height    : var(--space-01);
+	.project .item .live {
+		position   : absolute;
+		z-index    : 1;
+		right      : var(--space-00);
+		bottom     : var(--space-00);
+		width      : 1.25rem;
+		height     : 1.25rem;
+		box-sizing : border-box;
+		box-shadow : 0 0 0 1px var(--key);
+		border     : 3px transparent solid;
 		transform  : translate(50%, 50%) scale(var(--scale, 1));
 		transition :
 			var(--time-1) transform,
-			var(--time-1) opacity;
+			var(--time-1) opacity,
+			var(--time-1) border-width;
 		border-radius    : var(--border-radius-circle);
 		background-color : var(--key);
-		border           : 3px transparent solid;
 		background-clip  : padding-box;
-		box-shadow       : 0 0 0 1px var(--key);
 	}
 	
-	.project .video:hover .live {
+	.project .video.loaded:hover .live {
 		--scale : .5;
 		opacity : 0;
 	}
 	
-	.project .info {
+	.project .item .info {
 		padding : var(--space-00);
 	}
 	
-	.deco {
-		position    : relative;
-		overflow    : hidden;
-		width       : 100%;
-		height      : 100%;
-		grid-row    : span 2;
-		border-radius : var(--border-radius-big);
-	}
+	.project .item.loaded img,
+	.project .item.loaded video {
+		animation : var(--time-2) loadedAnimation forwards;}
+	@keyframes loadedAnimation {from {opacity : 0;} to {opacity : 1;}}
 	
-	.deco > div {
-		position : absolute;
-		left : 50%;
-		top  : 50%;
-		transform   : translate(-50%, -50%);
-		line-height : 1;
-		font-weight : bold;
-		font-size   : 10rem;
-	}
+	.project .item:not(.loaded) .live {
+		animation : var(--time-1) whileLoading alternate infinite;}
+	@keyframes whileLoading {to {border-width : 6px;}}
 `;
 
 let Project = {
@@ -103,26 +84,22 @@ let Project = {
 		</div>`,
 	
 	image : (src, size) => 
-		`<div class="image ${size}">
+		`<div class="item image ${size}">
 			<img
-				onload = "this.classList.add('loaded')"
+				onload = "this.parentNode.classList.add('loaded')"
 				toload = "${src}"/>
 		</div>`,
 	
 	video : (src, size) => 
-			`<div 
-				class='video ${size}'> 
-					<div class='live'></div>
-					<video 
-						loop         = "true"
-						preload      = "true"
-						onloadeddata = "this.classList.add('loaded')"
-						onmouseover  = "this.play()"
-						onmouseout   = "this.pause()"
-						toload       = "${src}"/></video>
-			</div>`,
-	number : (num, length) => 
-		`<div class='deco'>
-			<div>${num}/<br>${length}</div>
+		`<div 
+			class='item video ${size}'> 
+				<div class='live'></div>
+				<video 
+					loop         = "true"
+					preload      = "true"
+					onmouseover  = "this.play()"
+					onmouseout   = "this.pause()"
+					onloadeddata = "this.parentNode.classList.add('loaded')"
+					toload       = "${src}"/></video>
 		</div>`
 }
