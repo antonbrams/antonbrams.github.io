@@ -136,7 +136,7 @@ let about = [
 	},
 	{
 		title : 'Languages', 
-		body  : 'English [B1], German [C2], Russian [Native].'
+		body  : 'English [B2], German [C2], Russian [Native].'
 	},
 	{
 		title : 'Secondary Skills', 
