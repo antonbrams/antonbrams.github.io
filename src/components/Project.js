@@ -23,6 +23,8 @@ fw.css`
 		filter      : grayscale(1) contrast(.85);
 		transition  : var(--time-1) filter;
 		opacity     : 0;
+		-webkit-user-select   : none;
+		-webkit-touch-callout : none;
 	}
 	.project .image:hover img,
 	.project .video:hover video {
@@ -102,6 +104,7 @@ let Project = {
 					ontouchstart = "this.play()"
 					ontouchend   = "this.pause()"
 					playsinline	 = "true"
+					controls     = "false"
 					onloadeddata = "this.parentNode.classList.add('loaded')"
 					toload       = "${src}"/></video>
 		</div>`
