@@ -99,7 +99,7 @@ let onViewPortChange = e => {
 		.project .video video`)
 	for (let i = 0; i < content.length; i ++) {
 		let rect   = content[i].parentNode.getBoundingClientRect()
-		let offset = window.innerHeight
+		let offset = window.innerHeight * 4
 		// if the content is in the viewport
 		if (rect.top - offset < window.innerHeight 
 		&&	rect.bottom + offset > 0) {
@@ -115,8 +115,11 @@ let onViewPortChange = e => {
 		} else { 
 			// mark as unloaded if it's video
 			if (content[i].style.display == 'block'
-			&&	content[i].tagName == 'VIDEO')
+			&&	content[i].tagName == 'VIDEO') {
 				content[i].parentNode.classList.remove('loaded')
+				content[i].removeAttribute('src')
+				content[i].load()
+			}
 			// hide the content
 			content[i].style.display = 'none'
 		}
