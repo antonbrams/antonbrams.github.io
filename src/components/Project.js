@@ -23,7 +23,7 @@ fw.css`
 	
 	.project .image img.loaded,
 	.project .video video.loaded {
-		animation : var(--time-1) loadedAnimation forwards;
+		animation : var(--time-2) loadedAnimation forwards;
 	}
 	
 	.project .image img,

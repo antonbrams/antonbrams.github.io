@@ -98,20 +98,30 @@ document.body.innerHTML += template
 let onViewPortChange = e => {
 	let content = document.querySelectorAll(`
 		.project .image img, 
-		.project .video video
-	`)
+		.project .video video`)
 	for (let i = 0; i < content.length; i ++) {
 		let rect   = content[i].parentNode.getBoundingClientRect()
 		let offset = window.innerHeight * .5
-		if (
-			rect.top - offset < window.innerHeight && 
-			rect.bottom + offset > 0
-		) {
-			content[i].style.display = 'block'
+		// if the content is in the viewport
+		if (rect.top - offset < window.innerHeight 
+		&&	rect.bottom + offset > 0) {
+			// load the content
 			if (!content[i].src)
 				content[i].src = content[i].getAttribute('toload')
-		} else
+			// reload video
+			if (content[i].tagName == 'VIDEO' 
+			&& 	content[i].style.display == 'none')
+				content[i].load() 
+			// show content
+			content[i].style.display = 'block'
+		} else { 
+			// mark as unloaded if it's video
+			if (content[i].style.display == 'block'
+			&&	content[i].tagName == 'VIDEO')
+				content[i].classList.remove('loaded')
+			// hide the content
 			content[i].style.display = 'none'
+		}
 	}
 }
 window.addEventListener('resize', onViewPortChange)
