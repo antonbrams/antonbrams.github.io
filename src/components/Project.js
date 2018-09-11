@@ -32,15 +32,18 @@ fw.css`
 	}
 	
 	.project .item .live {
+		--outline  : 1px;
+		--border   : 3px;
+		--diameter : calc(var(--space-00) - (var(--border) - var(--outline)) * 2);
 		position   : absolute;
 		z-index    : 1;
 		right      : var(--space-00);
 		bottom     : var(--space-00);
-		width      : 1.25rem;
-		height     : 1.25rem;
+		width      : var(--diameter);
+		height     : var(--diameter);
 		box-sizing : border-box;
-		box-shadow : 0 0 0 1px var(--key);
-		border     : 3px transparent solid;
+		box-shadow : 0 0 0 var(--outline) var(--key);
+		border     : var(--border) transparent solid;
 		transform  : translate(50%, 50%) scale(var(--scale, 1));
 		transition :
 			var(--time-1) transform,
@@ -67,7 +70,7 @@ fw.css`
 	
 	.project .item:not(.loaded) .live {
 		animation : var(--time-1) whileLoading alternate infinite;}
-	@keyframes whileLoading {to {border-width : 6px;}}
+	@keyframes whileLoading {to {border-width : calc(var(--border) * 2);}}
 `;
 
 let Project = {
