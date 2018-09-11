@@ -2,14 +2,14 @@
 fw.css`
 	body {
 		display  : grid;
-		grid-gap : var(--space-30) 0;
-		padding  : var(--space-30) 0;
+		grid-gap : var(--space-20) 0;
+		padding  : var(--space-20) 0;
 		grid-template-columns : 
 			0 
 				0 
-					var(--space-10) 
+					var(--space-00) 
 						auto 
-					var(--space-10) 
+					var(--space-00) 
 				0 
 			0;
 	}
