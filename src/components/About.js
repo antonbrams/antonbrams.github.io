@@ -28,6 +28,7 @@ fw.css`
 	.divider {
 		border-bottom : var(--border-width) var(--front) solid;
 		width : var(--space-20);
+		margin : var(--space-00) 0 var(--space-20);
 	}
 `;
 
@@ -60,7 +61,7 @@ let About = {
 	
 	block : (title, body) => 
 		`<div class='block'>
-			${title? `<h6>${title}</h6><br>`: ``}
+			${title? `<h6 style='font-weight: bold;'>${title}</h6><br>`: ``}
 			<span>${body}</span>
 		</div>`,
 		

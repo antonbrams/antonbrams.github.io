@@ -103,7 +103,7 @@ let projects = [[
 let about = [
 	{
 		body  : `The basis for all my work is the key philosophy that with enough passion and patience a creative person can achieve almost anything they set out to do. Through unrestrained thinking combined with a critical and communicative approach I strive to bring all my products to perfection, even building my own tools along the way to facilitate the process.
-		<br><br><div class='divider'></div><br><br>`
+		<br><div class='divider'></div>`
 	},
 	{
 		title : 'Experience',

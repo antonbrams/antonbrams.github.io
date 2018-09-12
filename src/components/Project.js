@@ -20,16 +20,25 @@ fw.css`
 		width       : 100%;
 		height      : 100%;
 		object-fit  : cover;
-		filter      : grayscale(1) contrast(.85);
 		transition  : var(--time-1) filter;
 		opacity     : 0;
 		-webkit-user-select   : none;
 		-webkit-touch-callout : none;
 	}
-	.project .image:hover img,
-	.project .video:hover video {
-		filter : grayscale(0) contrast(.85);
-	}
+	
+	body.light .project .image img,
+	body.light .project .video video {
+		filter : grayscale(1);}
+	body.light .project .image:hover img,
+	body.light .project .video:hover video {
+		filter : grayscale(0);}
+		
+	body.dark .project .image img,
+	body.dark .project .video video {
+		filter : grayscale(1) contrast(.85);}
+	body.dark .project .image:hover img,
+	body.dark .project .video:hover video {
+		filter : grayscale(0) contrast(.85);}
 	
 	.project .item .live {
 		--outline  : 1px;

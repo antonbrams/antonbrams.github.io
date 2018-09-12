@@ -3,7 +3,7 @@ fw.css`
 	body {
 		display  : grid;
 		grid-gap : var(--space-20) 0;
-		padding  : var(--space-20) 0;
+		padding  : 0 0 var(--space-20);
 		grid-template-columns : 
 			0 
 				0 
@@ -17,7 +17,7 @@ fw.css`
 	@media screen and (min-width : ${fw.breakpoints.tablet}) {
 		body {
 			grid-gap : var(--space-30) 0;
-			padding  : var(--space-30) 0;
+			padding  : var(--space-00) 0 var(--space-30);
 			grid-template-columns : 
 				0 
 					var(--space-00) 
@@ -32,7 +32,7 @@ fw.css`
 	@media screen and (min-width : ${fw.breakpoints.desktop}) {
 		body {
 			grid-gap : var(--space-30) 0;
-			padding  : var(--space-30) 0;
+			padding  : var(--space-10) 0 var(--space-30);
 			grid-template-columns : 
 				1fr 
 					0 
@@ -49,7 +49,7 @@ let template = ''
 // Logotype
 template += Header()
 // Video
-template += Intro(intro)
+// template += Intro(intro)
 // About
 let infos = about.map(block => {
 	let matches = block.body.match(/\[(.+?)\]/g)

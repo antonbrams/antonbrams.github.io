@@ -24,7 +24,7 @@ for (let i = 0; i < maxCols; i ++) {
 
 fw.css`
 	.project {
-		grid-auto-rows : ${width * 1.15}px;
+		grid-auto-rows : calc(var(--lh-body) * 12);
 	}
 	
 	.project .info {

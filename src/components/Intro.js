@@ -15,8 +15,10 @@ fw.css`
 		top      : 0;
 		width    : 100%;
 		height   : 100%;
-		filter   : contrast(.85);
 	}
+	
+	body.dark #intro iframe {
+		filter   : contrast(.85);}
 
 	@media screen and (min-width : ${fw.breakpoints.tablet}) {
 		#intro {
@@ -31,7 +33,6 @@ let Intro = src =>
 			src         ='${src}'
 			frameborder ='0'
 			allow       = 'autoplay; encrypted-media'
-			allowfullscreen
-		>
+			allowfullscreen>
 		</iframe>
 	</div>`

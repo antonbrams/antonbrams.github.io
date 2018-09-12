@@ -2,11 +2,19 @@
 document.addEventListener('keyup', e => {
 	// dev toggle
 	if (e.key == 'd') document.body.classList.toggle('dev')
+	if (e.key == 't') {
+		document.body.classList.toggle('dark')
+		document.body.classList.toggle('light')
+	}
 })
 
-let hours = new Date().getHours()
-let day   = 6 < hours && hours < 21
-document.body.className = day? 'light': 'dark'
+let switchTheme = () => {
+	let hours = new Date().getHours()
+	let day   = 6 < hours && hours < 21
+	document.body.className = day? 'light': 'dark'
+}
+switchTheme()
+setInterval(switchTheme, 1000 * 60 * 30)
 
 let fw = {
 	breakpoints : {
