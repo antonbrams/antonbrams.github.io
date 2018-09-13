@@ -14,7 +14,7 @@ fw.css`
 			0;
 	}
 
-	@media screen and (min-width : ${fw.breakpoints.tablet}) {
+	@media screen and (min-width : ${fw.breakpoints.mobile}) {
 		body {
 			grid-gap : var(--space-30) 0;
 			padding  : var(--space-20) 0 var(--space-30);
@@ -76,10 +76,14 @@ projects.forEach(([title, notes, tools, content, more], i, list) => {
 			// insert item
 			else {
 				let size = []
-				if (/\|\|/.test(link)) size.push('supertall')
-				if (/--/.test(link))  size.push('superwide')
-				if (/\|/.test(link))  size.push('tall')
-				if (/-/.test(link))   size.push('wide')
+				if (/\|\|/.test(link))
+					size.push('supertall')
+				else if (/\|/.test(link))
+					size.push('tall')
+				if (/--/.test(link))
+					size.push('superwide')
+				else if (/-/.test(link))
+					size.push('wide')
 				let settings = link.match(/\[(.+?)\]/g)
 				link = link.replace(settings, '')
 				let type = link.match(/.mov|.mp4/)? 'video': 'image'

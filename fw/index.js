@@ -1,32 +1,39 @@
 
-document.addEventListener('keyup', e => {
-	// dev toggle
-	if (e.key == 'd') document.body.classList.toggle('dev')
-	if (e.key == 't') {
-		document.body.classList.toggle('dark')
-		document.body.classList.toggle('light')
-	}
-})
-
-let switchTheme = () => {
-	let hours = new Date().getHours()
-	let day   = 6 < hours && hours < 21
-	document.body.className = day? 'light': 'dark'
+// Dev
+if (true) {
+	document.addEventListener('keyup', e => {
+		// dev toggle
+		if (e.key == 'd') document.body.classList.toggle('dev')
+		if (e.key == 't') {
+			document.body.classList.toggle('dark')
+			document.body.classList.toggle('light')
+		}
+	})
 }
-switchTheme()
-setInterval(switchTheme, 1000 * 60 * 30)
+
+// Theme Switcher
+{
+	let switchTheme = () => {
+		let hours = new Date().getHours()
+		let day   = 6 < hours && hours < 20
+		document.body.className = day? 'light': 'dark'
+	}
+	switchTheme()
+	setInterval(switchTheme, 1000 * 60 * 30) // update every 30 mins
+}
 
 let fw = {
 	breakpoints : {
-		mobile  : '0px',
-		tablet  : '640px',
+		mobile  : '555px',
+		tablet  : '896px',
 		desktop : '1280px'
 	},
 	css (style, ...values) {
 		var node = document.createElement('style')
 		document.body.appendChild(node)
-		node.innerHTML = style.map((chunk, i) => 
-			chunk + values[i]).join('')
+		for (var i = 0; i < style.length - 1; i ++)
+			node.innerHTML += style[i] + values[i]
+		node.innerHTML += style[i]
 	},
 	map (value, aMin, aMax, bMin, bMax, clamp) {
 		var x = clamp == true? (

@@ -6,7 +6,7 @@
 	--dark-surface	: hsla(360, 0%,  0%, 0.1);
 	--light-surface	: hsla(360, 0%,100%, 0.1);
 	--light-middle	: hsla(360, 0%,100%, 0.6);
-	--light-back	: hsla(360, 0%, 95%, 1.0);
+	--light-back	: hsla(360, 0%, 90%, 1.0);
 	/* Chromatics */
 	/* http://jxnblk.com/colorable/demos/text/ */
 	/* rgb(235, 45, 55) */
@@ -56,6 +56,11 @@
 
 /* Themes */
 .light {
+	--front   : var(--dark-back);
+	--surface : var(--dark-surface);
+	--middle  : var(--dark-middle);
+	--back    : var(--light-back);
+	/* Chromatics */
 	--orange  : var(--light-orange);
 	--yellow  : var(--light-yellow);
 	--green   : var(--light-green);
@@ -68,6 +73,11 @@
 }
 
 .dark {
+	--front   : var(--light-back);
+	--surface : var(--light-surface);
+	--middle  : var(--light-middle);
+	--back    : var(--dark-back);
+	/* Chromatics */
 	--orange  : var(--dark-orange);
 	--yellow  : var(--dark-yellow);
 	--green   : var(--dark-green);
@@ -77,20 +87,6 @@
 	--magenta : var(--dark-magenta);
 	--red     : var(--dark-red);
 	--key     : var(--dark-red);
-}
-
-.dark {
-	--front   : var(--light-back);
-	--surface : var(--light-surface);
-	--middle  : var(--light-middle);
-	--back    : var(--dark-back);
-}
-
-.light {
-	--front   : var(--dark-back);
-	--surface : var(--dark-surface);
-	--middle  : var(--dark-middle);
-	--back    : var(--light-back);
 }
 
 /* Initial Setup */

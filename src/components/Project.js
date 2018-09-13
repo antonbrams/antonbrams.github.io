@@ -68,10 +68,6 @@ fw.css`
 		opacity : 0;
 	}
 	
-	.project .info {
-		padding : var(--space-00);
-	}
-	
 	.project .item.loaded img,
 	.project .item.loaded video {
 		animation : var(--time-2) loadedAnimation forwards;}
@@ -80,6 +76,41 @@ fw.css`
 	.project .item:not(.loaded) .live {
 		animation : var(--time-1) whileLoading alternate infinite;}
 	@keyframes whileLoading {to {border-width : calc(var(--border) * 2);}}
+	
+	.project .info {
+		grid-row     : 1;
+		grid-column  : 1;
+		align-self   : flex-end;
+		justify-self : flex-start;
+		padding : var(--space-00) 0;
+	}
+	.project {
+		grid-auto-rows : calc(var(--lh-body) * 12);}
+		grid-template-columns : repeat(1, 1fr);
+	}
+	.project .supertall {grid-row : span 4;}
+	@media screen and (min-width : ${fw.breakpoints.mobile}) {
+		.project {grid-template-columns : repeat(2, 1fr);}
+		.project .info {
+			grid-row : auto; 
+			grid-column : auto;
+			align-self   : center;
+			justify-self : center;
+			padding : 0 var(--space-00);
+		}
+		.project .wide {grid-column : span 2;}
+		.project .tall {grid-row : span 2;}
+		.project .superwide {grid-column : span 2;}
+	}
+	
+	@media screen and (min-width : ${fw.breakpoints.tablet}) {
+		.project {grid-template-columns : repeat(3, 1fr);}
+		.project .superwide {grid-column : span 3;}
+	}
+	
+	@media screen and (min-width : ${fw.breakpoints.desktop}) {
+		.project {grid-template-columns : repeat(4, 1fr);}
+	}
 `;
 
 let Project = {

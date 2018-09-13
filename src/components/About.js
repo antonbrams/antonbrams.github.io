@@ -4,7 +4,6 @@ fw.css`
 		grid-column : 4;
 		display     : grid;
 		grid-gap    : var(--space-10) var(--space-10);
-		grid-template-columns : repeat(auto-fill, minmax(220px, 1fr));
 	}
 	
 	#about .block:first-of-type {
@@ -19,17 +18,20 @@ fw.css`
 		float          : left;
 	}
 	
-	@media screen and (min-width : ${fw.breakpoints.tablet}) {
-		#about .block:first-of-type {
-			grid-column : -3/-1;
-		}
-	}
-	
 	.divider {
 		border-bottom : var(--border-width) var(--front) solid;
-		width : var(--space-20);
-		margin : var(--space-00) 0 var(--space-20);
+		width  : var(--space-20);
+		margin : calc(var(--space-00) - var(--border-width)) 0 var(--space-20);
 	}
+	
+	#about {grid-template-columns : repeat(1, 1fr);}
+	@media screen and (min-width : ${fw.breakpoints.mobile}) {
+		#about {grid-template-columns : repeat(2, 1fr);}}
+	@media screen and (min-width : ${fw.breakpoints.tablet}) {
+		#about {grid-template-columns : repeat(3, 1fr);}
+		#about .block:first-of-type {grid-column : -3/-1;}}
+	@media screen and (min-width : ${fw.breakpoints.desktop}) {
+		#about {grid-template-columns : repeat(4, 1fr);}}
 `;
 
 // #about .title {
