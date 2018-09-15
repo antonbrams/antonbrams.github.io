@@ -2,8 +2,6 @@
 fw.css`
 	body {
 		display  : grid;
-		grid-gap : var(--space-20) 0;
-		padding  : var(--space-20) 0 var(--space-20);
 		grid-template-columns : 
 			0 
 				0 
@@ -16,14 +14,12 @@ fw.css`
 
 	@media screen and (min-width : ${fw.breakpoints.mobile}) {
 		body {
-			grid-gap : var(--space-30) 0;
-			padding  : var(--space-20) 0 var(--space-30);
 			grid-template-columns : 
 				0 
 					var(--space-00) 
 						var(--space-20) 
 								auto 
-						var(--space-20) 
+						var(--space-20)
 					var(--space-00) 
 				0;
 		}
@@ -31,8 +27,6 @@ fw.css`
 
 	@media screen and (min-width : ${fw.breakpoints.desktop}) {
 		body {
-			grid-gap : var(--space-30) 0;
-			padding  : var(--space-20) 0 var(--space-30);
 			grid-template-columns : 
 				1fr 
 					0 
@@ -60,7 +54,7 @@ let infos = about.map(block => {
 	return About.block(block.title, block.body)
 }).join('')
 ;
-template += About.container(infos) //About.title + 
+template += About.container(About.first + infos)
 
 // Projects
 projects.forEach(([title, notes, tools, content, more], i, list) => {
@@ -98,9 +92,7 @@ document.body.innerHTML += template
 
 // load if in viewport
 let onViewPortChange = e => {
-	let content = document.querySelectorAll(`
-		.project .image img, 
-		.project .video video`)
+	let content = document.querySelectorAll(`.project .item .content`)
 	for (let i = 0; i < content.length; i ++) {
 		let rect   = content[i].parentNode.getBoundingClientRect()
 		let offset = window.innerHeight * 4

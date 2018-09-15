@@ -5,6 +5,7 @@ fw.css`
 		display        : grid;
 		grid-auto-flow : row dense;
 		grid-gap       : var(--space-01);
+		margin-bottom  : var(--space-30);
 	}
 	
 	.project .item {
@@ -15,8 +16,7 @@ fw.css`
 		transform        : translate(0, 0);
 	}
 	
-	.project .image img,
-	.project .video video {
+	.project .item .content {
 		width       : 100%;
 		height      : 100%;
 		object-fit  : cover;
@@ -26,19 +26,8 @@ fw.css`
 		-webkit-touch-callout : none;
 	}
 	
-	body.light .project .image img,
-	body.light .project .video video {
-		filter : grayscale(1);}
-	body.light .project .image:hover img,
-	body.light .project .video:hover video {
-		filter : grayscale(0);}
-		
-	body.dark .project .image img,
-	body.dark .project .video video {
-		filter : grayscale(1) contrast(.85);}
-	body.dark .project .image:hover img,
-	body.dark .project .video:hover video {
-		filter : grayscale(0) contrast(.85);}
+	.project .item .content {filter : grayscale(1) contrast(.85);}
+	.project .item:hover .content {filter : grayscale(0) contrast(.85);}
 	
 	.project .item .live {
 		--outline  : 1px;
@@ -63,32 +52,45 @@ fw.css`
 		background-clip  : padding-box;
 	}
 	
-	.project .video.loaded:hover .live {
+	.project .item.loaded:hover .live {
 		--scale : .5;
 		opacity : 0;
 	}
 	
-	.project .item.loaded img,
-	.project .item.loaded video {
-		animation : var(--time-2) loadedAnimation forwards;}
-	@keyframes loadedAnimation {from {opacity : 0;} to {opacity : 1;}}
+	.project .item.loaded .content {
+		animation : var(--time-2) loadedAnimation forwards;
+	}
+	@keyframes loadedAnimation {
+		from {opacity : 0;} to {opacity : 1;}
+	}
 	
 	.project .item:not(.loaded) .live {
-		animation : var(--time-1) whileLoading alternate infinite;}
-	@keyframes whileLoading {to {border-width : calc(var(--border) * 2);}}
+		animation : var(--time-1) whileLoading alternate infinite;
+	}
+	@keyframes whileLoading {
+		to {border-width : calc(var(--border) * 2);}
+	}
 	
 	.project .info {
 		grid-row     : 1;
 		grid-column  : 1;
 		align-self   : flex-end;
 		justify-self : flex-start;
-		padding : var(--space-00) 0;
+		padding      : var(--space-00) 0;
 	}
+	
+	.project .supertall {
+		grid-row : span 4;
+	}
+	
 	.project {
 		grid-auto-rows : calc(var(--lh-body) * 12);}
 		grid-template-columns : repeat(1, 1fr);
 	}
-	.project .supertall {grid-row : span 4;}
+`;
+
+fw.css`
+
 	@media screen and (min-width : ${fw.breakpoints.mobile}) {
 		.project {grid-template-columns : repeat(2, 1fr);}
 		.project .info {
@@ -102,18 +104,19 @@ fw.css`
 		.project .tall {grid-row : span 2;}
 		.project .superwide {grid-column : span 2;}
 	}
-	
+
 	@media screen and (min-width : ${fw.breakpoints.tablet}) {
 		.project {grid-template-columns : repeat(3, 1fr);}
 		.project .superwide {grid-column : span 3;}
 	}
-	
+
 	@media screen and (min-width : ${fw.breakpoints.desktop}) {
 		.project {grid-template-columns : repeat(4, 1fr);}
 	}
 `;
 
 let Project = {
+	
 	container : children => 
 		`<div class='project'>${children}</div>`,
 	
@@ -131,6 +134,7 @@ let Project = {
 	image : (src, size) => 
 		`<div class="item image ${size}">
 			<img
+				class  = "content"
 				onload = "this.parentNode.classList.add('loaded')"
 				toload = "${src}"/>
 		</div>`,
@@ -140,6 +144,7 @@ let Project = {
 			class='item video ${size}'> 
 				<div class='live'></div>
 				<video 
+					class        = "content"
 					loop         = "true"
 					preload      = "true"
 					onmouseover  = "this.play()"

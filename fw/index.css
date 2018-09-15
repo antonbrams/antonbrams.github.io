@@ -6,7 +6,7 @@
 	--dark-surface	: hsla(360, 0%,  0%, 0.1);
 	--light-surface	: hsla(360, 0%,100%, 0.1);
 	--light-middle	: hsla(360, 0%,100%, 0.6);
-	--light-back	: hsla(360, 0%, 90%, 1.0);
+	--light-back	: hsla(360, 0%,100%, 1.0);
 	/* Chromatics */
 	/* http://jxnblk.com/colorable/demos/text/ */
 	/* rgb(235, 45, 55) */
@@ -109,7 +109,7 @@ body {
 
 h1 {
 	font-family : var(--family-H);
-	font-size   : 4rem;
+	font-size   : 3rem;
 	line-height : calc(var(--lh-body) * 3.5);
 }
 

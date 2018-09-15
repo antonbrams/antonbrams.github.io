@@ -17,7 +17,7 @@ fw.css`
 		height   : 100%;
 	}
 	
-	body.dark #intro iframe {
+	#intro iframe {
 		filter   : contrast(.85);}
 
 	@media screen and (min-width : ${fw.breakpoints.tablet}) {
