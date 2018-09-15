@@ -32,6 +32,7 @@ fw.css`
 		font-weight : 100;
 		max-width   : 500px;
 		color       : white;
+		padding     : var(--space-00);
 	}
 	
 	#header a {
