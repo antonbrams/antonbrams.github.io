@@ -127,7 +127,8 @@ h6 {
 
 a {
 	--color : var(--front);
-	color           : var(--color);
+	color   : var(--color);
+	cursor  : pointer;
 	text-decoration : none;
 	border-bottom   : var(--border-width) solid var(--color);
 }
