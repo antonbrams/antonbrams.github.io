@@ -126,15 +126,14 @@ h6 {
 }
 
 a {
-	color           : var(--front);
+	--color : var(--front);
+	color           : var(--color);
 	text-decoration : none;
-	/* font-weight     : bold; */
-	border-bottom   : var(--border-width) solid var(--front);
+	border-bottom   : var(--border-width) solid var(--color);
 }
 
 a:hover {
-	color : var(--key);
-	border-bottom-color : var(--key);
+	border-width : calc(var(--border-width) + 2px);
 }
 
 .caption {

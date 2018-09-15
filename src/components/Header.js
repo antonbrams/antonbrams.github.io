@@ -35,14 +35,7 @@ fw.css`
 	}
 	
 	#header a {
-		color  : white;
-		border-color : white;
-	}
-	
-	#header a:hover {
-		color : white;
-		border-color : white;
-		border-width : 4px;
+		--color : white;
 	}
 `;
 

@@ -143,7 +143,7 @@ let about = [
 		body  : 'Philosophy, Music Composition, Beatbox, Drums, Gymnastics...'
 	},
 	{
-		title : 'Interested?', 
+		title : '<span style="color : var(--red);">Contact</span>', 
 		body  : 'hello@antonbrams.io'
 	},
 ]
