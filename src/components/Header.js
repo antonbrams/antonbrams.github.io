@@ -44,7 +44,6 @@ let Header = () => `<div id='header'>
 		<div class='bg'></div>
 		<div>
 		<h1>Where great <b>Ideas</b> meet <b>Math</b> and <b>Aesthetics.</b></h1>
-		<br>
 		<a target='blank' href='https://youtu.be/HMAyucUVoSo'>Introduction</a>
 		</div>
 	</div>`

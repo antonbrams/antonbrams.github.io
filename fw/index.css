@@ -110,7 +110,7 @@ body {
 h1 {
 	font-family : var(--family-H);
 	font-size   : 3rem;
-	line-height : calc(var(--lh-body) * 3.5);
+	line-height : calc(var(--lh-body) * 3);
 }
 
 h5 {
