@@ -137,10 +137,10 @@ let Project = {
 				class  = "content"
 				onload = "this.parentNode.classList.add('loaded')"
 				toload = "${src}"
-				onmouseover  = "photoHover(this, 1)"
-				onmouseout   = "photoHover(this, 0)"
-				ontouchstart = "photoHover(this, 1)"
-				ontouchend   = "photoHover(this, 0)" />
+				onmouseover  = "onHover(this, 1)"
+				onmouseout   = "onHover(this, 0)"
+				ontouchstart = "onHover(this, 1)"
+				ontouchend   = "onHover(this, 0)" />
 		</div>`,
 	
 	video : (src, size) => 
@@ -154,26 +154,19 @@ let Project = {
 					playsinline	 = "true"
 					onloadeddata = "this.parentNode.classList.add('loaded')"
 					toload       = "${src}"
-					onmouseover  = "videoPlayback(this, 1)"
-					onmouseout   = "videoPlayback(this, 0)"
-					ontouchstart = "videoPlayback(this, 1)"
-					ontouchend   = "videoPlayback(this, 0)" /></video>
+					onmouseover  = "onHover(this, 1)"
+					onmouseout   = "onHover(this, 0)"
+					ontouchstart = "onHover(this, 1)"
+					ontouchend   = "onHover(this, 0)" /></video>
 		</div>`
 }
 
-let photoHover = function (dom, bool) {
-	if (bool)
-		dom.parentNode.classList.add('hover')
-	else
-		dom.parentNode.classList.remove('hover')
-}
-
-let videoPlayback = function (dom, bool) {
-	if (bool) {
-		dom.parentNode.classList.add('hover')
-		dom.play()
-	} else {
-		dom.parentNode.classList.remove('hover')
-		setTimeout(() => dom.pause(), 5)
+let onHover = function (dom, bool) {
+	dom.parentNode.classList[bool? 'add': 'remove']('hover')
+	if (dom.tagName == 'VIDEO') {
+		if (bool) 
+			dom.play() 
+		else 
+			setTimeout(() => dom.pause(), 5)
 	}
 }
