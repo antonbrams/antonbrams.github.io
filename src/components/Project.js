@@ -27,7 +27,7 @@ fw.css`
 	}
 	
 	.project .item .content {filter : grayscale(1) contrast(.85);}
-	.project .item:hover .content {filter : grayscale(0) contrast(.85);}
+	.project .item.hover .content {filter : grayscale(0) contrast(.85);}
 	
 	.project .item .live {
 		--outline  : 1px;
@@ -52,7 +52,7 @@ fw.css`
 		background-clip  : padding-box;
 	}
 	
-	.project .item.loaded:hover .live {
+	.project .item.loaded.hover .live {
 		--scale : .5;
 		opacity : 0;
 	}
@@ -136,7 +136,11 @@ let Project = {
 			<img
 				class  = "content"
 				onload = "this.parentNode.classList.add('loaded')"
-				toload = "${src}"/>
+				toload = "${src}"
+				onmouseover  = "photoHover(this, 1)"
+				onmouseout   = "photoHover(this, 0)"
+				ontouchstart = "photoHover(this, 1)"
+				ontouchend   = "photoHover(this, 0)" />
 		</div>`,
 	
 	video : (src, size) => 
@@ -147,12 +151,29 @@ let Project = {
 					class        = "content"
 					loop         = "true"
 					preload      = "true"
-					onmouseover  = "this.play()"
-					onmouseout   = "this.pause()"
-					ontouchstart = "this.play()"
-					ontouchend   = "setTimeout(() => this.pause(), 5)"
 					playsinline	 = "true"
 					onloadeddata = "this.parentNode.classList.add('loaded')"
-					toload       = "${src}"/></video>
+					toload       = "${src}"
+					onmouseover  = "videoPlayback(this, 1)"
+					onmouseout   = "videoPlayback(this, 0)"
+					ontouchstart = "videoPlayback(this, 1)"
+					ontouchend   = "videoPlayback(this, 0)" /></video>
 		</div>`
+}
+
+let photoHover = function (dom, bool) {
+	if (bool)
+		dom.parentNode.classList.add('hover')
+	else
+		dom.parentNode.classList.remove('hover')
+}
+
+let videoPlayback = function (dom, bool) {
+	if (bool) {
+		dom.parentNode.classList.add('hover')
+		dom.play()
+	} else {
+		dom.parentNode.classList.remove('hover')
+		setTimeout(() => dom.pause(), 5)
+	}
 }
