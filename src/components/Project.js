@@ -106,6 +106,7 @@ fw.css`
 			justify-self : center;
 			padding      : 0 var(--space-00);
 		}
+		.project .item {grid-column : auto;}
 		.project .wide {grid-column : span 2;}
 		.project .tall {grid-row : span 2;}
 		.project .superwide {grid-column : span 2;}
