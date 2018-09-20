@@ -4,7 +4,6 @@ fw.css`
 		grid-column    : 4;
 		display        : grid;
 		grid-auto-flow : row dense;
-		grid-gap       : var(--space-01);
 		margin-bottom  : var(--space-30);
 	}
 	
@@ -50,6 +49,7 @@ fw.css`
 		border-radius    : var(--border-radius-circle);
 		background-color : var(--key);
 		background-clip  : padding-box;
+		pointer-events   : none;
 	}
 	
 	.project .item.loaded.hover .live {
@@ -73,7 +73,7 @@ fw.css`
 	
 	.project .info {
 		grid-row     : 1;
-		grid-column  : 1;
+		grid-column  : 1/span 2;
 		align-self   : flex-end;
 		justify-self : flex-start;
 		padding      : var(--space-00) 0;
@@ -84,21 +84,27 @@ fw.css`
 	}
 	
 	.project {
-		grid-auto-rows : calc(var(--lh-body) * 12);}
-		grid-template-columns : repeat(1, 1fr);
+		grid-auto-rows : calc(var(--lh-body) * 6);
+		grid-template-columns : repeat(2, 1fr);
+		grid-gap : var(--space-01);
 	}
+	
+	.project .item {grid-column : span 2;}
+	.project .wide {grid-column : span 2;}
+	.project .tall {grid-row : span 2;}
+	.project .superwide {grid-column : span 2;}
 `;
 
 fw.css`
 
 	@media screen and (min-width : ${fw.breakpoints.mobile}) {
-		.project {grid-template-columns : repeat(2, 1fr);}
+		.project {grid-auto-rows : calc(var(--lh-body) * 12);}
 		.project .info {
-			grid-row : auto; 
-			grid-column : auto;
+			grid-row     : auto; 
+			grid-column  : auto;
 			align-self   : center;
 			justify-self : center;
-			padding : 0 var(--space-00);
+			padding      : 0 var(--space-00);
 		}
 		.project .wide {grid-column : span 2;}
 		.project .tall {grid-row : span 2;}

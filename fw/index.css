@@ -45,9 +45,10 @@
 	--lh-H6      : calc(var(--ratio-lh) * 1);
 	--lh-H5      : calc(var(--ratio-lh) * 2);
 	/* Families */
-	--family-caption : Helvetica Neue, Sans-Serif;
-	--family-body    : Helvetica Neue, Sans-Serif;
-	--family-H       : Helvetica Neue, Sans-Serif;
+	--family : Helvetica Neue, sans-serif;
+	--family-caption : var(--family);
+	--family-body    : var(--family);
+	--family-H       : var(--family);
 	/* Animation */
 	--time-0 : 0.2s ease-out;
 	--time-1 : 0.4s ease-out;
