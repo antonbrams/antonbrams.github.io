@@ -1,4 +1,6 @@
 
+fw.import('./src/components/Button.js')
+
 fw.css`
 	.project {
 		grid-column    : 4;

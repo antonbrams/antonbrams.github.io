@@ -46,6 +46,11 @@ let fw = {
 			(bMax - bMin) + bMin
 		)
 	},
+	import (src) {
+		let script = document.createElement('script')
+		script.src = src
+		document.head.appendChild(script);
+	},
 	html (string) {
 		let a = document.createElement('div')
 		a.innerHTML = string

@@ -1,4 +1,12 @@
 
+fw.import('./model.js')
+fw.import('./src/components/Header.js')
+fw.import('./src/components/Badge.js')
+fw.import('./src/components/Intro.js')
+fw.import('./src/components/About.js')
+fw.import('./src/components/Project.js')
+fw.import('./src/components/Footer.js')
+
 fw.css`
 	body {
 		display  : grid;
@@ -39,56 +47,58 @@ fw.css`
 	}
 `;
 
-let template = ''
-// Video
-// template += Intro(intro)
-// Logotype
-template += Header()
-// About
-let infos = about.map(block => {
-	let matches = block.body.match(/\[(.+?)\]/g)
-	if (matches) matches.forEach(match => 
-		block.body = block.body.replace(
-			match, 
-			Badge(match.substr(1, match.length-2))))
-	return About.block(block.title, block.body)
-}).join('')
-;
-template += About.container(About.first + infos)
+window.addEventListener('load', e => {
+	let template = ''
+	// Video
+	// template += Intro(intro)
+	// Logotype
+	template += Header()
+	// About
+	let infos = about.map(block => {
+		let matches = block.body.match(/\[(.+?)\]/g)
+		if (matches) matches.forEach(match => 
+			block.body = block.body.replace(
+				match, 
+				Badge(match.substr(1, match.length-2))))
+		return About.block(block.title, block.body)
+	}).join('')
+	;
+	template += About.container(About.first + infos)
 
-// Projects
-projects.forEach(([title, notes, tools, content, more], i, list) => {
-	template += Project.container(content
-		.split(' ')
-		.map(link => {
-			// insert title
-			if (/H/.test(link))
-				return Project.title(
-					title, notes, 
-					tools.split(', ').map(Badge).join(' '), 
-					more)
-			// insert item
-			else {
-				let size = []
-				if (/\|\|/.test(link))
-					size.push('supertall')
-				else if (/\|/.test(link))
-					size.push('tall')
-				if (/--/.test(link))
-					size.push('superwide')
-				else if (/-/.test(link))
-					size.push('wide')
-				let settings = link.match(/\[(.+?)\]/g)
-				link = link.replace(settings, '')
-				let type = link.match(/.mov|.mp4/)? 'video': 'image'
-				let src  = `./projects/${title}/${link}`
-				return Project[type](src, size.join(' '))
-			}
-		}).join(''))
+	// Projects
+	projects.forEach(([title, notes, tools, content, more], i, list) => {
+		template += Project.container(content
+			.split(' ')
+			.map(link => {
+				// insert title
+				if (/H/.test(link))
+					return Project.title(
+						title, notes, 
+						tools.split(', ').map(Badge).join(' '), 
+						more)
+				// insert item
+				else {
+					let size = []
+					if (/\|\|/.test(link))
+						size.push('supertall')
+					else if (/\|/.test(link))
+						size.push('tall')
+					if (/--/.test(link))
+						size.push('superwide')
+					else if (/-/.test(link))
+						size.push('wide')
+					let settings = link.match(/\[(.+?)\]/g)
+					link = link.replace(settings, '')
+					let type = link.match(/.mov|.mp4/)? 'video': 'image'
+					let src  = `./projects/${title}/${link}`
+					return Project[type](src, size.join(' '))
+				}
+			}).join(''))
+	})
+	// add footer
+	template += Footer()
+	document.body.innerHTML += template
 })
-// add footer
-template += Footer()
-document.body.innerHTML += template
 
 // load if in viewport
 let onViewPortChange = e => {
