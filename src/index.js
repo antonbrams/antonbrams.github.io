@@ -125,7 +125,7 @@ let onViewPortChange = e => {
 			&&	content[i].tagName == 'VIDEO') {
 				content[i].parentNode.classList.remove('loaded')
 				content[i].removeAttribute('src')
-				// content[i].load()
+				content[i].load()
 			}
 			// hide the content
 			content[i].style.display = 'none'

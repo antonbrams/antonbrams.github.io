@@ -30,7 +30,6 @@ fw.css`
 		white-space   : nowrap;
 		overflow-x    : scroll;
 		margin-bottom : var(--space-20);
-		scroll-snap-type : mandatory;
 		-webkit-overflow-scrolling : touch;
 		padding : var(--space-00);
 	}
@@ -51,7 +50,6 @@ fw.css`
 		max-width : 85vw;
 		margin-right      : var(--space-01);
 		border-radius     : var(--border-radius-big);
-		scroll-snap-align : center;
 	}
 	
 	.project .item:last-child {
@@ -208,9 +206,11 @@ let Project = {
 let onHover = function (dom, bool) {
 	dom.parentNode.classList[bool? 'add': 'remove']('hover')
 	if (dom.tagName == 'VIDEO') {
-		if (bool) 
-			dom.play() 
-		else 
+		if (bool) {
+			let promise = dom.play()
+			if (promise !== undefined)
+			    promise.catch(error => console.log(error))
+		} else 
 			setTimeout(() => dom.pause(), 5)
 	}
 }
