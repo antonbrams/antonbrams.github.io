@@ -45,7 +45,7 @@ fw.css`
 		--ratio   : 1;
 		display   : inline-block;
 		overflow  : hidden;
-		transform : scale(1);
+		transform : translateZ(0);
 		height    : var(--height);
 		width     : calc(var(--height) * var(--ratio));
 		max-width : 85vw;
