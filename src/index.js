@@ -105,10 +105,10 @@ let onViewPortChange = e => {
 		// if the content is in the viewport
 		let x = window.innerHeight * 1
 		let y = window.innerWidth  * .2
-		let l = rect.left - x < window.innerWidth
-		let r = rect.right + x > 0
-		let t = rect.top - y < window.innerHeight 
-		let b = rect.bottom + y > 0
+		let l = rect.left < window.innerWidth + x
+		let r = rect.right > -x
+		let t = rect.top < window.innerHeight + y 
+		let b = rect.bottom > -y
 		if (l && r && t && b) {
 			// load the content
 			if (!content[i].src)
