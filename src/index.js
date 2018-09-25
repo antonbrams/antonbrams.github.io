@@ -74,49 +74,24 @@ window.addEventListener('load', e => {
 			let project = Project.project(content
 				.split(' ')
 				.map(link => {
-					let type   = link.match(/.mov|.mp4/)? 'video' : 'image'
-					let width  = /\[(.+?)\]/g.exec(link)[1]
-					let params = link.match(/\[(.+?)\]/g)
-					let file   = link.replace(params, '')
-					let url    = `./projects/${title}/${file}`
-					return Project[type](url, width)
+					if (link == '(')
+						return `<div class='stack'>`
+					else if (link == ')')
+						return `</div>`
+					else {
+						let type   = link.match(/.mov|.mp4/)? 'video' : 'image'
+						let width  = /\[(.+?)\]/g.exec(link)[1]
+						let params = link.match(/\[(.+?)\]/g)
+						let file   = link.replace(params, '')
+						let url    = `./projects/${title}/${file}`
+						return Project[type](url, width)
+					}
 				})
 				.join(''))
 			return projectTitle + project
 		})
 		.join('')
 	
-	
-	// Projects
-	// projects.forEach(([title, notes, tools, content, more], i, list) => {
-	// 	template += Project.container(content
-	// 		.split(' ')
-	// 		.map(link => {
-	// 			// insert title
-	// 			if (/H/.test(link))
-	// 				return Project.title(
-	// 					title, notes, 
-	// 					tools.split(', ').map(Badge).join(' '), 
-	// 					more)
-	// 			// insert item
-	// 			else {
-	// 				let size = []
-	// 				if (/\|\|/.test(link))
-	// 					size.push('supertall')
-	// 				else if (/\|/.test(link))
-	// 					size.push('tall')
-	// 				if (/--/.test(link))
-	// 					size.push('superwide')
-	// 				else if (/-/.test(link))
-	// 					size.push('wide')
-	// 				let settings = link.match(/\[(.+?)\]/g)
-	// 				link = link.replace(settings, '')
-	// 				let type = link.match(/.mov|.mp4/)? 'video': 'image'
-	// 				let src  = `./projects/${title}/${link}`
-	// 				return Project[type](src, size.join(' '))
-	// 			}
-	// 		}).join(''))
-	// })
 	// add footer
 	template += Footer()
 	document.body.innerHTML += template
@@ -127,10 +102,14 @@ let onViewPortChange = e => {
 	let content = document.querySelectorAll(`.project .item .content`)
 	for (let i = 0; i < content.length; i ++) {
 		let rect   = content[i].parentNode.getBoundingClientRect()
-		let offset = window.innerHeight * 1
 		// if the content is in the viewport
-		if (rect.top - offset < window.innerHeight 
-		&&	rect.bottom + offset > 0) {
+		let x = window.innerHeight * 1
+		let y = window.innerWidth  * .2
+		let l = rect.left - x < window.innerWidth
+		let r = rect.right + x > 0
+		let t = rect.top - y < window.innerHeight 
+		let b = rect.bottom + y > 0
+		if (l && r && t && b) {
 			// load the content
 			if (!content[i].src)
 				content[i].src = content[i].getAttribute('toload')

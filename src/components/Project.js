@@ -30,10 +30,14 @@ fw.css`
 		white-space   : nowrap;
 		overflow-x    : scroll;
 		margin-bottom : var(--space-20);
-		transform     : translate3d(0,0,0);
 		scroll-snap-type : mandatory;
 		-webkit-overflow-scrolling : touch;
 		padding : var(--space-00);
+	}
+	
+	.project .stack {
+		display : inline-block;
+		margin-right : var(--space-01);
 	}
 	
 	.project .item {
@@ -41,7 +45,7 @@ fw.css`
 		--ratio   : 1;
 		display   : inline-block;
 		overflow  : hidden;
-		transform : translate3d(0,0,0);
+		transform : scale(1);
 		height    : var(--height);
 		width     : calc(var(--height) * var(--ratio));
 		max-width : 85vw;
@@ -58,7 +62,6 @@ fw.css`
 		height     : 100%;
 		width      : 100%;
 		transition : var(--time-1) filter;
-		transform  : translate3d(0,0,0);
 		object-fit : cover;
 		-webkit-user-select   : none;
 		-webkit-touch-callout : none;
@@ -91,6 +94,19 @@ fw.css`
 		}
 		.projectInfo > *:first-child {padding-left: 0;}
 		.projectInfo > *:last-child {border: none;}
+		
+		.project .stack {
+			margin-right : 0;
+		}
+		
+		.project .stack .item {
+			display  : block;
+			height    : calc((var(--height) - var(--space-01)) * .5);
+			width     : calc((var(--height) - var(--space-01)) * .5 * var(--ratio));
+		}
+		.project .stack .item:first-child {
+			margin-bottom : var(--space-01);
+		}
 	}
 	@media screen and (min-width : ${fw.breakpoints.desktop}) {
 		.project {
@@ -98,10 +114,11 @@ fw.css`
 			padding : var(--space-00) calc((100vw - var(--big-padding))/2);
 		}
 		.project .item {
-			--height     : calc(var(--lh-body) * 20);
+			--height : calc(var(--lh-body) * 20);
 		}
 	}
 `;
+
 
 fw.css`
 	.project .item .content {filter : grayscale(1) contrast(.85);}
