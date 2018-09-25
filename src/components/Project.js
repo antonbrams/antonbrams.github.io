@@ -37,16 +37,17 @@ fw.css`
 	}
 	
 	.project .item {
-		display        : inline-block;
-		overflow       : hidden;
-		transform      : translate3d(0,0,0);
-		margin-right   : var(--space-01);
-		border-radius  : var(--border-radius-big);
+		--height  : 48vw;
+		--ratio   : 1;
+		display   : inline-block;
+		overflow  : hidden;
+		transform : translate3d(0,0,0);
+		height    : var(--height);
+		width     : calc(var(--height) * var(--ratio));
+		max-width : 85vw;
+		margin-right      : var(--space-01);
+		border-radius     : var(--border-radius-big);
 		scroll-snap-align : center;
-		--height : 48vw;
-		--ratio  : 1;
-		height   : var(--height);
-		width    : calc(var(--height) * var(--ratio));
 	}
 	
 	.project .item:last-child {
