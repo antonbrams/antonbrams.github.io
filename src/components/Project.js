@@ -100,9 +100,9 @@ fw.css`
 		}
 		
 		.project .stack .item {
-			display  : block;
-			height    : calc((var(--height) - var(--space-01)) * .5);
-			width     : calc((var(--height) - var(--space-01)) * .5 * var(--ratio));
+			display : block;
+			height  : calc((var(--height) - var(--space-01)) * .5);
+			width   : calc((var(--height) - var(--space-01)) * .5 * var(--ratio));
 		}
 		.project .stack .item:first-child {
 			margin-bottom : var(--space-01);
@@ -153,6 +153,7 @@ fw.css`
 		opacity : 0;
 	}
 	.project .item .content {opacity : 0;}
+	.project .item {background-color : var(--surface);}
 	.project .item.loaded .content {animation : var(--time-1) loadedAnimation forwards;}
 	@keyframes loadedAnimation {from {opacity : 0;} to {opacity : 1;}}
 	.project .item:not(.loaded) .live {animation : var(--time-1) whileLoading alternate infinite;}
