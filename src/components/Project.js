@@ -192,6 +192,7 @@ let Project = {
 				<div class="live"></div>
 				<video 
 					class        = "content"
+					muted        = "true"
 					loop         = "true"
 					preload      = "true"
 					playsinline	 = "true"
