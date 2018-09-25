@@ -4,7 +4,7 @@ fw.css`
 		grid-column : 4;
 		display     : grid;
 		grid-gap    : var(--space-10) var(--space-10);
-		margin-bottom : var(--space-30);
+		margin-bottom : calc(var(--lh-body) * 12);
 	}
 	
 	#about .block:first-of-type {

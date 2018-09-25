@@ -4,7 +4,7 @@
 	--dark-back		: hsla(210, 8%,  0%, 1.0);
 	--dark-middle	: hsla(360, 0%,  0%, 0.5);
 	--dark-surface	: hsla(360, 0%,  0%, 0.1);
-	--light-surface	: hsla(360, 0%,100%, 0.1);
+	--light-surface	: hsla(360, 0%,100%, 0.14);
 	--light-middle	: hsla(360, 0%,100%, 0.6);
 	--light-back	: hsla(360, 0%,100%, 1.0);
 	/* Chromatics */

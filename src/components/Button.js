@@ -1,8 +1,5 @@
 
 fw.css`
-	.buttonWrap {
-		text-align : center;
-	}
 	.button {
 		display     : inline-block;
 		background  : var(--key);
@@ -15,10 +12,8 @@ fw.css`
 `;
 
 let Button = (name, url) => 
-	`<br><div class='buttonWrap'>
-		<div 
-			class   = "button"
-			onclick = "window.open('${url}', '_blank')">
-				${name}
-		</div>
+	`<div 
+		class   = "button"
+		onclick = "window.open('${url}', '_blank')">
+			${name}
 	</div>`
