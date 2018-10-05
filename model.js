@@ -51,13 +51,13 @@ let projects = [[
 	],[
 		'Dance Dj',
 		'Bachelor Thesis for Intelligent Suit that composes Music. Full realization in Folkwang.',
-		'Cinema 4D, After Effects',
+		'C++, Ableton Live',
 		'[v]1.mp4 ( [v]4.mp4 [v]3.mp4 ) [v]2.mp4',
 		'https://www.youtube.com/watch?v=hTVp_bRUWas'
 	],[
 		'Kitchen Dj',
 		'Make music witcooking. Full realisation in Folkwang.',
-		'MaxMSP, Illustrator, After Effects, Crafting',
+		'MaxMSP, Garage Band, Illustrator, After Effects, Crafting',
 		'[v]2.mp4 ( [v]1.mp4 [v]3.mp4 ) [v]4.mp4',
 		'https://www.youtube.com/watch?v=WfmR7fv0_Gs'
 	],[
