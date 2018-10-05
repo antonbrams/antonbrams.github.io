@@ -48,7 +48,7 @@
 	--family : Helvetica Neue, sans-serif;
 	--family-caption : var(--family);
 	--family-body    : var(--family);
-	--family-H       : var(--family);
+	--family-H       : Arial Black, Helvetica Neue;
 	/* Animation */
 	--time-0 : 0.2s ease-out;
 	--time-1 : 0.4s ease-out;
