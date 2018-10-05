@@ -102,7 +102,7 @@ let projects = [[
 
 let about = [
 	{
-		body  : `The basis for all my work is the key philosophy that with enoug passion and patience a creative person can achieve almost anything they set out to do. Through unrestrained thinking combined wita critical and communicative approacI strive to bring all my products to perfection, even building my own tools along the way to facilitate the process.
+		body  : `I like to interact with people through simple geometry, clear communication, different channels, forms which are defined by its functionality... also i solve logical problems, build complex systems, rethinking daily life from the ground up, getting up to very fundamental philosophical questions: What if? Why? How? And... generate fresh and interesting ideas.
 		<br><div class='divider'></div>`
 	},
 	{
