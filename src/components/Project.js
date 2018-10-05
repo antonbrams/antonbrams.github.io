@@ -83,7 +83,7 @@ fw.css`
 	}
 	@media screen and (min-width : ${fw.breakpoints.tablet}) {
 		.projectInfo {
-			grid-template-columns : minmax(auto, 250px) minmax(auto, 250px) auto;
+			grid-template-columns : 280px 280px auto;
 			grid-gap : 0;
 		}
 		.projectInfo > * {
