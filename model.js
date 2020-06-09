@@ -102,7 +102,7 @@ let projects = [[
 
 let about = [
 	{
-		body  : `I like to interact with people through simple geometry, clear communication, different channels, forms which are defined by its functionality... also i solve logical problems, build complex systems, rethinking daily life from the ground up, getting up to very fundamental philosophical questions: What if? Why? How? And... generate fresh and interesting ideas.
+		body  : `I like to interact with people through simple geometry, clear communication, multimodal interactions and forms, which are defined by their functionality... i solve logical problems, build complex systems, rethinking daily life from the ground up, getting up to very fundamental philosophical questions: What if? Why? How? And generate fresh and interesting ideas.
 		<br><div class='divider'></div>`
 	},
 	{
