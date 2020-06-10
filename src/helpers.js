@@ -3,3 +3,28 @@ const toggleClasses = (dom, classes, i) => {
 		dom.classList[i == n ? 'add' : 'remove'](a)
 	})
 }
+
+const Lerp = (fn, speed = 0.05, threshold = 1) => {
+	let active = false
+	let pTarget = null
+	let pSmooth = null
+	const frame = () => {
+		let diff = 0
+		pSmooth = pSmooth.map((n, i) => {
+			const v = pTarget[i] - n
+			diff += Math.abs(v)
+			return n + v * speed
+		})
+		fn(pSmooth)
+		if (diff > threshold) window.requestAnimationFrame(frame)
+		else active = false
+	}
+	return params => {
+		if (!pSmooth) pSmooth = params.slice()
+		pTarget = params
+		if (!active) {
+			active = true
+			frame()
+		}
+	}
+}

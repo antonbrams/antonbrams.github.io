@@ -38,11 +38,12 @@ body > .background {
 	max-width: 20ch;
 }
 
-.separator {
-	height: var(--space-03);
+.intro .separator {
+	height: var(--space-02);
 	width: var(--space-10);
-	background-color: var(--color-front);
+	background-color: var(--color-middle-bold);
 	margin-bottom: calc(-1 * var(--space-03));
+	border-radius: 9999px;
 }
 
 @media screen and (max-width: 720px) {

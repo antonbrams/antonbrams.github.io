@@ -1,13 +1,9 @@
 const project = document.querySelector('.project')
 const sections = project.querySelector('.sections')
-const background = project.querySelector('.background')
 const perspective = project.querySelector('.perspective')
 const name = project.querySelector('.name')
 const cancel = project.querySelector('.cancel')
 const contents = project.querySelector('.contents')
-
-const iToClass = i =>
-	i == 0 ? 'center' : i % 2 == 0 ? 'left' : 'right'
 
 const mapContent = (project, file, i) => {
 	const style = `
@@ -22,7 +18,16 @@ const mapContent = (project, file, i) => {
 		: ''
 }
 
-let scrollSmooth = 0
+const scroller = Lerp(
+	([tx, ty, rx, ry]) =>
+		(contents.style.transform = `
+			rotateX(${rx}deg)
+			rotateY(${ry}deg)
+			translateX(${tx}%)
+			translateY(${ty}%)
+		`)
+)
+
 const onScroll = e => {
 	Array.from(project.querySelectorAll('.section')).forEach(
 		(section, i, list) => {
@@ -39,15 +44,11 @@ const onScroll = e => {
 				content[inViewport ? 'play' : 'pause']()
 			if (inViewport) {
 				const y = rect.top + rect.height / 2
-				const p = (y - middle) * 0.2
-				scrollSmooth += (p - scrollSmooth) * 0.1
-				const contents = project.querySelector('.contents')
-				toggleClasses(
-					contents,
-					['center', 'left', 'right'],
-					i == 0 ? 0 : i % 2 == 0 ? 2 : 1
-				)
-				perspective.style.transform = `translateY(${scrollSmooth}px)`
+				const p = (y - middle) * 0.02
+				// animate
+				if (i == 0) scroller([0, p - 15, 10, 0])
+				else if (i % 2 == 1) scroller([-15, p, 5, 16])
+				else scroller([15, p, 5, -16])
 			}
 			if (i == list.length - 1) {
 				const atBottom = rect.top < 20
@@ -58,7 +59,7 @@ const onScroll = e => {
 }
 
 const openProject = i => {
-	project.style.visibility = i ? 'visible' : 'hidden'
+	project.classList[i ? 'add' : 'remove']('show')
 	document.body.style.overflow = i ? 'hidden' : null
 	if (i) {
 		sections.scrollTop = 0
@@ -70,24 +71,23 @@ const openProject = i => {
 			theme == 'light'
 		)
 		// bg color
-		background.style.backgroundColor = bg
+		project.style.backgroundColor = bg
 		// cancel theme
-		cancel.style.backgroundImage = `url('./src/components/project/cancel_${theme}.svg')`
+		cancel.style.backgroundImage = `url(
+			'./src/components/project/cancel_${theme}.svg')`
 		// fill out the name
 		name.innerHTML = title
 		// sections
+		const iToClass = i =>
+			i == 0 ? 'center' : ['left', 'right'][i % 2]
 		sections.innerHTML = content
 			.map(
 				([_, title, description], i) =>
 					`<div class="section" data-i-section="${i}">
 						<div class="typo ${iToClass(i)}">
-							<p class="
-								text_10 header
-								${i == 0 ? 'morph-description' : ''}
-							">
+							<p class="text_10 header">
 								${title}
 							</p>
-							<br />
 							<br />
 							<p>${description}</p>
 						</div>
@@ -101,15 +101,10 @@ const openProject = i => {
 		// do on scroll
 		sections.addEventListener('scroll', onScroll)
 		onScroll()
-		animate(i)
 	} else {
-		animate()
 		sections.removeEventListener('scroll', onScroll)
 		Array.from(project.querySelectorAll('video')).forEach(video =>
 			video.pause()
 		)
-		// contents.innerHTML = ''
-		// cancel.classList.remove('end')
-		// toggleClasses(contents, ['center', 'left', 'right'], 0)
 	}
 }

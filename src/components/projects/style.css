@@ -7,7 +7,6 @@
 }
 
 .projects .preview,
-.projects .background,
 .projects .content {
 	border-radius: var(--space-01);
 }
@@ -27,7 +26,6 @@
 	transform: scale(1.03);
 }
 
-.projects .preview .background,
 .projects .preview .content {
 	position: absolute;
 	left: 0;
@@ -40,8 +38,7 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	/* opacity: 0.3; */
-	filter: opacity(0.3);
+	filter: opacity(0.3) saturate(0);
 }
 
 .projects .preview p {
@@ -54,7 +51,6 @@
 		grid-column: span 2;
 		grid-row: span 2;
 	}
-
 	.projects .preview.big .header {
 		font-size: 48px;
 		line-height: calc(var(--line-height) * 3);

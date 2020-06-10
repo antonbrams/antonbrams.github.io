@@ -303,10 +303,4 @@ const about = [
 		title: 'Hobbys',
 		body: 'Philosophy, Beatbox, Drums, Gymnastics...',
 	},
-	{
-		title: '<span style="color : var(--red);">Contact</span>',
-		body: `<a style="--color : var(--red);" href='mailto:${
-			'hello' + '@' + 'antonbrams' + '.' + 'io'
-		}';">&#104;&#101;&#108;&#108;&#111;&#64;&#97;&#110;&#116;&#111;&#110;&#98;&#114;&#97;&#109;&#115;&#46;&#105;&#111;</a>`,
-	},
 ]
