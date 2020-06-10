@@ -1,0 +1,107 @@
+.project {
+	z-index: 1;
+	visibility: hidden;
+	color: var(--color-front);
+}
+
+.project .background {
+	z-index: -1;
+	background-color: var(--color-back);
+	background-image: url('./blur.png');
+	background-size: cover;
+}
+.project .perspective {
+	position: fixed;
+	z-index: -1;
+	perspective: 800px;
+}
+
+.project .contents {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	--size: 100vmin;
+	width: var(--size);
+	height: var(--size);
+	margin-left: calc(-0.5 * var(--size));
+	margin-top: calc(-0.5 * var(--size));
+	transition: 1s transform;
+}
+
+.project .contents.center {
+	transform: translateY(-15%) rotateX(10deg);
+}
+
+.project .contents.left {
+	transform: translateX(-15%) rotateY(16deg) rotateX(5deg);
+}
+
+.project .contents.right {
+	transform: translateX(15%) rotateY(-16deg) rotateX(5deg);
+}
+
+.project .content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 1s opacity;
+	opacity: 0;
+}
+
+.project .section,
+.project .centerName2 {
+	position: relative;
+	max-width: 1280px !important;
+	padding: 0 var(--space-20);
+	margin: 0 auto;
+}
+
+.project .sections {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.project .centerName {
+	position: fixed;
+	top: var(--space-20);
+	width: 100%;
+}
+
+.project .section {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	height: 100%;
+}
+
+.project .typo {
+	max-width: 50ch;
+}
+
+.project .typo.center {
+	justify-self: center;
+	align-self: flex-end;
+	padding: var(--space-20) 0;
+}
+
+.project .typo.right {
+	justify-self: flex-end;
+}
+
+.project .cancel {
+	position: fixed;
+	z-index: 1;
+	right: var(--space-10);
+	bottom: var(--space-10);
+	width: var(--space-10);
+	height: var(--space-10);
+	background-size: contain;
+	cursor: pointer;
+	transition: 1s right, 1s margin-right;
+}
+
+.project .end {
+	right: 50%;
+	margin-right: calc(-0.5 * var(--space-10));
+}

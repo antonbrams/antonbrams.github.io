@@ -1,0 +1,62 @@
+body {
+	max-width: 1280px;
+	margin: auto;
+}
+
+body.scrolled > .background {
+	filter: blur(30px);
+	opacity: 0.3;
+}
+
+body > .background {
+	z-index: -1;
+	background-image: url('./bg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	transition: 1s opacity, 1s filter;
+}
+
+.intro,
+.skills,
+.projects {
+	margin-bottom: var(--space-20);
+}
+
+.footer {
+	text-align: center;
+	width: 100%;
+}
+
+.intro {
+	display: grid;
+	grid-auto-flow: column;
+	height: 100%;
+}
+
+.intro .header {
+	max-width: 20ch;
+}
+
+.separator {
+	height: var(--space-03);
+	width: var(--space-10);
+	background-color: var(--color-front);
+	margin-bottom: calc(-1 * var(--space-03));
+}
+
+@media screen and (max-width: 720px) {
+	body {
+		padding: var(--space-00);
+	}
+}
+
+@media screen and (min-width: 720px) {
+	body {
+		padding: var(--space-20);
+	}
+	.intro {
+		align-content: center;
+		justify-content: flex-start;
+	}
+}
