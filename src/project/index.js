@@ -5,19 +5,6 @@ const name = project.querySelector('.name')
 const cancel = project.querySelector('.cancel')
 const contents = project.querySelector('.contents')
 
-const mapContent = (project, file, i) => {
-	const style = `
-		src="projects/${project}/${file}"
-		data-i-content="${i}"
-		class="content"
-	`
-	return file.match('.mp4') || file.match('.mov')
-		? `<video ${style} muted loop playsinline></video>`
-		: file.match('.jpg')
-		? `<img ${style} />`
-		: ''
-}
-
 const scroller = Lerp(
 	([tx, ty, rx, ry]) =>
 		(contents.style.transform = `
@@ -58,6 +45,19 @@ const onScroll = e => {
 	)
 }
 
+const mapContent = (project, file, i) => {
+	const style = `
+		src="projects/${project}/${file}"
+		data-i-content="${i}"
+		class="content"
+	`
+	return file.match('.mp4') || file.match('.mov')
+		? `<video ${style} muted loop playsinline></video>`
+		: file.match('.jpg')
+		? `<img ${style} />`
+		: `<div ${style}></div>`
+}
+
 const openProject = i => {
 	project.classList[i ? 'add' : 'remove']('show')
 	document.body.style.overflow = i ? 'hidden' : null
@@ -74,7 +74,7 @@ const openProject = i => {
 		project.style.backgroundColor = bg
 		// cancel theme
 		cancel.style.backgroundImage = `url(
-			'./src/components/project/cancel_${theme}.svg')`
+			'./src/project/cancel_${theme}.svg')`
 		// fill out the name
 		name.innerHTML = title
 		// sections
@@ -106,5 +106,6 @@ const openProject = i => {
 		Array.from(project.querySelectorAll('video')).forEach(video =>
 			video.pause()
 		)
+		cancel.classList.remove('end')
 	}
 }

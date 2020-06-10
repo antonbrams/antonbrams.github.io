@@ -6,23 +6,7 @@
 			content="width=device-width, initial-scale=1"
 		/>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<link rel="stylesheet" href="./src/components/global.css" />
-		<link
-			rel="stylesheet"
-			href="./src/components/skills/style.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./src/components/project/style.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./src/components/projects/style.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./src/components/intro/style.css"
-		/>
+		<link rel="stylesheet" href="./src/boilerplate.css" />
 	</head>
 	<body class="theme_light">
 		<div class="background fixed"></div>
@@ -35,16 +19,6 @@
 				<div class="separator"></div>
 				<br />
 				with &#10084; by Anton Brams
-				<!-- <p class="motivation">
-					I like to interact with people through simple
-					geometry, clear communication, multimodal
-					interactions and forms, which are defined by their
-					functionality... i solve logical problems, build
-					complex systems, rethinking daily life from the
-					ground up, getting up to very fundamental
-					philosophical questions: What if? Why? How? And
-					generate fresh and interesting ideas.
-				</p> -->
 			</div>
 		</div>
 		<p class="text_10 header">Skills</p>
@@ -56,21 +30,41 @@
 		<br />
 		<div class="projects">test</div>
 		<div class="project fixed">
-			<div class="centerName">
+			<div class="cancel" onclick="openProject()"></div>
+			<div class="sections"></div>
+			<div class="top">
 				<p class="name text_20 header"></p>
 			</div>
 			<div class="perspective">
 				<div class="contents center"></div>
 			</div>
-			<div class="sections"></div>
-			<div class="cancel" onclick="openProject()"></div>
 		</div>
 		<p class="footer">with &#10084; by Anton Brams</p>
 	</body>
+	<!-- helpers -->
 	<script src="./model.js"></script>
 	<script src="./src/helpers.js"></script>
-	<script src="./src/components/intro/index.js"></script>
-	<script src="./src/components/skills/index.js"></script>
-	<script src="./src/components/projects/index.js"></script>
-	<script src="./src/components/project/index.js"></script>
+	<!-- intro -->
+	<link rel="stylesheet" href="./src/intro/style.css" />
+	<script src="./src/intro/index.js"></script>
+	<!-- skills -->
+	<link rel="stylesheet" href="./src/skills/style.css" />
+	<script src="./src/skills/index.js"></script>
+	<!-- projects -->
+	<link rel="stylesheet" href="./src/projects/style.css" />
+	<script src="./src/projects/index.js"></script>
+	<!-- project -->
+	<link rel="stylesheet" href="./src/project/style.css" />
+	<script src="./src/project/index.js"></script>
 </html>
+
+<!-- <p class="motivation">
+	I like to interact with people through simple
+	geometry, clear communication, multimodal
+	interactions and forms, which are defined by their
+	functionality... i solve logical problems, build
+	complex systems, rethinking daily life from the
+	ground up, getting up to very fundamental
+	philosophical questions: What if? Why? How? And
+	generate fresh and interesting ideas.
+</p> -->
