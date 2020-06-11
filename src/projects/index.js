@@ -13,7 +13,7 @@ document.querySelector('.projects').innerHTML = projects
 		>
 			<div
 				class="content"
-				style="background-image: url('./projects/${name}/0.png')"
+				style="background-image: url('./projects/${name}/0.jpg')"
 			></div>
 			<div>
 				<p class="header text_10">${name}</p>

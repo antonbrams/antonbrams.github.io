@@ -52,7 +52,7 @@ const mapContent = (project, file, i) => {
 		class="content"
 	`
 	return file.match('.mp4') || file.match('.mov')
-		? `<video ${style} muted loop playsinline></video>`
+		? `<video ${style} muted loop playsinline"></video>`
 		: file.match('.jpg')
 		? `<img ${style} />`
 		: `<div ${style}></div>`

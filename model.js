@@ -11,6 +11,32 @@ const dummy = {
 
 const projects = [
 	[
+		'eSkin',
+		[
+			['1.jpg', dummy.title, dummy.description],
+			['2.jpg', dummy.title, dummy.description],
+			['3.jpg', dummy.title, dummy.description],
+			['4.mp4', dummy.title, dummy.description],
+			['5.jpg', dummy.title, dummy.description],
+			['6.jpg', dummy.title, dummy.description],
+			['7.jpg', dummy.title, dummy.description],
+		],
+		['dark', 'hsl(35, 21%, 50%)'],
+	],
+	[
+		'InfoSight',
+		[
+			['1.mp4', dummy.title, 'https://youtu.be/HpON28BZiOs'],
+			['2.mov', dummy.title, dummy.description],
+			['3.mov', dummy.title, dummy.description],
+			['4.mov', dummy.title, dummy.description],
+			['5.mov', dummy.title, dummy.description],
+			['6.jpg', dummy.title, dummy.description],
+			['7.jpg', dummy.title, dummy.description],
+		],
+		['light', '#b1d7ff', true],
+	],
+	[
 		'YanFeng',
 		[
 			[
@@ -23,20 +49,6 @@ const projects = [
 			['4.mp4', dummy.title, dummy.description],
 		],
 		['dark', '#1F1D16', true],
-	],
-	[
-		'TimeDNA',
-		[
-			[
-				'3.mp4',
-				'New Shape of Time. Full realization at Home.',
-				'JavaScript, Three.js',
-			],
-			['2.mp4', dummy.title, dummy.description],
-			['4.mp4', dummy.title, dummy.description],
-			['1.mp4', dummy.title, dummy.description],
-		],
-		['dark', 'hsl(208, 100%, 16%)'],
 	],
 	[
 		'Hyundai',
@@ -67,6 +79,20 @@ const projects = [
 		['light', 'hsl(232, 7%, 78%)', true],
 	],
 	[
+		'TimeDNA',
+		[
+			[
+				'3.mp4',
+				'New Shape of Time. Full realization at Home.',
+				'JavaScript, Three.js',
+			],
+			['2.mp4', dummy.title, dummy.description],
+			['4.mp4', dummy.title, dummy.description],
+			['1.mp4', dummy.title, dummy.description],
+		],
+		['dark', 'hsl(208, 100%, 16%)'],
+	],
+	[
 		'OnTime',
 		[
 			// [
@@ -86,20 +112,6 @@ const projects = [
 		['dark', 'hsl(352, 100%, 70%)'],
 	],
 	[
-		'Flux',
-		[
-			[
-				'1.mp4',
-				'Ambient live Decoration in a Bank. Typography, Choreography and <a href="https://neoanalog.io/flux/">Generative</a> Design.',
-				'OpenFrameworks, C++',
-			],
-			['3.mp4', dummy.title, dummy.description],
-			['2.mp4', dummy.title, dummy.description],
-			['4.mp4', dummy.title, dummy.description],
-		],
-		['dark', '#73522C'],
-	],
-	[
 		'KUKA',
 		[
 			[
@@ -113,6 +125,34 @@ const projects = [
 			['1.jpg', dummy.title, dummy.description],
 		],
 		['dark', '#9D3300'],
+	],
+	[
+		'Fraport',
+		[
+			[
+				'1.jpg',
+				'LED Panel Animation. Opening Animation & <a href="https://meso.design/en/projects/fraport-architectural-light-effect-for-brand-communication-in-international-airport">Intros</a>.',
+				'VVVV, Premiere',
+			],
+			['3.jpg', dummy.title, dummy.description],
+			['2.jpg', dummy.title, dummy.description],
+			['4.jpg', dummy.title, dummy.description],
+		],
+		['light', 'hsl(234, 13%, 85%)'],
+	],
+	[
+		'Flux',
+		[
+			[
+				'1.mp4',
+				'Ambient live Decoration in a Bank. Typography, Choreography and <a href="https://neoanalog.io/flux/">Generative</a> Design.',
+				'OpenFrameworks, C++',
+			],
+			['3.mp4', dummy.title, dummy.description],
+			['2.mp4', dummy.title, dummy.description],
+			['4.mp4', dummy.title, dummy.description],
+		],
+		['dark', '#73522C'],
 	],
 	[
 		'ReMind',
@@ -143,7 +183,7 @@ const projects = [
 			['3.mp4', dummy.title, dummy.description],
 			['2.mp4', dummy.title, dummy.description],
 		],
-		['light', 'hsl(185, 100%, 87%)'],
+		['light', 'hsl(185, 100%, 87%)', true],
 	],
 	[
 		'Kitchen Dj',
@@ -188,20 +228,6 @@ const projects = [
 			['1.mov', dummy.title, dummy.description],
 		],
 		['light', 'hsl(0, 0%, 83%)'],
-	],
-	[
-		'Fraport',
-		[
-			[
-				'1.jpg',
-				'LED Panel Animation. Opening Animation & <a href="https://meso.design/en/projects/fraport-architectural-light-effect-for-brand-communication-in-international-airport">Intros</a>.',
-				'VVVV, Premiere',
-			],
-			['3.jpg', dummy.title, dummy.description],
-			['2.jpg', dummy.title, dummy.description],
-			['4.jpg', dummy.title, dummy.description],
-		],
-		['light', 'hsl(234, 13%, 85%)'],
 	],
 	[
 		'Teleporto',
