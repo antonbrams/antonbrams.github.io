@@ -13,10 +13,10 @@ const projects = [
 	[
 		'eSkin',
 		[
-			['1.jpg', dummy.title, dummy.description],
 			['2.jpg', dummy.title, dummy.description],
 			['3.jpg', dummy.title, dummy.description],
 			['4.mp4', dummy.title, dummy.description],
+			['1.jpg', dummy.title, dummy.description],
 			['5.jpg', dummy.title, dummy.description],
 			['6.jpg', dummy.title, dummy.description],
 			['7.jpg', dummy.title, dummy.description],
@@ -26,7 +26,17 @@ const projects = [
 	[
 		'InfoSight',
 		[
-			['1.mp4', dummy.title, 'https://youtu.be/HpON28BZiOs'],
+			[
+				'1.mp4',
+				dummy.title,
+				`<a
+					class="button"
+					href="https://youtu.be/HpON28BZiOs"
+					target="_blank"
+				>
+					YouTube
+				</a>`,
+			],
 			['2.mov', dummy.title, dummy.description],
 			['3.mov', dummy.title, dummy.description],
 			['4.mov', dummy.title, dummy.description],
@@ -34,7 +44,7 @@ const projects = [
 			['6.jpg', dummy.title, dummy.description],
 			['7.jpg', dummy.title, dummy.description],
 		],
-		['light', '#b1d7ff', true],
+		['light', 'hsl(210, 100%, 84%)', true],
 	],
 	[
 		'YanFeng',
@@ -48,7 +58,7 @@ const projects = [
 			['3.mp4', dummy.title, dummy.description],
 			['4.mp4', dummy.title, dummy.description],
 		],
-		['dark', '#1F1D16', true],
+		['dark', 'hsl(45, 17%, 19%)', true],
 	],
 	[
 		'Hyundai',
@@ -90,7 +100,7 @@ const projects = [
 			['4.mp4', dummy.title, dummy.description],
 			['1.mp4', dummy.title, dummy.description],
 		],
-		['dark', 'hsl(208, 100%, 16%)'],
+		['dark', 'hsl(210, 10%, 7%)'],
 	],
 	[
 		'OnTime',
@@ -193,7 +203,6 @@ const projects = [
 				'Make music with cooking. Full realisation in <a href="https://www.youtube.com/watch?v=WfmR7fv0_Gs">Folkwang</a>.',
 				'MaxMSP, Garage Band, Illustrator, After Effects, Crafting',
 			],
-			['2.mp4', dummy.title, dummy.description],
 			['1.mp4', dummy.title, dummy.description],
 			['3.mp4', dummy.title, dummy.description],
 			['4.mp4', dummy.title, dummy.description],

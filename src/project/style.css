@@ -49,6 +49,12 @@
 	opacity: 0;
 }
 
+.project .perspective .contents a {
+	position: absolute;
+	right: -20px;
+	top: 50%;
+}
+
 .project .section,
 .project .top .name {
 	max-width: 1280px;
@@ -65,17 +71,27 @@
 .project .sections {
 	overflow-x: hidden;
 	height: 100%;
+	pointer-events: painted;
 }
 
-.project .section {
+.project .sections .section {
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
 	height: 100%;
 }
 
-.project .section .typo {
+/* .project .sections .section .play {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	border: none;
+	font-size: 4rem;
+} */
+
+.project .sections .section .typo {
 	max-width: 50ch;
+	pointer-events: auto;
 }
 
 .project .cancel {

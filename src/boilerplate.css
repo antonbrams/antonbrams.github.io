@@ -177,3 +177,11 @@ a:hover {
 	bottom: 0px;
 	right: 0px;
 }
+
+a.button {
+	background-color: var(--color-front);
+	color: var(--color-back);
+	padding: var(--space-02) var(--space-01);
+	border-radius: var(--space-02);
+	border: none;
+}

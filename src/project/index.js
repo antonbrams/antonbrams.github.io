@@ -22,9 +22,9 @@ const onScroll = e => {
 			const middle = window.innerHeight / 2
 			const inViewport =
 				rect.top < middle && rect.bottom > middle
-			const id = section.getAttribute('data-i-section')
+			const id = section.getAttribute('data-section')
 			const content = project.querySelector(
-				`[data-i-content="${id}"]`
+				`[data-content="${id}"]`
 			)
 			content.style.opacity = inViewport ? 0.7 : 0
 			if (content.tagName == 'VIDEO')
@@ -46,11 +46,9 @@ const onScroll = e => {
 }
 
 const mapContent = (project, file, i) => {
-	const style = `
-		src="projects/${project}/${file}"
-		data-i-content="${i}"
-		class="content"
-	`
+	const link = `./projects/${project}/${file}`
+	const style = `src="${link}" data-content="${i}" class="content"`
+	preload(link)
 	return file.match('.mp4') || file.match('.mov')
 		? `<video ${style} muted loop playsinline"></video>`
 		: file.match('.jpg')
@@ -63,7 +61,7 @@ const openProject = i => {
 	document.body.style.overflow = i ? 'hidden' : null
 	if (i) {
 		sections.scrollTop = 0
-		const [title, content, [theme, bg]] = projects[i]
+		const [title, content, [theme, bg], url] = projects[i]
 		// set theme
 		toggleClasses(
 			project,
@@ -83,7 +81,7 @@ const openProject = i => {
 		sections.innerHTML = content
 			.map(
 				([_, title, description], i) =>
-					`<div class="section" data-i-section="${i}">
+					`<div class="section" data-section="${i}">
 						<div class="typo ${iToClass(i)}">
 							<p class="text_10 header">
 								${title}
