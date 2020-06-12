@@ -28,3 +28,11 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 		}
 	}
 }
+
+const preload = url => {
+	const link = document.createElement('link')
+	link.href = url
+	link.rel = 'preload'
+	link.as = 'image'
+	document.head.appendChild(link)
+}

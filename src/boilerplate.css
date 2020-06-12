@@ -184,4 +184,5 @@ a.button {
 	padding: var(--space-02) var(--space-01);
 	border-radius: var(--space-02);
 	border: none;
+	cursor: pointer;
 }

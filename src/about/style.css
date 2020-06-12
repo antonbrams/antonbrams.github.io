@@ -1,0 +1,27 @@
+.about {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: var(--space-00);
+	/* column-width: 200px; */
+	/* column-gap: var(--space-00); */
+}
+
+.about > div {
+	/* break-inside: avoid; */
+	/* padding-bottom: var(--space-00); */
+}
+
+.badge {
+	position: relative;
+	top: -2px;
+	background-color: var(--color-back);
+	color: var(--color-front);
+	padding: 1px var(--space-03) 0px;
+	border-radius: var(--space-03);
+}
+
+/* a.button.aligned {
+	position: relative;
+	top: -6px;
+	margin-left: var(--space-01);
+} */

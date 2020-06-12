@@ -1,17 +1,22 @@
+// blur intro
 window.addEventListener('scroll', e => {
+	const threshold = 20
 	document.body.classList[
-		document.body.scrollTop > 20 ? 'add' : 'remove'
+		document.body.scrollTop > threshold ? 'add' : 'remove'
 	]('scrolled')
+	document
+		.querySelector('.indicator')
+		.classList[
+			document.body.scrollTop > threshold ? 'add' : 'remove'
+		]('hide')
+	const motivation = document.querySelector('.motivation')
+	const rect = motivation.getBoundingClientRect()
+	motivation.classList[
+		rect.top < window.innerHeight ? 'add' : 'remove'
+	]('visible')
 })
 
-const preload = url => {
-	const link = document.createElement('link')
-	link.href = url
-	link.rel = 'preload'
-	link.as = 'image'
-	document.head.appendChild(link)
-}
-
+// preload first videos
 projects.forEach(([name, content, settings]) => {
 	const first = content[0][0]
 	if (first.search(/.mp4|.mov/g) > -1)

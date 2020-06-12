@@ -14,7 +14,7 @@ const badgify = text => {
 	return text
 }
 
-document.querySelector('.skills').innerHTML = about
+document.querySelector('.about').innerHTML = about
 	.map(
 		fact => `<div>
 		<p class='header'>${fact.title}</p>

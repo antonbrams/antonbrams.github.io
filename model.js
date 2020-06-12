@@ -305,15 +305,7 @@ const projects = [
 const about = [
 	{
 		title: 'Experience',
-		body: `3 years of professional experience at
-			<a target='blank' href='http://meso.design'>MESO</a>,
-			<a target='blank' href='http://universal-interaction.com'>Universal Interaction</a>
-			and
-			<a target='blank' href='http://dreiform.de'>dreiform</a>,
-
-			Human Computer Interaction [M.S.] at <a target='blank' href='https://www.uni-weimar.de/en/media/studies/human-computer-interaction-msc/'>Bauhaus</a> and
-
-			Industrial Design [B.A.] at <a target='blank' href='https://www.folkwang-uni.de/home/gestaltung/studiengaenge/industrial-design/industrial-design-ba/'>Folkwang</a>.`,
+		body: `3 years of professional experience at <a target='blank' href='http://meso.design'>MESO</a>, <a target='blank' href='http://universal-interaction.com'>Universal Interaction</a> and <a target='blank' href='http://dreiform.de'>dreiform</a>. Studied Human-Computer Interaction [M.S.] at <a target='blank' href='https://www.uni-weimar.de/en/media/studies/human-computer-interaction-msc/'>Bauhaus</a> and Industrial Design [B.A.] at <a target='blank' href='https://www.folkwang-uni.de/home/gestaltung/studiengaenge/industrial-design/industrial-design-ba/'>Folkwang</a>.`,
 	},
 	{
 		title: 'Fields',
@@ -342,5 +334,11 @@ const about = [
 	{
 		title: 'Hobbys',
 		body: 'Philosophy, Beatbox, Drums, Gymnastics...',
+	},
+	{
+		title: 'Get in Touch',
+		body: `If you have any Questions, just contact me on <a href="mailto:${
+			'hello' + '@' + 'antonbrams' + '.' + 'io'
+		}">&#104;&#101;&#108;&#108;&#111;&#64;&#97;&#110;&#116;&#111;&#110;&#98;&#114;&#97;&#109;&#115;&#46;&#105;&#111;</a>`,
 	},
 ]
