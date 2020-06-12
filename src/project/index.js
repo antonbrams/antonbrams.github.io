@@ -48,7 +48,7 @@ const onScroll = e => {
 const mapContent = (project, file, i) => {
 	const link = `./projects/${project}/${file}`
 	const style = `src="${link}" data-content="${i}" class="content"`
-	preload(link)
+	if (i > 0) preload(link)
 	return file.match('.mp4') || file.match('.mov')
 		? `<video ${style} muted loop playsinline"></video>`
 		: file.match('.jpg')
