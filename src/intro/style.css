@@ -30,7 +30,6 @@ body > .background {
 .intro {
 	display: grid;
 	grid-auto-flow: column;
-	/* height: calc(100% + var(--space-20)); */
 	height: 100%;
 }
 
@@ -50,6 +49,7 @@ body > .background {
 	border-radius: 9999px;
 	animation: 0.5s wave infinite alternate;
 	transition: 0.5s opacity;
+	pointer-events: none;
 }
 
 .indicator.hide {
@@ -76,7 +76,7 @@ body > .background {
 .motivation p {
 	transition: 2s ease-out opacity, 2s ease-out transform;
 	opacity: 0;
-	transform: translateY(30vh);
+	transform: translateY(40vh);
 }
 
 .motivation.visible p {
@@ -88,9 +88,6 @@ body > .background {
 	body {
 		padding: var(--space-00);
 	}
-	.intro {
-		padding-bottom: var(--space-00);
-	}
 }
 
 @media screen and (min-width: 720px) {
@@ -100,6 +97,5 @@ body > .background {
 	.intro {
 		align-content: center;
 		justify-content: flex-start;
-		padding-bottom: var(--space-20);
 	}
 }

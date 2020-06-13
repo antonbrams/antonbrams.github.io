@@ -9,11 +9,16 @@ window.addEventListener('scroll', e => {
 		.classList[
 			document.body.scrollTop > threshold ? 'add' : 'remove'
 		]('hide')
-	const motivation = document.querySelector('.motivation')
-	const rect = motivation.getBoundingClientRect()
-	motivation.classList[
-		rect.top < window.innerHeight - threshold ? 'add' : 'remove'
-	]('visible')
+	document
+		.querySelector('.motivation')
+		.classList[
+			document.body.scrollTop > threshold ? 'add' : 'remove'
+		]('visible')
+	// const motivation = document.querySelector('.motivation')
+	// const rect = motivation.getBoundingClientRect()
+	// motivation.classList[
+	// 	rect.top < window.innerHeight - threshold ? 'add' : 'remove'
+	// ]('visible')
 })
 
 // preload first videos

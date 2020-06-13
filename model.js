@@ -325,7 +325,7 @@ const about = [
 	{
 		title: 'Programming Languages',
 		body:
-			'JavaScript, CSS, HTML, C++, C, Bash, Python, AppleScript, Java, C#...',
+			'JavaScript, CSS, HTML, C++ / C, Bash, Python, AppleScript, Java, C#...',
 	},
 	{
 		title: 'Human Languages',

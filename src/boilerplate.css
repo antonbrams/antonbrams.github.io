@@ -105,6 +105,11 @@ body.dev:before {
 	font-weight: bold;
 }
 
+.text_20.header,
+.text_10.header {
+	letter-spacing: -1px;
+}
+
 .text_20,
 .text_10,
 .text_00,
