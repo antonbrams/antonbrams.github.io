@@ -10,7 +10,7 @@ body.scrolled > .background {
 
 body > .background {
 	z-index: -1;
-	background-image: url('./bg.png');
+	background-image: url('./bg.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right bottom;
@@ -74,9 +74,9 @@ body > .background {
 }
 
 .motivation p {
-	transition: 2s ease-out opacity, 2s ease-out transform;
+	transition: 3s ease-out opacity, 2s ease-out transform;
 	opacity: 0;
-	transform: translateY(40vh);
+	transform: translateY(30vh);
 }
 
 .motivation.visible p {
