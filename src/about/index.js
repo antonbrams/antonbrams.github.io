@@ -22,3 +22,9 @@ document.querySelector('.about').innerHTML = about
 	</div>`
 	)
 	.join('')
+
+document
+	.querySelector('.getintouch')
+	.querySelector('.button').href = `mailto:${
+	'hello' + '@' + 'antonbrams' + '.' + 'io'
+}`

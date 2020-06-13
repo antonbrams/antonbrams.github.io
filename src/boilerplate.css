@@ -108,6 +108,7 @@ body.dev:before {
 .text_20.header,
 .text_10.header {
 	letter-spacing: -1px;
+	/* font-family: Arial Black; */
 }
 
 .text_20,
@@ -175,7 +176,7 @@ a:hover {
 	border-width: 3px;
 }
 
-.fixed {
+.layout_fixed {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -183,10 +184,17 @@ a:hover {
 	right: 0px;
 }
 
+.layout_center {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
 a.button {
+	display: inline-block;
+	text-align: center;
 	background-color: var(--color-front);
 	color: var(--color-back);
-	padding: var(--space-02) var(--space-01);
+	padding: var(--space-03) var(--space-01);
 	border-radius: var(--space-02);
 	border: none;
 	cursor: pointer;

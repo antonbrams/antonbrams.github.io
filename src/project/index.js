@@ -15,6 +15,12 @@ const scroller = Lerp(
 		`)
 )
 
+const button = (name, url) =>
+	`<br />
+	<a class="button" href="${url}" target="blank">
+		${name}
+	</a>`
+
 const onScroll = e => {
 	Array.from(project.querySelectorAll('.section')).forEach(
 		(section, i, list) => {
@@ -61,7 +67,7 @@ const openProject = i => {
 	document.body.style.overflow = i ? 'hidden' : null
 	if (i) {
 		sections.scrollTop = 0
-		const [title, content, [theme, bg], url] = projects[i]
+		const [title, content, [theme, bg], extern] = projects[i]
 		// set theme
 		toggleClasses(
 			project,
@@ -88,6 +94,7 @@ const openProject = i => {
 							</p>
 							<br />
 							<p>${description}</p>
+							${i == 0 && extern ? button(extern[0], extern[1]) : ''}
 						</div>
 					</div>`
 			)

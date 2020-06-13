@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-gap: var(--space-00);
+	margin-bottom: var(--space-20);
 	/* column-width: 200px; */
 	/* column-gap: var(--space-00); */
 }
@@ -18,6 +19,15 @@
 	color: var(--color-front);
 	padding: 1px var(--space-03) 0px;
 	border-radius: var(--space-03);
+}
+
+.getintouch {
+	text-align: center;
+}
+
+.getintouch .button {
+	/* padding: var(--space-01) var(--space-00);
+	border-radius: var(--space-01); */
 }
 
 /* a.button.aligned {
