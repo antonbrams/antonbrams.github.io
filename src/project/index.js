@@ -15,11 +15,13 @@ const scroller = Lerp(
 		`)
 )
 
-const button = (name, url) =>
-	`<br />
-	<a class="button" href="${url}" target="blank">
-		${name}
-	</a>`
+const button = (i, list, extern) =>
+	(i == 0 || i == list.length - 1) && extern
+		? `<br />
+		<a class="button" href="${extern[1]}" target="blank">
+			${extern[0]}
+		</a>`
+		: ''
 
 const onScroll = e => {
 	Array.from(project.querySelectorAll('.section')).forEach(
@@ -86,15 +88,15 @@ const openProject = i => {
 			i == 0 ? 'center' : ['left', 'right'][i % 2]
 		sections.innerHTML = content
 			.map(
-				([_, title, description], i) =>
-					`<div class="section" data-section="${i}">
-						<div class="typo ${iToClass(i)}">
+				([_, title, description], n, list) =>
+					`<div class="section" data-section="${n}">
+						<div class="typo ${iToClass(n)}">
 							<p class="text_10 header">
 								${title}
 							</p>
 							<br />
 							<p>${description}</p>
-							${i == 0 && extern ? button(extern[0], extern[1]) : ''}
+							${button(n, list, extern)}
 						</div>
 					</div>`
 			)
