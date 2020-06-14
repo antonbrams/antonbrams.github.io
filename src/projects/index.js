@@ -2,7 +2,7 @@ document.querySelector('.projects').innerHTML = projects
 	.map(([name, content, [theme, bg, big]], i) => {
 		return `<div
 			class="preview ${big ? 'big' : ''} theme_${theme}"
-			onclick="openProject('${i}')"
+			onclick="openProjectAndSetURL('${i}')"
 			style="
 				background-color: ${bg};
 				box-shadow:

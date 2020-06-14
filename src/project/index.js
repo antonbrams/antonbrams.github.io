@@ -64,6 +64,13 @@ const mapContent = (project, file, i) => {
 		: `<div ${style}></div>`
 }
 
+const openProjectAndSetURL = i => {
+	openProject(i)
+	if (i)
+		window.history.pushState({}, '', `?project=${projects[i][0]}`)
+	else window.history.pushState({}, '', '?')
+}
+
 const openProject = i => {
 	project.classList[i ? 'add' : 'remove']('show')
 	document.body.style.overflow = i ? 'hidden' : null

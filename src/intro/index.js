@@ -14,18 +14,20 @@ window.addEventListener('scroll', e => {
 		.classList[
 			document.body.scrollTop > threshold ? 'add' : 'remove'
 		]('visible')
-	// const motivation = document.querySelector('.motivation')
-	// const rect = motivation.getBoundingClientRect()
-	// motivation.classList[
-	// 	rect.top < window.innerHeight - threshold ? 'add' : 'remove'
-	// ]('visible')
 })
 
 // preload first videos
 window.addEventListener('load', e => {
 	projects.forEach(([name, content, settings]) => {
 		const first = content[0][0]
-		// if (first.search(/.mp4|.mov/g) > -1)
 		preload(`./projects/${name}/${first}`)
 	})
+	// check address
+	const p = new URLSearchParams(window.location.search)
+	if (p.has('project')) {
+		const i = projects
+			.map(([name]) => name)
+			.indexOf(p.get('project'))
+		if (i > -1) openProject(i)
+	}
 })
