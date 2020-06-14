@@ -81,6 +81,15 @@
 	height: 100%;
 }
 
+.project .sections .section span {
+	display: block;
+	margin-top: var(--space-00);
+	font-size: 12px;
+	line-height: var(--line-height);
+	padding-top: 2px;
+	margin-bottom: -2px;
+}
+
 /* .project .sections .section .play {
 	position: fixed;
 	top: 30%;

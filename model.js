@@ -16,7 +16,7 @@ const projects = [
 			[
 				'2.jpg',
 				'Electronic skin for the bidirectional tactile communication between persons',
-				'If one person touches his arm, another can feel it. A Bauhaus "Cyborg" HCI project.',
+				'If one person touches his arm, another can feel it. A "Cyborg" HCI project. <span>Idea, PCB design, SMD soldering and software development at Bauhaus in 2019</span>',
 			],
 			[
 				'3.jpg',
@@ -57,7 +57,7 @@ const projects = [
 			[
 				'7.jpg',
 				'HUD experimental interface for Caretakers controlled by mouth clicks',
-				`"Care Robot" HCI project in cooperation with the industrial design department, Bauhaus 2018.`,
+				'"Care Robot" HCI project in cooperation with the industrial design department. <span>Idea, industrial design, hardware and software development at Bauhaus in 2018</span>',
 			],
 			[
 				'1.mp4',
@@ -99,7 +99,7 @@ const projects = [
 			[
 				'1.mp4',
 				'Dashboard design and programming for a futuristic selfdriving showcar',
-				'This Project was all about the future of the autonomous driving. How could the dashboard interface look like?',
+				'This Project was all about the future of the autonomous driving. How could the dashboard interface look like? <span>Concept development, graphic design and software development at MESO in 2017</span>',
 			],
 			[
 				'2.mp4',
@@ -129,7 +129,7 @@ const projects = [
 		],
 		['dark', 'hsl(45, 17%, 19%)', true],
 		[
-			'Full Project',
+			'Project Page',
 			'https://meso.design/en/projects/yanfeng-kinetic-seat-and-media-elements-for-autonomous-car-concept',
 		],
 	],
@@ -138,16 +138,33 @@ const projects = [
 		[
 			[
 				'5.mov',
-				'JavaScript, Cordova, IMU, Android, After Effects',
-				'UI Design and Programming.',
+				'Modular cockpit for concept sports car Hyundai RN30',
+				'The display systems simulate a lap on the Nürburgring based on real telemetric data. <span>Generative design and software development at MESO in 2016</span>',
 			],
-			['4.mov', dummy.title, dummy.description],
-			['2.jpg', dummy.title, dummy.description],
-			['3.jpg', dummy.title, dummy.description],
+			[
+				'3.jpg',
+				'The mobile interface design seamlessly blends into the interior design of the vehicle',
+				'Each module consists of a <i>Samsung Galaxy S6</i> smartphone and a power converter.',
+			],
+			[
+				'2.mp4',
+				'The first smartphone module is attached behind the steering wheel',
+				'It shows the gear, velocity, current rotation speed, and other critical car information.',
+			],
+			[
+				'4.mov',
+				'The steering wheel UI stays allways up!',
+				`The second module displays an interactive route simulation of the Nürburgring with the car's position, based on real telemetric data and imparts the feeling of a racing experience.`,
+			],
+			[
+				'6.mp4',
+				'Generative Design',
+				`The real telemetric data has been used to drive screen animations in <i>Adobe After Effects</i>. The resulting footage was playbacked in <i>Cordova</i> web sandbox on the <i>Android</i> system and rotated by the smartphone's IMU.`,
+			],
 		],
 		['dark', 'rgb(43, 65, 108)'],
 		[
-			'Sport Showcar',
+			'Project Page',
 			'https://meso.design/en/projects/hyundai-modular-cockpit-for-concept-sports-car',
 		],
 	],
@@ -156,12 +173,24 @@ const projects = [
 		[
 			[
 				'4.mp4',
-				'Collaborative Tool across Devices. Design & Functional Prototyping.',
-				'JavaScript, After Effects, Premiere, CGI, Illustrator',
+				'Intuitive digital system for collective brainstoms using multiple devices',
+				'BASF provides expert support for their customers in selecting the best materials for their application. Therefore it comes to collective brainstorms. <span>Concept development, software prototyping, moviemaking and CGI at MESO in 2018</span>',
 			],
-			['1.mov', dummy.title, dummy.description],
-			['2.mp4', dummy.title, dummy.description],
-			['3.mp4', dummy.title, dummy.description],
+			[
+				'1.mov',
+				'The customer scans the material, shares, discusses',
+				'By walking in the BASF Material Gallery, the customer scans materials and shares them on the wall',
+			],
+			[
+				'2.mp4',
+				'The coach logs in, brainstorm starts',
+				'The system reads <i>RFID</i> tags and automatically logs participants into the meeting room.',
+			],
+			[
+				'3.mp4',
+				'Brainstorm directly on the wall or from your device',
+				'The movie mockup was made with <i>green screen</i> technique, <i>2D tracking</i>, <i>Adobe After Effects</i> and <i>Adobe Premiere</i>. The functional prototype was implemented in <i>JavaScript</i> and <i>Node Js</i>, communicating via <i>WebSocket</i>.',
+			],
 		],
 		['light', 'hsl(232, 7%, 78%)', true],
 	],
@@ -170,33 +199,53 @@ const projects = [
 		[
 			[
 				'3.mp4',
-				'New Shape of Time. Full realization at Home.',
-				'JavaScript, Three.js',
+				'The experimental way to represent time and data in Virtual Reality',
+				'60 seconds are 1 minute. 60 minutes are 1 hour. If seconds were a helix, it would wrap around minutes. Minutes would wrap around hours... <span>Idea and software development at Bauhaus in 2017</span>',
 			],
-			['2.mp4', dummy.title, dummy.description],
-			['4.mp4', dummy.title, dummy.description],
-			['1.mp4', dummy.title, dummy.description],
+			[
+				'2.mp4',
+				'You see the perspective of time',
+				'The interface provides an easy navigation in 3D, using VR controller',
+			],
+			[
+				'4.mp4',
+				'You see the data in the past and future',
+				'The dataset did mockup a temperature change over the year timespan. You can read it by clicking on the radial graph.',
+			],
+			[
+				'1.mp4',
+				'You can fly through time',
+				'The interface utilizes <i>Three JS</i> framework and runs in the <i>Electron</i> application. <i>Integral map</i> algorhythm (learned in the <i>Image Analysis and Recognition</i> curse) has been utilized to drastically reduced the loading time of the mockup data.',
+			],
 		],
 		['dark', 'hsl(210, 10%, 7%)'],
 	],
 	[
 		'OnTime',
 		[
-			// [
-			// 	'https://www.youtube.com/watch?v=-O0U7h2WDmc&frags=pl%2Cwn',
-			// 	dummy.title,
-			// 	dummy.description,
-			// ],
 			[
 				'1.mp4',
-				'Interaction <a href="https://www.youtube.com/watch?v=-O0U7h2WDmc&frags=pl%2Cwn">Concept</a> to not forget a Pill. Full realization at Bauhaus.',
-				'After Effects, Film Making',
+				'Tangible interface to not forget a pill',
+				'Some people have a whole set of pills, that have to be taken in different intervals. The radial interface might help you to setup alarms the intuitiv way. This ring scan the packaging, so it knows the drug. <span>Idea, moviemaking and CGI at Bauhaus in 2017</span>',
 			],
-			['2.mp4', dummy.title, dummy.description],
-			['3.mp4', dummy.title, dummy.description],
-			['4.mov', dummy.title, dummy.description],
+			[
+				'2.mp4',
+				'The tangible interface is like alive',
+				'The ring blinks and vibrates to get your attention. As you lift it, it displays the name of the drug.',
+			],
+			[
+				'3.mp4',
+				'Take it everywhere',
+				'It might be shaped as a fitness band, so you can weare it. And yes... we used a tape for the mockup &#129323;',
+			],
+			[
+				'4.mov',
+				'It will never leave you in peace, until you scan the package',
+				'The video has been made with <i>After Effects</i> and lots of manual tracking',
+			],
 		],
 		['dark', 'hsl(352, 100%, 70%)'],
+		['Full Video', 'https://youtu.be/-O0U7h2WDmc'],
 	],
 	[
 		'KUKA',
@@ -294,6 +343,7 @@ const projects = [
 				'Snippets of some 3D Animations from Projects.',
 				'Cinema 4D',
 			],
+			['3.jpg', dummy.title, dummy.description],
 			['5.mov', dummy.title, dummy.description],
 			['1.mp4', dummy.title, dummy.description],
 			['2.mov', dummy.title, dummy.description],
@@ -340,9 +390,6 @@ const projects = [
 			],
 			['5.jpg', dummy.title, dummy.description],
 			['4.jpg', dummy.title, dummy.description],
-			['7.jpg', dummy.title, dummy.description],
-			['1.jpg', dummy.title, dummy.description],
-			['3.jpg', dummy.title, dummy.description],
 		],
 		['light', 'hsl(201, 100%, 81%)'],
 	],

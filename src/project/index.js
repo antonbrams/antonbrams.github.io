@@ -66,15 +66,14 @@ const mapContent = (project, file, i) => {
 
 const openProjectAndSetURL = i => {
 	openProject(i)
-	if (i)
-		window.history.pushState({}, '', `?project=${projects[i][0]}`)
-	else window.history.pushState({}, '', '?')
+	const st = (state = '') =>
+		window.history.replaceState({}, '', `?${state}`)
+	if (i > -1) st(`project=${projects[i][0]}`)
+	else st()
 }
 
 const openProject = i => {
-	project.classList[i ? 'add' : 'remove']('show')
-	document.body.style.overflow = i ? 'hidden' : null
-	if (i) {
+	if (i > -1) {
 		sections.scrollTop = 0
 		const [title, content, [theme, bg], extern] = projects[i]
 		// set theme
@@ -122,4 +121,6 @@ const openProject = i => {
 		)
 		cancel.classList.remove('end')
 	}
+	project.classList[i > -1 ? 'add' : 'remove']('show')
+	document.body.style.overflow = i > -1 ? 'hidden' : null
 }
