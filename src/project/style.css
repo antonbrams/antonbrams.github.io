@@ -90,14 +90,6 @@
 	margin-bottom: -2px;
 }
 
-/* .project .sections .section .play {
-	position: fixed;
-	top: 30%;
-	left: 50%;
-	border: none;
-	font-size: 4rem;
-} */
-
 .project .sections .section .typo {
 	max-width: 50ch;
 	pointer-events: auto;

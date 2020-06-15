@@ -251,54 +251,97 @@ const projects = [
 		'KUKA',
 		[
 			[
-				'3.mp4',
-				'Presenters for the Showroom. UI Storyboards and <a href="https://www.tisch13.com/en/projects/kuka-brand-experience/">Programming</a>.',
-				'VVVV, Illustrator',
+				'3.jpg',
+				'Digital presenter for the industry brand showroom',
+				`MESO and Tisch13 designed a massive showroom with a lot of interactive exponates. <span>Concept development, UI storyboards and software development at MESO in 2016</span>`,
 			],
-			['6.mov', dummy.title, dummy.description],
-			['2.jpg', dummy.title, dummy.description],
-			['4.jpg', dummy.title, dummy.description],
-			['1.jpg', dummy.title, dummy.description],
+			[
+				'1.jpg',
+				'Orange Intelligenz presenter',
+				`This presenter combines analog and digital. The tangible ring-pointer is made in a shape of the brand logo and is tracked by table's touchscreen.`,
+			],
+			[
+				'4.jpg',
+				'Move to select, rotate to scroll',
+				'The visitor can move the ring on the category of interest and get additional information. Once selected, by rotating a ring, the visitor can list between topics',
+			],
+			[
+				'2.mov',
+				'Debug mode',
+				`Floating categories shouldn't collide, so a custom collision detection was programmed, besides the actual application logic. This has been my first project by MESO and also very first experience with the famous <i>VVVV</i> software, which is, by the way, was co-created by MESO back in the days.`,
+			],
 		],
-		['dark', '#9D3300'],
+		['dark', 'hsl(19, 100%, 30%)'],
+		[
+			'Project Page',
+			'https://www.tisch13.com/en/projects/kuka-brand-experience/',
+		],
 	],
 	[
 		'Fraport',
 		[
 			[
 				'1.jpg',
-				'LED Panel Animation. Opening Animation & <a href="https://meso.design/en/projects/fraport-architectural-light-effect-for-brand-communication-in-international-airport">Intros</a>.',
-				'VVVV, Premiere',
+				'Digital brand communication for Frankfurt International Aeroport',
+				'MESO developed an adaptive real-time media data feed for the 435m LED stripe to form a harmonic impression with the advertisment.<span>Generative animation and video cut at MESO in 2016',
 			],
-			['3.jpg', dummy.title, dummy.description],
-			['2.jpg', dummy.title, dummy.description],
-			['4.jpg', dummy.title, dummy.description],
+			[
+				'5.mp4',
+				'Opening ceremony',
+				`My part in this big project was a montage of the footage, shown on the opening ceremony of Fraport's new redesign. The footage was composed in <i>Adobe Premiere</i>`,
+			],
+			[
+				'2.jpg',
+				'LED opening animation',
+				'Animation sequences has been created for the LED stripe and synced to the ceremony footage. The generative animation was done in <i>VVVV</i>.',
+			],
 		],
-		['light', 'hsl(234, 13%, 85%)'],
+		['dark', 'hsl(227, 100%, 20%)'],
+		[
+			'Project Page',
+			'https://meso.design/en/projects/fraport-architectural-light-effect-for-brand-communication-in-international-airport',
+		],
 	],
 	[
 		'Flux',
 		[
 			[
 				'1.mp4',
-				'Ambient live Decoration in a Bank. Typography, Choreography and <a href="https://neoanalog.io/flux/">Generative</a> Design.',
-				'OpenFrameworks, C++',
+				'Permanent installation in Volksbank',
+				'Natural phenomena invites visitors to dive into an immersive experience for all senses. <span>Typography, choreography and generative design at Neoanalog in 2015',
 			],
-			['3.mp4', dummy.title, dummy.description],
-			['2.mp4', dummy.title, dummy.description],
-			['4.mp4', dummy.title, dummy.description],
+			[
+				'3.mp4',
+				'Walls, screens, orchestra',
+				'Beautiful walls open a window into various worlds of nature, created with generative design. The whole experience is supported by a settle generativ background sound.',
+			],
+			[
+				'2.mp4',
+				'Water, Wind, Light',
+				`Flux can dynamically switch between three themes. I've been helping Neoanalog team to program some parts of this beautiful generative installation. Flux was implemented in <i>OpenFrameworks</i>.`,
+			],
+			[
+				'4.mp4',
+				'Digital Posters',
+				'Posters show opening times, events and news. Depending on the content, the typographical layout adapts generativity. All the posters are animated in sync. So the system for layout and choreography was also my duty.',
+			],
 		],
 		['dark', '#73522C'],
+		['Project Page', 'https://neoanalog.io/flux/'],
 	],
 	[
 		'ReMind',
 		[
 			[
 				'7.mov',
-				'Software remake of physical Calendar against Procrastination. Full realization at <a href="https://www.youtube.com/watch?v=gL_K9__scvM&frags=pl%2Cwn">Folkwang</a>.',
+				'Software remake of physical Calendar against Procrastination. Full realization at Folkwang.',
 				'JavaScript, After Effects',
 			],
-			['1.jpg', dummy.title, dummy.description],
+			[
+				'1.jpg',
+				dummy.title,
+				'<a href="http://www.pleasurabletroublemakers.com/remind-en" target="blank">ReMind</a>',
+			],
 			['2.jpg', dummy.title, dummy.description],
 			['3.jpg', dummy.title, dummy.description],
 			['6.mov', dummy.title, dummy.description],
@@ -306,13 +349,14 @@ const projects = [
 			['5.mov', dummy.title, dummy.description],
 		],
 		['dark', 'hsl(216, 100%, 2%)', true],
+		['Full Video', 'https://youtu.be/gL_K9__scvM'],
 	],
 	[
 		'Dance Dj',
 		[
 			[
 				'1.mp4',
-				'Bachelor Thesis for Intelligent Suit that composes Music. Full realization in <a href="https://www.youtube.com/watch?v=hTVp_bRUWas">Folkwang</a>.',
+				'Bachelor Thesis for Intelligent Suit that composes Music. Full realization in Folkwang.',
 				'C++, Ableton Live',
 			],
 			['4.mp4', dummy.title, dummy.description],
@@ -320,13 +364,14 @@ const projects = [
 			['2.mp4', dummy.title, dummy.description],
 		],
 		['light', 'hsl(185, 100%, 87%)', true],
+		['Full Video', 'https://youtu.be/hTVp_bRUWas'],
 	],
 	[
 		'Kitchen Dj',
 		[
 			[
 				'2.mp4',
-				'Make music with cooking. Full realisation in <a href="https://www.youtube.com/watch?v=WfmR7fv0_Gs">Folkwang</a>.',
+				'Make music with cooking. Full realisation in Folkwang.',
 				'MaxMSP, Garage Band, Illustrator, After Effects, Crafting',
 			],
 			['1.mp4', dummy.title, dummy.description],
@@ -334,6 +379,7 @@ const projects = [
 			['4.mp4', dummy.title, dummy.description],
 		],
 		['dark', 'hsl(240, 51%, 17%)'],
+		['Full Video', 'https://youtu.be/WfmR7fv0_Gs'],
 	],
 	[
 		'3D Graphics',
@@ -355,7 +401,7 @@ const projects = [
 		[
 			[
 				'2.mov',
-				'<a href="https://www.youtube.com/watch?v=HMAyucUVoSo">Home</a> Project, programmed in OpenFrameworks, animated in AE.',
+				'Home Project, programmed in OpenFrameworks, animated in AE.',
 				'OpenFrameworks, After Effects',
 			],
 			['5.mov', dummy.title, dummy.description],
@@ -364,13 +410,14 @@ const projects = [
 			['1.mov', dummy.title, dummy.description],
 		],
 		['light', 'hsl(0, 0%, 83%)'],
+		['Full Video', 'https://youtu.be/HMAyucUVoSo'],
 	],
 	[
 		'Teleporto',
 		[
 			[
 				'1.mp4',
-				'Moviemaking Project. Full realization in <a href="https://www.youtube.com/watch?v=X_ZUUzQBHqo&frags=pl%2Cwn">Folkwang</a>.',
+				'Moviemaking Project. Full realization in Folkwang.',
 				'Final Cut, After Effects',
 			],
 			['5.mov', dummy.title, dummy.description],
@@ -379,6 +426,7 @@ const projects = [
 			['3.mp4', dummy.title, dummy.description],
 		],
 		['dark', 'hsl(132, 10%, 18%)'],
+		['Full Video', 'https://youtu.be/X_ZUUzQBHqo'],
 	],
 	[
 		'Sketches',
@@ -412,15 +460,15 @@ const projects = [
 		'Apple Table',
 		[
 			[
-				'2.jpg',
+				'4.jpg',
 				'Selfmade Table like in Apple Stores.',
 				'Crafting',
 			],
-			['4.jpg', dummy.title, dummy.description],
+			['2.jpg', dummy.title, dummy.description],
+			['6.jpg', dummy.title, dummy.description],
 			['5.jpg', dummy.title, dummy.description],
 			['7.jpg', dummy.title, dummy.description],
 			['1.jpg', dummy.title, dummy.description],
-			['6.jpg', dummy.title, dummy.description],
 		],
 		['dark', 'hsl(39, 100%, 31%)'],
 	],
