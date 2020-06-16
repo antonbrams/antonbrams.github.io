@@ -68,14 +68,16 @@ const openProjectAndSetURL = i => {
 	openProject(i)
 	const st = (state = '') =>
 		window.history.replaceState({}, '', `?${state}`)
-	if (i > -1) st(`project=${projects[i][0]}`)
+	if (i > -1) st(`project=${Model.projects[i][0]}`)
 	else st()
 }
 
 const openProject = i => {
 	if (i > -1) {
 		sections.scrollTop = 0
-		const [title, content, [theme, bg], extern] = projects[i]
+		const [title, content, [theme, bg], extern] = Model.projects[
+			i
+		]
 		// set theme
 		toggleClasses(
 			project,

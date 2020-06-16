@@ -20,6 +20,7 @@
 	color: var(--color-front);
 	transition: 0.2s transform;
 	cursor: pointer;
+	background-color: var(--color-surface-bold);
 }
 
 .projects .preview:hover {

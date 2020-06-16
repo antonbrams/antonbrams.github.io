@@ -14,11 +14,11 @@ const badgify = text => {
 	return text
 }
 
-document.querySelector('.about').innerHTML = about
+document.querySelector('.about').innerHTML = Model.about
 	.map(
-		fact => `<div>
-		<p class='header'>${fact.title}</p>
-		${badgify(fact.body)}
+		([title, body]) => `<div>
+		<p class='header'>${title}</p>
+		${badgify(body)}
 	</div>`
 	)
 	.join('')
