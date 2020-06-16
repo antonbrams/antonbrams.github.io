@@ -23,8 +23,9 @@ document.querySelector('.about').innerHTML = Model.about
 	)
 	.join('')
 
-document
+const getintouch = document
 	.querySelector('.getintouch')
-	.querySelector('.button').href = `mailto:${
-	'hello' + '@' + 'antonbrams' + '.' + 'io'
-}`
+	.querySelector('.button')
+const email = 'hello' + '@' + 'antonbrams' + '.' + 'io'
+getintouch.href = `mailto:${email}`
+getintouch.innerHTML = email

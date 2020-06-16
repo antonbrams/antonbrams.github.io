@@ -1,3 +1,6 @@
+document.querySelector('.intro').querySelector('p').innerHTML =
+	Model.intro[0]
+
 // blur intro
 window.addEventListener('scroll', e => {
 	const threshold = 20
@@ -14,23 +17,4 @@ window.addEventListener('scroll', e => {
 		.classList[
 			document.body.scrollTop > threshold ? 'add' : 'remove'
 		]('visible')
-})
-
-// preload first videos
-window.addEventListener('load', e => {
-	Model.projects.forEach(project => {
-		if (project.length > 1) {
-			const [name, content] = project
-			const first = content[0][0]
-			preload(`./projects/${name}/${first}`)
-		}
-	})
-	// check address
-	const p = new URLSearchParams(window.location.search)
-	if (p.has('project')) {
-		const i = Model.projects
-			.map(([name]) => name)
-			.indexOf(p.get('project'))
-		if (i > -1) openProject(i)
-	}
 })

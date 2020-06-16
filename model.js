@@ -6,6 +6,22 @@ const dummy = {
 }
 
 const Model = {
+	intro: [
+		`From the <br />Experience Design up to tiny Bits in
+		the CPU`,
+
+		`"I develop concepts. My superpower is a broad
+		understanding from the experience design up to tiny
+		bits in the cpu and a wide skillset, to design each
+		aspect of a product in harmony. I have a good
+		intuition for the aesthetics as well as for the
+		technological domain. I like to drill down to the very
+		essence of things, therefore my design is simple,
+		functional and emotional. I hunt for good principles
+		anytime, anywhere. So I can integrate them into my
+		design system, to create beautiful and intuitiv
+		products in a fast, precise and consistent way."`,
+	],
 	about: [
 		[
 			'Experience',

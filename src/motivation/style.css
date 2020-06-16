@@ -1,0 +1,27 @@
+.motivation {
+	text-align: center;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Georgia;
+}
+
+.motivation p {
+	transition: 3s ease-out opacity, 2s ease-out transform;
+	opacity: 0;
+	transform: translateY(30vh);
+}
+
+.motivation.visible p {
+	opacity: 1;
+	transform: translateY(0vh);
+}
+
+@media screen and (max-width: 720px) {
+	.motivation p {
+		font-size: 16px;
+		line-height: var(--line-height);
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+}

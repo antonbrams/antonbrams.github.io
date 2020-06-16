@@ -1,0 +1,30 @@
+.loader {
+	display: grid;
+	z-index: 1000;
+	grid-auto-flow: column;
+	align-items: center;
+	text-align: center;
+	background: white;
+	transition: 1s visibility, 1s opacity;
+}
+
+body.loaded .loader {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.loader span {
+	position: relative;
+	animation: 0.5s pulse alternate infinite;
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(0.9);
+		opacity: 0.2;
+	}
+}
