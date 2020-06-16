@@ -17,6 +17,10 @@ body.scrolled > .background {
 	opacity: 0.3;
 }
 
+body.hide-intro > .background {
+	opacity: 0;
+}
+
 .intro {
 	display: grid;
 	grid-auto-flow: column;

@@ -2,7 +2,6 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	grid-auto-flow: dense;
-	grid-auto-rows: 350px;
 	grid-gap: var(--space-00);
 }
 
@@ -13,19 +12,28 @@
 
 .projects .preview {
 	position: relative;
+	/* center */
 	display: grid;
 	grid-auto-flow: column;
 	align-items: flex-end;
-	padding: var(--space-00);
+	/* other stuff */
+	padding: var(--space-00) var(--space-00);
 	color: var(--color-front);
-	transition: 0.2s transform;
 	cursor: pointer;
-	background-color: var(--color-surface-bold);
+	/* hover */
+	background-color: var(--bg);
+	/* transition: 0.3s box-shadow, 0.3s transform, 0.3s z-index;
+	--shadow: 0 30px 60px -20px;
+	box-shadow: var(--shadow) rgba(0, 0, 0, 0),
+		var(--shadow) rgba(0, 0, 0, 0); */
 }
 
-.projects .preview:hover {
-	transform: scale(1.03);
-}
+/* .projects .preview:hover {
+	z-index: 1;
+	transform: scale(1.01);
+	box-shadow: var(--shadow) rgba(0, 0, 0, 0.4),
+		var(--shadow) var(--bg);
+} */
 
 .projects .preview .content {
 	position: absolute;
@@ -47,15 +55,29 @@
 	max-width: 40ch;
 }
 
+.projects .description {
+	opacity: 0.5;
+	margin-top: var(--space-01);
+}
+
+@media screen and (max-width: 720px) {
+	.projects {
+		grid-auto-rows: 250px;
+	}
+}
+
 @media screen and (min-width: 720px) {
+	.projects {
+		grid-auto-rows: 400px;
+	}
 	.projects .preview.big {
 		grid-column: span 2;
 		/* grid-row: span 2; */
 	}
-	.projects .preview.big .header {
+	/* .projects .preview.big .header {
 		font-size: 48px;
 		line-height: calc(var(--line-height) * 3);
 		padding-top: 12px;
 		margin-bottom: -12px;
-	}
+	} */
 }

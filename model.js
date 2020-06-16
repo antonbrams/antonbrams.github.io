@@ -70,7 +70,7 @@ const Model = {
 					'We used the <i>Dragon Skin</i> Silicon to mimic the human skin. We 3d-printed forms to mold the eSkin casing.',
 				],
 			],
-			['dark', 'hsl(35, 21%, 50%)'],
+			['dark', 'rgb(255, 171, 133)'],
 		],
 		[
 			'InfoSight',
@@ -111,7 +111,7 @@ const Model = {
 					`The headset owns a monochromatic <i>LCD</i> with a selfmade lens-system, projecting a picture on a 45&#176; angled transparent mirror. Also we integrated a haptic actuator and a microphone. The headset is connected to a <i>Raspberry Pi</i>. Logic is implemented in <i>Node JS</i>.`,
 				],
 			],
-			['light', 'hsl(210, 100%, 84%)', true],
+			['light', 'rgb(200, 208, 215)', true],
 			['Full Video', 'https://youtu.be/HpON28BZiOs'],
 		],
 		[
@@ -148,7 +148,7 @@ const Model = {
 					'Screens are controlled by <i>Raspberry Pi</i>. Graphical Interfaces are made in <i>HTML</i> and <i>JavaScript</i> running within <i>Electron</i>.',
 				],
 			],
-			['dark', 'hsl(45, 17%, 19%)', true],
+			['dark', 'rgb(120, 95, 73)', true],
 			[
 				'Project Page',
 				'https://meso.design/en/projects/yanfeng-kinetic-seat-and-media-elements-for-autonomous-car-concept',
@@ -183,7 +183,7 @@ const Model = {
 					`The real telemetric data has been used to drive screen animations in <i>Adobe After Effects</i>. The resulting footage was playbacked in <i>Cordova</i> web sandbox on the <i>Android</i> system and rotated by the smartphone's IMU.`,
 				],
 			],
-			['dark', 'rgb(43, 65, 108)'],
+			['dark', 'rgb(105, 127, 152)'],
 			[
 				'Project Page',
 				'https://meso.design/en/projects/hyundai-modular-cockpit-for-concept-sports-car',
@@ -213,7 +213,7 @@ const Model = {
 					'The movie mockup was made with <i>green screen</i> technique, <i>2D tracking</i>, <i>Adobe After Effects</i> and <i>Adobe Premiere</i>. The functional prototype was implemented in <i>JavaScript</i> and <i>Node Js</i>, communicating via <i>WebSocket</i>.',
 				],
 			],
-			['light', 'hsl(232, 7%, 78%)', true],
+			['light', 'rgb(217, 217, 217)', true],
 		],
 		[
 			'TimeDNA',
@@ -239,7 +239,7 @@ const Model = {
 					'The interface utilizes <i>Three JS</i> framework and runs in the <i>Electron</i> application. <i>Integral map</i> algorhythm (learned in the <i>Image Analysis and Recognition</i> curse) has been utilized to drastically reduced the loading time of the mockup data.',
 				],
 			],
-			['dark', 'hsl(210, 10%, 7%)'],
+			['dark', 'rgb(23, 23, 23)'],
 		],
 		[
 			'OnTime',
@@ -265,7 +265,7 @@ const Model = {
 					'The video has been made with <i>After Effects</i> and lots of manual tracking',
 				],
 			],
-			['dark', 'hsl(352, 100%, 70%)'],
+			['dark', 'rgb(235, 77, 92)'],
 			['Full Video', 'https://youtu.be/-O0U7h2WDmc'],
 		],
 		[
@@ -292,7 +292,7 @@ const Model = {
 					`Floating categories shouldn't collide, so a custom collision detection was programmed, besides the actual application logic. This has been my first project by MESO and also very first experience with the famous <i>VVVV</i> software, which is, by the way, was co-created by MESO back in the days.`,
 				],
 			],
-			['dark', 'hsl(19, 100%, 30%)'],
+			['dark', 'rgb(175, 48, 0)'],
 			[
 				'Project Page',
 				'https://www.tisch13.com/en/projects/kuka-brand-experience/',
@@ -317,7 +317,7 @@ const Model = {
 					'Animation sequences has been created for the LED stripe and synced to the ceremony footage. The generative animation was done in <i>VVVV</i>.',
 				],
 			],
-			['dark', 'hsl(227, 100%, 20%)'],
+			['dark', 'rgb(38, 43, 88)'],
 			[
 				'Project Page',
 				'https://meso.design/en/projects/fraport-architectural-light-effect-for-brand-communication-in-international-airport',
@@ -347,7 +347,7 @@ const Model = {
 					'Posters show opening times, events and news. Depending on the content, the typographical layout adapts generativity. All the posters are animated in sync. So the system for layout and choreography was also my duty.',
 				],
 			],
-			['dark', 'hsl(32, 44%, 31%)'],
+			['light', 'rgb(215, 188, 140)'],
 			['Project Page', 'https://neoanalog.io/flux/'],
 		],
 		[
@@ -355,7 +355,7 @@ const Model = {
 			[
 				[
 					'7.mov',
-					'Calender against procrastination',
+					'Calendar against procrastination',
 					'This interface was a digital remake of a tangible object, created in a research, lead by prof. dr. Marc Hassenzahl. It was realized as a video concept and a Progressive Web App using <i>JavaScript</i>. <span>Idea, CGI, software at Folkwang in 2014</span>',
 				],
 				[
@@ -389,7 +389,7 @@ const Model = {
 					'Done/undone pucks can be accessed in the "dock" and can be put back to the timeline.',
 				],
 			],
-			['dark', 'hsl(216, 100%, 2%)', true],
+			['dark', 'rgb(37, 37, 37)', true],
 			['Full Video', 'https://youtu.be/gL_K9__scvM'],
 		],
 		[
@@ -416,7 +416,7 @@ const Model = {
 					`The suit based on <i>Arduino Mega</i> sends users's motion data via <i>Bluetooth</i> to the <i>C++</i> appication. Selfmade algorhythm matches rhythm, harmony and genre to dance moves. It generates composition note for note as <i>MIDI</i> commands and send them to <i>Ableton Live</i>. So music comes to life.`,
 				],
 			],
-			['light', 'hsl(203, 100%, 87%)', true],
+			['light', 'rgb(176, 224, 255)', true],
 			['Full Video', 'https://youtu.be/hTVp_bRUWas'],
 		],
 		[
@@ -443,7 +443,7 @@ const Model = {
 					`We've filmed the video during the night. The cut was made in <i>Final Cut Pro</i>. In order to show exactly, what's under the hood of the <i>MaxMSP</i> patch, i've put explanational graphics onto the concept video, made with <i>Illustrator</i> and <i>After Effects</i>.`,
 				],
 			],
-			['dark', 'hsl(240, 51%, 17%)'],
+			['dark', 'rgb(38, 43, 88)'],
 			['Full Video', 'https://youtu.be/WfmR7fv0_Gs'],
 		],
 		[
@@ -465,17 +465,17 @@ const Model = {
 					'Custom materials were made to let globe appear more realistic. Animation in <i>Cinema 4D</i>, composing in <i>Adobe After Effects</i>. <span>3D animation and composing at MESO in 2017</span>',
 				],
 				[
-					'1.mp4',
-					'Union Investment popup animation',
-					'This popup effect was achieved by using node-based programming in <i>Cinema 4D</i> <span>3D animation at dreiform in 2014</span>',
-				],
-				[
 					'2.mov',
 					'Starship',
 					'Homeproject. Doors, and landing gears are controlled by moving control sliders. Modeled and programmed with node-based approach in <i>Cinema 4D</i>. <span>3D animation at home in 2014</span>',
 				],
+				[
+					'1.mp4',
+					'Union Investment popup animation',
+					'This popup effect was achieved by using node-based programming in <i>Cinema 4D</i> <span>3D animation at dreiform in 2014</span>',
+				],
 			],
-			['dark', 'hsl(212, 13%, 49%)'],
+			['light', 'rgb(200, 208, 215)'],
 		],
 		[
 			'Logotype',
@@ -506,7 +506,7 @@ const Model = {
 					'I even programmed own framework in <i>OpenFrameworks</i> to create geometrically precise grids for logotype manufacturing programmatically. The source code was like a cooking recipe for a logo. Moreover i could change any circle position and radius that caused change in logotype proportion or stroke width.',
 				],
 			],
-			['light', 'hsl(0, 0%, 83%)'],
+			['light', 'rgb(233, 233, 233)'],
 			['Full Video', 'https://youtu.be/HMAyucUVoSo'],
 		],
 		[
@@ -550,7 +550,7 @@ const Model = {
 					'It was a challenge to get all proportions right &#128563; I think, skinny people are the hardest to draw because they have so many details. <span>Sketching at Folkwang in 2014</span>',
 				],
 			],
-			['light', 'hsl(201, 100%, 81%)'],
+			['dark', 'rgb(138, 90, 162)'],
 		],
 		[
 			'ToolBox',
@@ -591,7 +591,7 @@ const Model = {
 					`A trolley from eBay <br/> has been utilized for this duity.`,
 				],
 			],
-			['light', 'hsl(46, 100%, 83%)'],
+			['light', 'rgb(250, 220, 112)'],
 		],
 		[
 			'Apple Store Table',
@@ -627,7 +627,7 @@ const Model = {
 					`In reality the table is built out of multiplex and is not massive but hollow. So the obvious choice was to use the inner space for cables and hardware, that shouldn't been seen all the time.`,
 				],
 			],
-			['dark', 'hsl(39, 100%, 31%)'],
+			['light', 'rgb(200, 208, 215)'],
 		],
 	],
 }
