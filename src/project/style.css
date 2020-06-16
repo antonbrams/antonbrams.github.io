@@ -11,13 +11,15 @@
 	/* transition */
 	--ani: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 	transition: var(--ani) visibility, var(--ani) opacity,
-		var(--ani) transform;
+		var(--ani) transform, var(--ani) border-radius;
+	border-radius: var(--space-30);
 }
 
 .project.show {
 	visibility: visible;
 	opacity: 1;
 	transform: scale(1);
+	border-radius: 0;
 }
 
 .project .perspective {

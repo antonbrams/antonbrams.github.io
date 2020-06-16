@@ -9,18 +9,7 @@ const Model = {
 	intro: [
 		`From the <br />Experience Design up to tiny Bits in
 		the CPU`,
-
-		`"I develop concepts. My superpower is a broad
-		understanding from the experience design up to tiny
-		bits in the cpu and a wide skillset, to design each
-		aspect of a product in harmony. I have a good
-		intuition for the aesthetics as well as for the
-		technological domain. I like to drill down to the very
-		essence of things, therefore my design is simple,
-		functional and emotional. I hunt for good principles
-		anytime, anywhere. So I can integrate them into my
-		design system, to create beautiful and intuitiv
-		products in a fast, precise and consistent way."`,
+		`"I develop concepts. My superpower is a broad understanding from the experience design up to tiny bits in the cpu and a wide skillset, to design each aspect of a product in harmony. I have a good intuition for the aesthetics as well as for the technological domain. I like to drill down to the very essence of things, therefore my design is simple, functional and emotional. I hunt for good principles anytime, anywhere. So I can integrate them into my design system, to create beautiful and intuitiv products in a fast, precise and consistent way."`,
 	],
 	about: [
 		[
@@ -568,13 +557,39 @@ const Model = {
 			[
 				[
 					'2.jpg',
-					'Own project to organize all Instruments at Home.',
-					'Crafting',
+					'Container system for tool organization',
+					`I didn't have a proper system to store all my tools in a small appartment. So i decided to make my own.<span>Crafting at home in 2014</span>`,
 				],
-				['6.jpg', dummy.title, dummy.description],
-				['7.jpg', dummy.title, dummy.description],
-				['3.jpg', dummy.title, dummy.description],
-				['4.jpg', dummy.title, dummy.description],
+				[
+					'1.jpg',
+					'Multiplex',
+					`I've build 3 different box sizes for different kind of stuff. Holes on both sides of the box allow to handle the box comfortably.`,
+				],
+				[
+					'5.jpg',
+					'Miter cut',
+					'It allows to stack boxes on each other. The floor of the top box is a cover for the bottom one. Additional locks allow to fix the stack and use it as the whole.',
+				],
+				[
+					'7.jpg',
+					'Cover',
+					'It interacts tightly with the miter cut. The cover is made for the very top box to close the stack. It also has additional functionality - carring.',
+				],
+				[
+					'6.jpg',
+					'Pencils, soldering iron, camera rigs...',
+					`For small stuff i've put separators to keep order inside. For bigger stuff like camera, i've cut negativ foam forms to protect hardware from shaking.`,
+				],
+				[
+					'3.jpg',
+					'Carring a whole stack around?',
+					`I've created a transport module for the heavy stack in case i want to move some tools to the lab for a bigger project.`,
+				],
+				[
+					'4.jpg',
+					'Trolley',
+					`A trolley from eBay <br/> has been utilized for this duity.`,
+				],
 			],
 			['light', 'hsl(46, 100%, 83%)'],
 		],

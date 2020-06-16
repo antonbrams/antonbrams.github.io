@@ -4,8 +4,12 @@ body > .background {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right bottom;
-	transition: 1s opacity, 1s filter, 1s transform;
-	transform: scale(1.1);
+	transition: 1s opacity, 1s filter, 5s transform;
+	transform: translateX(5vw);
+}
+
+body.loaded > .background {
+	transform: translateX(0vw);
 }
 
 body.scrolled > .background {
@@ -13,16 +17,12 @@ body.scrolled > .background {
 	opacity: 0.3;
 }
 
-body.loaded > .background {
-	transform: scale(1);
-}
-
 .intro {
 	display: grid;
 	grid-auto-flow: column;
 	height: 100%;
-	transition: 1s transform;
-	transform: translateX(-10vw);
+	transition: 5s transform;
+	transform: translateX(-5vw);
 }
 
 body.loaded > .intro {
