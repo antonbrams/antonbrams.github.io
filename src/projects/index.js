@@ -8,14 +8,14 @@ document.querySelector('.projects').innerHTML = Model.projects
 				style="
 					background-color: ${bg};
 					box-shadow:
-						0 40px 80px -20px rgba(0,0,0,.4),
-						0 40px 80px -20px ${bg}
+						// 0 30px 60px -30px rgba(0,0,0,.4),
+						// 0 30px 60px -30px ${bg}
 					;
 				"
 			>
 				<div
 					class="content"
-					style="background-image: url('./projects/${name}/0.jpg')"
+					style="background-image: url('./projects/${name}/0-jpg')"
 				></div>
 				<div>
 					<p class="header text_10">${name}</p>

@@ -2,7 +2,7 @@
 	display: grid;
 	z-index: 1000;
 	grid-auto-flow: column;
-	align-items: center;
+	align-content: center;
 	text-align: center;
 	background: white;
 	transition: 1s visibility, 1s opacity;

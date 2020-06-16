@@ -77,7 +77,7 @@ const Model = {
 			[
 				[
 					'7.jpg',
-					'HUD experimental interface for Caretakers controlled by mouth clicks',
+					'HUD experimental interface for caretakers controlled by mouth clicks',
 					'"Care Robot" HCI project in cooperation with the industrial design department. The functional prototype was built in just 3 days. <span>Idea, industrial design, hardware and software at Bauhaus in 2018</span>',
 				],
 				[
