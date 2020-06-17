@@ -1,7 +1,9 @@
-window.addEventListener('load', e => {
-	document.body.classList.add('loaded')
-})
+document.body.style.overflow = 'hidden'
 
-setTimeout(() => {
+const hideLoader = () => {
 	document.body.classList.add('loaded')
-}, 10000)
+	document.body.style.overflow = null
+}
+
+window.addEventListener('load', hideLoader)
+setTimeout(hideLoader, 10000)
