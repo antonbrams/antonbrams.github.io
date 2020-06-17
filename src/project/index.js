@@ -61,7 +61,6 @@ const mapContent = (project, file, i) => {
 				loop="true"
 				playsinline="true"
 				preload="auto"
-				poster="./src/project/loader.gif"
 			>
 				Sorry, your browser doesn't support embedded videos.
 			</video>`
