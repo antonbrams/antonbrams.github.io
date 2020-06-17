@@ -55,7 +55,16 @@ const mapContent = (project, file, i) => {
 	const link = `./projects/${project}/${file}`
 	const classes = `src="${link}" data-content="${i}" class="content"`
 	return file.match('.mp4') || file.match('.mov')
-		? `<video ${classes} muted loop playsinline preload="auto">Loading...</video>`
+		? `<video
+				${classes}
+				muted="true"
+				loop="true"
+				playsinline="true"
+				preload="auto"
+				poster="./projects/${project}/0.jpg"
+			>
+				Sorry, your browser doesn't support embedded videos.
+			</video>`
 		: file.match('.jpg')
 		? `<img ${classes} />`
 		: `<div ${classes}></div>`
