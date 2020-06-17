@@ -33,12 +33,9 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 	}
 }
 
-const preload = url => {
-	// const img = new Image()
-	// img.src = url
-	// const link = document.createElement('link')
-	// link.href = url
-	// link.rel = 'preload'
-	// link.as = 'image'
-	// document.head.appendChild(link)
+const preloaded = []
+const preload = (i, url) => {
+	const img = new Image()
+	img.src = url
+	preloaded.push([i, img])
 }

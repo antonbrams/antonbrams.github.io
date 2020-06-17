@@ -1,12 +1,5 @@
 const projects = document.querySelector('.projects')
 
-Model.projects.forEach(project => {
-	if (project.length > 1) {
-		const [name, content, [theme, bg, big, locked]] = project
-		if (!locked) preload(`./projects/${name}/${content[0][0]}`)
-	}
-})
-
 window.addEventListener('scroll', e => {
 	const rect = projects.getBoundingClientRect()
 	addClass(
@@ -62,7 +55,10 @@ const showLocked = () =>
 				// unlock thumbnails
 				img.src = `${path}/0_unlocked.jpg`
 				// preload first contents in locked projects
-				setTimeout(preload(`${path}/${content[0][0]}`), 5000)
+				setTimeout(
+					preload(i, `${path}/${content[0][0]}`),
+					5000
+				)
 			}
 		}
 	)
