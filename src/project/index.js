@@ -45,39 +45,56 @@ const onScroll = e => {
 				else if (i % 2 == 1) scroller([-15, p, 5, 16])
 				else scroller([15, p, 5, -16])
 			}
-			if (i == list.length - 1) {
-				const atBottom = rect.top < 20
-				cancel.classList[atBottom ? 'add' : 'remove']('end')
-			}
+			if (i == list.length - 1)
+				addClass(cancel, rect.top < 20, 'end')
 		}
 	)
 }
 
 const mapContent = (project, file, i) => {
 	const link = `./projects/${project}/${file}`
-	const style = `src="${link}" data-content="${i}" class="content"`
+	const classes = `src="${link}" data-content="${i}" class="content"`
 	if (i > 0) preload(link)
 	return file.match('.mp4') || file.match('.mov')
-		? `<video ${style} muted loop playsinline"></video>`
+		? `<video ${classes} muted loop playsinline"></video>`
 		: file.match('.jpg')
-		? `<img ${style} />`
-		: `<div ${style}></div>`
+		? `<img ${classes} />`
+		: `<div ${classes}></div>`
 }
 
-const openProjectAndSetURL = i => {
-	openProject(i)
-	const st = (state = '') =>
-		window.history.replaceState({}, '', `?${state}`)
-	if (i > -1) st(`project=${Model.projects[i][0]}`)
-	else st()
+const setURL = i => {
+	const state = i > -1 ? `project=${Model.projects[i][0]}` : ''
+	window.history.replaceState({}, '', `?${state}`)
+}
+
+let unlocked = false
+
+const verifyProject = i => {
+	const [
+		title,
+		content,
+		[theme, bg, big, locked],
+		extern,
+	] = Model.projects[i]
+	if (unlocked || !locked) {
+		openProject(i)
+	} else {
+		if (prompt('Unlock with the password') == 'hello') {
+			openProject(i)
+			unlocked = true
+			setTimeout(showLocked, 1000)
+		} else openProject(-1)
+	}
 }
 
 const openProject = i => {
 	if (i > -1) {
-		sections.scrollTop = 0
-		const [title, content, [theme, bg], extern] = Model.projects[
-			i
-		]
+		const [
+			title,
+			content,
+			[theme, bg, locked],
+			extern,
+		] = Model.projects[i]
 		// set theme
 		toggleClasses(
 			project,
@@ -114,6 +131,7 @@ const openProject = i => {
 			.map(([file], i) => mapContent(title, file, i))
 			.join('')
 		// do on scroll
+		sections.scrollTop = 0
 		sections.addEventListener('scroll', onScroll)
 		onScroll()
 	} else {
@@ -123,6 +141,7 @@ const openProject = i => {
 		)
 		cancel.classList.remove('end')
 	}
-	project.classList[i > -1 ? 'add' : 'remove']('show')
+	addClass(project, i > -1, 'show')
 	document.body.style.overflow = i > -1 ? 'hidden' : null
+	setURL(i)
 }

@@ -2,7 +2,6 @@
 	z-index: 1;
 	color: var(--color-front);
 	/* background */
-	background-color: var(--color-back);
 	background-image: url('./blur.png');
 	background-size: cover;
 	/* open animation */

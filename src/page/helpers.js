@@ -4,6 +4,10 @@ const toggleClasses = (dom, classes, i) => {
 	})
 }
 
+const addClass = (dom, boolean, c) => {
+	dom.classList[boolean ? 'add' : 'remove'](c)
+}
+
 const Lerp = (fn, speed = 0.05, threshold = 1) => {
 	let active = false
 	let pTarget = null

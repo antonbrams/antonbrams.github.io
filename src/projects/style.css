@@ -6,7 +6,7 @@
 }
 
 .projects .preview,
-.projects .content {
+.projects img {
 	border-radius: var(--space-01);
 }
 
@@ -35,19 +35,15 @@
 		var(--shadow) var(--bg);
 } */
 
-.projects .preview .content {
+.projects .preview img {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-}
-
-.projects .preview .content {
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	filter: opacity(0.3) saturate(0);
+	object-fit: cover;
+	opacity: 0.3;
+	pointer-events: none;
 }
 
 .projects .preview p {

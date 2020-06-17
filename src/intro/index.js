@@ -3,18 +3,12 @@ document.querySelector('.intro').querySelector('p').innerHTML =
 
 // blur intro
 window.addEventListener('scroll', e => {
-	const threshold = 20
-	document.body.classList[
-		document.body.scrollTop > threshold ? 'add' : 'remove'
-	]('scrolled')
-	document
-		.querySelector('.indicator')
-		.classList[
-			document.body.scrollTop > threshold ? 'add' : 'remove'
-		]('hide')
-	document
-		.querySelector('.motivation')
-		.classList[
-			document.body.scrollTop > threshold ? 'add' : 'remove'
-		]('visible')
+	const scrolled = document.body.scrollTop > 20
+	addClass(document.body, scrolled, 'scrolled')
+	addClass(document.querySelector('.indicator'), scrolled, 'hide')
+	addClass(
+		document.querySelector('.motivation'),
+		scrolled,
+		'visible'
+	)
 })
