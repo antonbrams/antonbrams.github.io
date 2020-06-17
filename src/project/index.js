@@ -55,7 +55,7 @@ const mapContent = (project, file, i) => {
 	const link = `./projects/${project}/${file}`
 	const classes = `src="${link}" data-content="${i}" class="content"`
 	return file.match('.mp4') || file.match('.mov')
-		? `<video ${classes} muted loop playsinline preload="auto"></video>`
+		? `<video ${classes} muted loop playsinline preload="auto">Loading...</video>`
 		: file.match('.jpg')
 		? `<img ${classes} />`
 		: `<div ${classes}></div>`
