@@ -44,5 +44,7 @@ const preload = (i, url) => {
 		element.src = url
 		element.preload = true
 	}
+	element.classList.add('preload')
+	document.body.appendChild(element)
 	preloaded.push([i, element])
 }
