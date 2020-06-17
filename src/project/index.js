@@ -34,7 +34,7 @@ const onScroll = e => {
 			const content = project.querySelector(
 				`[data-content="${id}"]`
 			)
-			content.style.opacity = inViewport ? 0.7 : 0
+			content.style.opacity = inViewport ? 1 : 0
 			if (content.tagName == 'VIDEO')
 				content[inViewport ? 'play' : 'pause']()
 			if (inViewport) {
@@ -61,7 +61,7 @@ const mapContent = (project, file, i) => {
 				loop="true"
 				playsinline="true"
 				preload="auto"
-				poster="./projects/${project}/0.jpg"
+				poster="./src/project/loader.gif"
 			>
 				Sorry, your browser doesn't support embedded videos.
 			</video>`
