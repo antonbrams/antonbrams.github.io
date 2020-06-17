@@ -35,7 +35,14 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 
 const preloaded = []
 const preload = (i, url) => {
-	const img = new Image()
-	img.src = url
-	preloaded.push([i, img])
+	let element = null
+	if (url.search('.jpg') > -1) {
+		element = new Image()
+		element.src = url
+	} else {
+		element = document.createElement('video')
+		element.src = url
+		element.preload = true
+	}
+	preloaded.push([i, element])
 }

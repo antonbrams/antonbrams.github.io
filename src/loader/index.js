@@ -8,7 +8,6 @@ const hideLoader = () => {
 				preload(i, `./projects/${name}/${content[0][0]}`)
 		}
 	})
-	console.log(preloaded)
 }
 
 window.addEventListener('load', hideLoader)
