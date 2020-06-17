@@ -39,10 +39,10 @@
 	margin-left: calc(-0.5 * var(--size));
 	margin-top: calc(-0.5 * var(--size));
 	opacity: 0.7;
-	background-image: url('./loader.gif');
+	/* background-image: url('./loader.gif');
 	background-position: center;
 	background-size: 100px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 }
 
 .project .perspective .contents .content {

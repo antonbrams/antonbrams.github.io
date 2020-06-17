@@ -34,8 +34,8 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 }
 
 const preload = url => {
-	const img = new Image()
-	img.src = url
+	// const img = new Image()
+	// img.src = url
 	// const link = document.createElement('link')
 	// link.href = url
 	// link.rel = 'preload'
