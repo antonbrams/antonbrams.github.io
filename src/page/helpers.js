@@ -38,10 +38,13 @@ const preload = url => {
 	if (url.search('.jpg') > -1) {
 		element = document.createElement('img')
 		element.src = url
+		element.onload = () => document.body.removeChild(element)
 	} else {
 		element = document.createElement('video')
 		element.src = url
 		element.preload = true
+		element.oncanplaythrough = () =>
+			document.body.removeChild(element)
 	}
 	element.classList.add('preload')
 	document.body.appendChild(element)
