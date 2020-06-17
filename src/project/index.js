@@ -53,7 +53,7 @@ const onScroll = e => {
 
 const mapContent = (i, project, file, n) => {
 	const link =
-		i == 0
+		n == 0
 			? preloaded.find(p => p[0] == i)[1].src
 			: `./projects/${project}/${file}`
 	const classes = `src="${link}" data-content="${n}" class="content"`
