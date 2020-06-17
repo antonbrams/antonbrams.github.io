@@ -16,7 +16,7 @@
 	transform: translateY(0vh);
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 812px) {
 	.motivation {
 		max-width: 25ch;
 	}
@@ -28,7 +28,7 @@
 	}
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 812px) {
 	.motivation {
 		max-width: 40ch;
 	}

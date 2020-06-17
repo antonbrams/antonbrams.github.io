@@ -56,13 +56,13 @@
 	margin-top: var(--space-01);
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 812px) {
 	.projects {
 		grid-auto-rows: 250px;
 	}
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 812px) {
 	.projects {
 		grid-auto-rows: 400px;
 	}
