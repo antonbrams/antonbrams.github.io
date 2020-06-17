@@ -21,6 +21,6 @@ body.loaded .loader {
 @keyframes pulse {
 	to {
 		transform: scale(0.9);
-		color: silver;
+		opacity: 0.4;
 	}
 }
