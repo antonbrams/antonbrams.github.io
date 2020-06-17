@@ -79,7 +79,7 @@ const verifyProject = i => {
 	if (unlocked || !locked) {
 		openProject(i)
 	} else {
-		if (prompt('Unlock with the password') == 'hello') {
+		if (prompt('Enter pin to unlock') === 'hello') {
 			openProject(i)
 			unlocked = true
 			setTimeout(showLocked, 1000)
