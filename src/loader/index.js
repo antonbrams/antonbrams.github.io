@@ -1,8 +1,6 @@
-document.body.style.overflow = 'hidden'
-
 const hideLoader = () => {
 	document.body.classList.add('loaded')
-	document.body.style.overflow = null
+	document.body.style.overflow = 'auto'
 }
 
 window.addEventListener('load', hideLoader)

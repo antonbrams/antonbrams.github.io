@@ -150,6 +150,6 @@ const openProject = i => {
 		cancel.classList.remove('end')
 	}
 	addClass(project, i > -1, 'show')
-	document.body.style.overflow = i > -1 ? 'hidden' : null
+	document.body.style.overflow = i > -1 ? 'hidden' : 'auto'
 	setURL(i)
 }
