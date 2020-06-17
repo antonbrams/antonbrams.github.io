@@ -55,10 +55,7 @@ const showLocked = () =>
 				// unlock thumbnails
 				img.src = `${path}/0_unlocked.jpg`
 				// preload first contents in locked projects
-				setTimeout(
-					preload(i, `${path}/${content[0][0]}`),
-					5000
-				)
+				setTimeout(preload(`${path}/${content[0][0]}`), 5000)
 			}
 		}
 	)

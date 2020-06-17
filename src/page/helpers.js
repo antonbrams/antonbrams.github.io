@@ -33,11 +33,10 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 	}
 }
 
-const preloaded = []
-const preload = (i, url) => {
+const preload = url => {
 	let element = null
 	if (url.search('.jpg') > -1) {
-		element = new Image()
+		element = document.createElement('img')
 		element.src = url
 	} else {
 		element = document.createElement('video')
@@ -46,5 +45,4 @@ const preload = (i, url) => {
 	}
 	element.classList.add('preload')
 	document.body.appendChild(element)
-	preloaded.push([i, element])
 }

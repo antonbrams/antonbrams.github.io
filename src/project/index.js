@@ -51,11 +51,8 @@ const onScroll = e => {
 	)
 }
 
-const mapContent = (i, project, file, n) => {
-	const link =
-		n == 0
-			? preloaded.find(p => p[0] == i)[1].src
-			: `./projects/${project}/${file}`
+const mapContent = (project, file, n) => {
+	const link = `./projects/${project}/${file}`
 	const classes = `src="${link}" data-content="${n}" class="content"`
 	return file.match('.mp4') || file.match('.mov')
 		? `<video
@@ -138,7 +135,7 @@ const openProject = i => {
 			.join('')
 		// content
 		contents.innerHTML = content
-			.map(([file], n) => mapContent(i, title, file, n))
+			.map(([file], n) => mapContent(title, file, n))
 			.join('')
 		// do on scroll
 		sections.scrollTop = 0

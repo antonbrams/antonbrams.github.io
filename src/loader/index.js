@@ -5,7 +5,7 @@ const hideLoader = () => {
 		if (project.length > 1) {
 			const [name, content, [theme, bg, big, locked]] = project
 			if (!locked)
-				preload(i, `./projects/${name}/${content[0][0]}`)
+				preload(`./projects/${name}/${content[0][0]}`)
 		}
 	})
 }
