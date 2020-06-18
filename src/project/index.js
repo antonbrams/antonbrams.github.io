@@ -41,9 +41,13 @@ const onScroll = e => {
 				const y = rect.top + rect.height / 2
 				const p = (y - middle) * 0.02
 				// animate
-				if (i == 0) scroller([0, p - 15, 10, 0])
-				else if (i % 2 == 1) scroller([-15, p, 5, 16])
-				else scroller([15, p, 5, -16])
+				if (window.innerWidth < 815) {
+					scroller([15, p - 5, -5, -16])
+				} else {
+					if (i == 0) scroller([0, p - 15, 10, 0])
+					else if (i % 2 == 1) scroller([-15, p, 5, 15])
+					else scroller([15, p, 5, -15])
+				}
 			}
 			if (i == list.length - 1)
 				addClass(cancel, rect.top < 20, 'end')

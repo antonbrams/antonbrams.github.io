@@ -73,13 +73,6 @@
 	pointer-events: painted;
 }
 
-.project .sections .section {
-	display: grid;
-	grid-auto-flow: column;
-	align-items: center;
-	height: 100%;
-}
-
 .project .sections .section span {
 	display: block;
 	margin-top: var(--space-00);
@@ -121,11 +114,14 @@
 	.project .perspective .contents {
 		top: 40%;
 	}
-	.project .section .typo {
+	.project .sections .section {
+		padding-top: 70vh;
+	}
+	.project .sections .section .typo {
 		align-self: flex-end;
 		padding-bottom: var(--space-10);
 	}
-	.project .section:last-child {
+	.project .sections .section:last-child {
 		padding-bottom: var(--space-20);
 	}
 }
@@ -141,12 +137,18 @@
 	.project .perspective .contents {
 		top: 50%;
 	}
-	.project .section .typo.center {
+	.project .sections .section {
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+		height: 100vh;
+	}
+	.project .sections .section .typo.center {
 		justify-self: center;
 		align-self: flex-end;
 		padding-bottom: var(--space-20);
 	}
-	.project .section .typo.right {
+	.project .sections .section .typo.right {
 		justify-self: flex-end;
 	}
 }
