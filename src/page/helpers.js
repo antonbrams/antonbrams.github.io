@@ -34,15 +34,21 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 }
 
 const preload = url => {
-	if (url.search('.jpg') > -1) {
-		document.createElement('img').src = url
-	} else {
-		const video = document.createElement('video')
-		video.src = url
-		video.preload = true
-		video.classList.add('preload')
-		// video.oncanplaythrough = () =>
-		// 	document.body.removeChild(video)
-		document.body.appendChild(video)
-	}
+	const link = document.createElement('link')
+	link.href = url
+	link.rel = 'preload'
+	link.as = url.search('.jpg') > -1 ? 'image' : 'video'
+	document.head.appendChild(link)
 }
+
+// if () {
+// 	document.createElement('img').src = url
+// } else {
+// 	const video = document.createElement('video')
+// 	video.src = url
+// 	video.preload = true
+// 	video.classList.add('preload')
+// 	video.oncanplaythrough = () =>
+// 		document.body.removeChild(video)
+// 	document.body.appendChild(video)
+// }

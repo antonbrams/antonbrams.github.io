@@ -68,11 +68,7 @@ const mapContent = (project, file, n) => {
 	return `<div class="wrapper" data-c="${n}">${
 		file.match('.mp4') || file.match('.mov')
 			? `<video
-				${classes}
-				muted="true"
-				loop="true"
-				playsinline="true"
-				preload="auto"
+				${classes} muted loop playsinline preload
 				oncanplaythrough="hideLoader(this)"
 			>
 				Sorry, your browser doesn't support embedded videos.
