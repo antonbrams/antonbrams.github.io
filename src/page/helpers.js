@@ -34,21 +34,39 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 }
 
 const preload = url => {
-	const link = document.createElement('link')
-	link.href = url
-	link.rel = 'preload'
-	link.as = url.search('.jpg') > -1 ? 'image' : 'video'
-	document.head.appendChild(link)
+	if (url.search('.jpg') > -1) {
+		document.createElement('img').src = url
+	} else {
+		// const video = document.createElement('video')
+		// video.src = url
+		// video.preload = true
+		// video.classList.add('preload')
+		// video.oncanplaythrough = () =>
+		// 	document.body.removeChild(video)
+		// document.body.appendChild(video)
+		// var xhr = new XMLHttpRequest()
+		// xhr.open('GET', 'https://antonbrams.io' + url.substr(1), true)
+		// xhr.responseType = 'blob'
+		// xhr.onload = function () {
+		// 	if (this.status === 200) {
+		// 		const src = URL.createObjectURL(this.response)
+		//
+		// 		const video = document.createElement('video')
+		// 		// video.src = src
+		// 		video.autoplay = true
+		// 		video.width = 500
+		// 		video.height = 500
+		// 		// video.classList.add('preload')
+		// 		// video.oncanplaythrough = () =>
+		// 		// 	document.body.removeChild(video)
+		// 		document.body.appendChild(video)
+		// 		console.log(src)
+		// 	}
+		// }
+		// xhr.onerror = function () {
+		// 	console.log('err', arguments)
+		// }
+		// xhr.send()
+	}
+	// var images = document.querySelectorAll("img[src='meh.png']");
 }
-
-// if () {
-// 	document.createElement('img').src = url
-// } else {
-// 	const video = document.createElement('video')
-// 	video.src = url
-// 	video.preload = true
-// 	video.classList.add('preload')
-// 	video.oncanplaythrough = () =>
-// 		document.body.removeChild(video)
-// 	document.body.appendChild(video)
-// }
