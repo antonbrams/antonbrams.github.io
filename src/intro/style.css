@@ -65,7 +65,7 @@ body.loaded > .intro {
 	}
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 815px) {
 	.intro {
 		align-content: center;
 		justify-content: flex-start;

@@ -110,7 +110,7 @@
 	margin-right: calc(-0.5 * var(--space-10));
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 815px) {
 	.project .section,
 	.project .top .name {
 		padding: 0 var(--space-00);
@@ -130,7 +130,7 @@
 	}
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 815px) {
 	.project .section,
 	.project .top .name {
 		padding: 0 var(--space-20);
