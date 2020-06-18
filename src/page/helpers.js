@@ -43,6 +43,6 @@ const preload = url => {
 		video.classList.add('preload')
 		// video.oncanplaythrough = () =>
 		// 	document.body.removeChild(video)
-		// document.body.appendChild(video)
+		document.body.appendChild(video)
 	}
 }
