@@ -45,8 +45,8 @@ const onScroll = e => {
 					scroller([15, p - 5, -5, -16])
 				} else {
 					if (i == 0) scroller([0, p - 15, 10, 0])
-					else if (i % 2 == 1) scroller([-15, p, 5, 15])
-					else scroller([15, p, 5, -15])
+					else if (i % 2 == 1) scroller([-10, p, 5, 15])
+					else scroller([10, p, 5, -15])
 				}
 			}
 			if (i == list.length - 1)
