@@ -1,4 +1,4 @@
-const hideLoader = () => {
+const hideSplashScreen = () => {
 	document.body.classList.add('loaded')
 	document.body.style.overflow = 'auto'
 	Model.projects.forEach((project, i) => {
@@ -10,5 +10,5 @@ const hideLoader = () => {
 	})
 }
 
-window.addEventListener('load', hideLoader)
-setTimeout(hideLoader, 10000)
+window.addEventListener('load', hideSplashScreen)
+setTimeout(hideSplashScreen, 10000)

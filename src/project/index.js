@@ -31,12 +31,17 @@ const onScroll = e => {
 			const inViewport =
 				rect.top < middle && rect.bottom > middle
 			const id = section.getAttribute('data-section')
-			const content = project.querySelector(
+			const wrapper = project.querySelector(
 				`[data-content="${id}"]`
 			)
-			content.style.opacity = inViewport ? 1 : 0
-			if (content.tagName == 'VIDEO')
-				content[inViewport ? 'play' : 'pause']()
+			wrapper.style.opacity = inViewport ? 1 : 0
+			// if video
+			const video = wrapper.querySelector('video')
+			if (video) {
+				const promise = video[inViewport ? 'play' : 'pause']()
+				if (promise !== undefined)
+					promise.catch(error => {}).then(() => {})
+			}
 			if (inViewport) {
 				const y = rect.top + rect.height / 2
 				const p = (y - middle) * 0.02
@@ -55,23 +60,29 @@ const onScroll = e => {
 	)
 }
 
+function hideLoader(that) {
+	that.parentNode.classList.add('loaded')
+}
+
 const mapContent = (project, file, n) => {
 	const link = `./projects/${project}/${file}`
-	const classes = `src="${link}" data-content="${n}" class="content"`
-	return file.match('.mp4') || file.match('.mov')
-		? `<video
+	const classes = `src="${link}" class="content"`
+	return `<div class="wrapper" data-content="${n}">${
+		file.match('.mp4') || file.match('.mov')
+			? `<video
 				${classes}
 				muted="true"
 				loop="true"
 				playsinline="true"
 				preload="auto"
-				oncanplaythrough="this.classList.add('loaded')"
+				oncanplaythrough="hideLoader(this)"
 			>
 				Sorry, your browser doesn't support embedded videos.
 			</video>`
-		: file.match('.jpg')
-		? `<img ${classes} />`
-		: `<div ${classes}></div>`
+			: file.match('.jpg')
+			? `<img ${classes} onload="hideLoader(this)" />`
+			: `<div ${classes}></div>`
+	}</div>`
 }
 
 const setURL = i => {

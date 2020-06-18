@@ -41,25 +41,30 @@
 	opacity: 0.7;
 }
 
-.project .perspective .contents .content {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
+.project .perspective .contents .wrapper {
 	transition: 1s opacity;
 	opacity: 0;
 }
 
-.project .perspective .contents video:not(.loaded) {
-	width: 100%;
-	height: 56.25vmin;
+.project .perspective .contents .wrapper:not(.loaded):after {
+	content: '';
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	left: 50%;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 	background-image: url('./loader.gif');
-	background-color: rgba(100, 100, 100, 0.2);
-	background-size: 42px;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.project .perspective .contents .wrapper .content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 .project .section,
