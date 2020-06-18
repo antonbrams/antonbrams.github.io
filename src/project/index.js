@@ -30,10 +30,8 @@ const onScroll = e => {
 			const middle = window.innerHeight / 2
 			const inViewport =
 				rect.top < middle && rect.bottom > middle
-			const id = section.getAttribute('data-section')
-			const wrapper = project.querySelector(
-				`[data-content="${id}"]`
-			)
+			const id = section.getAttribute('data-s')
+			const wrapper = project.querySelector(`[data-c="${id}"]`)
 			wrapper.style.opacity = inViewport ? 1 : 0
 			// if video
 			const video = wrapper.querySelector('video')
@@ -67,7 +65,7 @@ function hideLoader(that) {
 const mapContent = (project, file, n) => {
 	const link = `./projects/${project}/${file}`
 	const classes = `src="${link}" class="content"`
-	return `<div class="wrapper" data-content="${n}">${
+	return `<div class="wrapper" data-c="${n}">${
 		file.match('.mp4') || file.match('.mov')
 			? `<video
 				${classes}
@@ -138,7 +136,7 @@ const openProject = i => {
 		sections.innerHTML = content
 			.map(
 				([_, title, description], n, list) =>
-					`<div class="section" data-section="${n}">
+					`<div class="section" data-s="${n}">
 						<div class="typo ${iToClass(n)}">
 							<p class="text_10 header">
 								${title}
