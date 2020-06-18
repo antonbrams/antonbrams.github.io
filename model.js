@@ -7,18 +7,17 @@ const dummy = {
 
 const Model = {
 	intro: [
-		`From the <br />Experience Design up to tiny Bits in
-		the CPU`,
-		`"I develop concepts. My superpower is a broad understanding from the experience design up to tiny bits in the cpu and a wide skillset, to design each aspect of a product in harmony. I have a good intuition for the aesthetics as well as for the technological domain. I like to drill down to the very essence of things, therefore my design is simple, functional and emotional. I hunt for good principles anytime, anywhere. So I can integrate them into my design system, to create great products in a fast, precise and consistent way."`,
+		`From experience design to tiny bits in the CPU`,
+		`"I develop concepts. My superpower is a broad understanding, from experience design to tiny bits in the CPU and a wide skill set, to design each aspect of a product in harmony. I have a good intuition for aesthetics, as well as, for the technological domain. I like to drill down to the very essence of things, therefore, my design is simple, functional and emotional. I hunt for good principles anytime, anywhere. So, I can integrate them into my design system, to create great products in a fast, precise and consistent way."`,
 	],
 	about: [
 		[
 			'Experience',
-			`3 years in total at <a target="blank" href="https://www.uni-weimar.de/en/media/chairs/computer-science-department/human-computer-interaction/research/hci-lab/">Interface Development Lab</a>, <a target="blank" href="http://meso.design">MESO</a>, <a target="blank" href="http://universal-interaction.com">Universal Interaction</a> and <a target="blank" href="http://dreiform.de">dreiform</a>. Studied Human-Computer Interaction [M.S.] at <a target='blank' href='https://www.uni-weimar.de/en/media/studies/human-computer-interaction-msc/'>Bauhaus</a> and Industrial Design [B.A.] at <a target='blank' href='https://www.folkwang-uni.de/home/gestaltung/studiengaenge/industrial-design/industrial-design-ba/'>Folkwang</a>.`,
+			`3 years work experience at <a target="blank" href="https://www.uni-weimar.de/en/media/chairs/computer-science-department/human-computer-interaction/research/hci-lab/">Interface Development Lab</a>, <a target="blank" href="http://meso.design">MESO</a>, <a target="blank" href="http://universal-interaction.com">Universal Interaction</a> and <a target="blank" href="http://dreiform.de">dreiform</a>. Studied Human-Computer Interaction [M.S.] at <a target='blank' href='https://www.uni-weimar.de/en/media/studies/human-computer-interaction-msc/'>Bauhaus</a> and Industrial Design [B.A.] at <a target='blank' href='https://www.folkwang-uni.de/home/gestaltung/studiengaenge/industrial-design/industrial-design-ba/'>Folkwang</a>.`,
 		],
 		[
 			'Fields',
-			'Vision, Concept Development, Usability, UX, UI, Modeling, Mechanics, Software Engineering, Hardware Design, Generative Design, Presentation, Motiongraphics, Film, CGI, Sound Design, Choreography...',
+			'Vision, Concept Development, Usability, UX, UI, Modeling, Mechanics, Software Engineering, Hardware Design, Generative Design, Presentation, motion graphics, Film, CGI, Sound Design, Choreography...',
 		],
 		[
 			'Tools',
@@ -36,38 +35,38 @@ const Model = {
 			[
 				[
 					'2.jpg',
-					'Electronic skin for the bidirectional tactile communication between persons',
-					'If one person touches his arm, another can feel it. A "Cyborg" HCI project. <span>Idea, PCB design, SMD soldering and software at Bauhaus in 2019</span>',
+					'Electronic skin for the bidirectional tactile communication between people',
+					'If one person touches his arm, another can feel it. "Cyborg" HCI project. <span>Idea, PCB design, SMD soldering and software at Bauhaus in 2019</span>',
 				],
 				[
 					'3.jpg',
-					'The tactile and visual information is transmitted to another persons arm',
-					'The eSkin consists out of single tactile pixels',
+					`The tactile and visual information is transmitted to another person's arm`,
+					'The eSkin consists of single tactile pixels',
 				],
 				[
 					'7.jpg',
 					'eSkin pixels',
-					'Each pixel has a force sensor, led and a vibrational motor. Powered by <i>ATTiny85</i> Chip.',
+					'Each pixel has a force sensor, led and a vibrational motor, powered by <i>ATTiny85</i> Chip.',
 				],
 				[
 					'5.jpg',
 					'Pixels are connected parallely with the Main Unit',
-					'We used <i>I<sup>2</sup>C</i> to communicate with 31 pixel individually.',
+					'We used <i>I<sup>2</sup>C</i> to communicate with 31 pixels individually.',
 				],
 				[
 					'4.mp4',
-					'One Unit speaks to another. Wirelessly.',
+					'One Unit speaks to another, wirelessly.',
 					`The Main Unit based on an <i>Arduino Feather</i> transfers user's touch wirelessly via <i>433Mhz Antenna</i>.`,
 				],
 				[
 					'1.jpg',
 					'You can see the touch',
-					'eSkin acts as a low res screen, so you can see, where your eSkin partner touches himself.',
+					'eSkin acts as a low res screen, so you can see where your eSkin partner touches himself.',
 				],
 				[
 					'6.jpg',
 					'Materials that feel natural',
-					'We used the <i>Dragon Skin</i> Silicon to mimic the human skin. We 3d-printed forms to mold the eSkin casing.',
+					'We used the <i>Dragon Skin</i> Silicone to mimic the human skin. We 3d-printed forms to mold the eSkin casing.',
 				],
 			],
 			['dark', 'rgb(209, 112, 67)', false, false],
@@ -87,28 +86,28 @@ const Model = {
 				],
 				[
 					'2.mov',
-					'The system recognizes automatically, who is in a front of the caretaker',
+					'The system recognizes automatically, who is in front of the caretaker',
 					'We use Bluetooth Low Energy Trackers, to give our system a context.',
 				],
 				[
 					'3.mov',
-					'The caretaker sees in the HUD daily routines, that have to be performed on the patient',
-					`Depending on the context InfoSight loads the patient's Tasks to the HUD and notifies the caretaker with a haptic pulse.`,
+					'The caretaker sees in the HUD the daily routines, that have to be performed on the patient',
+					`Depending on the context InfoSight loads the patient's tasks to the HUD and notifies the caretaker with a haptic pulse.`,
 				],
 				[
 					'4.mov',
-					'Caretaker is able to mark Tasks as done with his mouth',
-					`Clicking patterns, made by the caretaker's mouth, are catched by the microphone, and intepret by our algorhythm. The associated todo is marked as done.`,
+					'Caretaker is able to mark tasks as done using his mouth',
+					`No hands or voice commands are required. Silent clicking patterns, made by the caretaker's mouth, are catched by the microphone, and interpreted by our algorithm. The associated "todo" is marked as done.`,
 				],
 				[
 					'5.mov',
 					`InfoSight updates the patient's account`,
-					'Our prototype utilizes <i>Google Calender</i> to keep track of each patient',
+					'Our prototype utilizes <i>Google Calendar</i> to keep track of each patient',
 				],
 				[
 					'6.jpg',
 					'The prototype is based on Raspberry Pi',
-					`The headset owns a monochromatic <i>LCD</i> with a selfmade lens-system, projecting a picture on a 45&#176; angled transparent mirror. Also we integrated a haptic actuator and a microphone. The headset is connected to a <i>Raspberry Pi</i>. Logic is implemented in <i>Node JS</i>.`,
+					`The headset owns a monochromatic <i>LCD</i> with a selfmade lens-system, projecting a picture on a 45&#176; angled transparent mirror. Also we integrated a haptic actuator and a microphone. The headset is connected to a <i>Raspberry Pi</i>. The logic is implemented in <i>Node JS</i>.`,
 				],
 			],
 			['light', 'rgb(200, 208, 215)', true, false],
@@ -119,32 +118,32 @@ const Model = {
 			[
 				[
 					'1.mp4',
-					'Dashboard design and programming for a futuristic selfdriving showcar',
-					'This Project was all about the future of the autonomous driving. How could the dashboard interface look like? <span>Concept, graphic design and software at MESO in 2017</span>',
+					'Dashboard design and programming for a futuristic self driving showcar',
+					'This Project was all about the future of autonomous driving. How could the dashboard interface look like? <span>Concept, graphic design and software at MESO in 2017</span>',
 				],
 				[
 					'2.mp4',
 					`Car's environment adapts to different driving modes`,
-					'You choose between manual or autonomous drive. In the manual mode you see navigation and a rear camera view. The interface is implemented in <i>VVVV</i>.',
+					'The user chooses between manual or autonomous drive. In the manual, the user sees navigation and a rear camera view. The interface is implemented in <i>VVVV</i>.',
 				],
 				[
 					'5.jpg',
 					'The autonomous mode turns the car into a living room',
-					'So the dashboard shows media selection. You can control it from the central console.',
+					'So, the dashboard shows media selection. The user can control it from the central console.',
 				],
 				[
 					'4.mp4',
-					'The ceiling changes its texture. Seats are making more space by moving back.',
+					'The ceiling changes its texture. Seats make more space by rearranging themselves.',
 					'All the components are controlled via <i>MQTT</i> protocol.',
 				],
 				[
 					'3.mp4',
 					'The central console',
-					'Everything is controlled via central console, that is easy to access. The interface is implemented in <i>HTML</i> and <i>JavaScript</i>.',
+					'Everything is controlled via a central console that is easy to access. The interface is implemented in <i>HTML</i> and <i>JavaScript</i>.',
 				],
 				[
 					'6.jpg',
-					'Door screens displays from windows control up to fitness statistics',
+					'Door screens display from window control up to fitness statistics',
 					'Screens are controlled by <i>Raspberry Pi</i>. Graphical Interfaces are made in <i>HTML</i> and <i>JavaScript</i> running within <i>Electron</i>.',
 				],
 			],
@@ -174,8 +173,8 @@ const Model = {
 				],
 				[
 					'4.mov',
-					'The steering wheel UI stays allways up!',
-					`The second module displays an interactive route simulation of the Nürburgring with the car's position, based on real telemetric data and imparts the feeling of a racing experience.`,
+					'The steering wheel UI stays always up!',
+					`The second module displays an interactive route simulation of the Nürburgring with the car's position, based on real telemetric data and conveys the feeling of a racing experience.`,
 				],
 				[
 					'6.mp4',
@@ -195,21 +194,21 @@ const Model = {
 				[
 					'4.mp4',
 					'Intuitive digital system for collective brainstoms using multiple devices',
-					'BASF provides expert support for their customers in selecting the best materials for their application. Therefore it comes to collective brainstorms. <span>Concept, software prototyping, moviemaking and CGI at MESO in 2018</span>',
+					'BASF provides expert support for their customers in selecting the best materials for their application. Therefore, it comes to collective brainstorms. <span>Concept, software prototyping, filmmaking and CGI at MESO in 2018</span>',
 				],
 				[
 					'1.mov',
-					'The customer scans the material, shares, discusses',
+					'The customer scans the material, shares and discusses',
 					'By walking in the BASF Material Gallery, the customer scans materials and shares them on the wall',
 				],
 				[
 					'2.mp4',
-					'The coach logs in, brainstorm starts',
-					'The system reads <i>RFID</i> tags and automatically logs participants into the meeting room.',
+					'The coach logs in and the brainstorm starts',
+					'The system reads <i>RFID</i> tags, and automatically logs participants into the meeting room.',
 				],
 				[
 					'3.mp4',
-					'Brainstorm directly on the wall or from your device',
+					'Brainstorm happens directly on the wall or from your device',
 					'The movie mockup was made with <i>green screen</i> technique, <i>2D tracking</i>, <i>Adobe After Effects</i> and <i>Adobe Premiere</i>. The functional prototype was implemented in <i>JavaScript</i> and <i>Node Js</i>, communicating via <i>WebSocket</i>.',
 				],
 			],
@@ -236,7 +235,7 @@ const Model = {
 				[
 					'1.mp4',
 					'You can fly through time',
-					'The interface utilizes <i>Three JS</i> framework and runs in the <i>Electron</i> application. <i>Integral map</i> algorhythm (learned in the <i>Image Analysis and Recognition</i> curse) has been utilized to drastically reduced the loading time of the mockup data.',
+					'The interface utilizes <i>Three JS</i> framework and runs in the <i>Electron</i> application. <i>Integral map</i> algorithm (learned in the <i>Image Analysis and Recognition</i> course) has been utilized to drastically reduce the loading time of the mockup data.',
 				],
 			],
 			['dark', 'rgb(23, 23, 23)', false, false],
@@ -247,17 +246,17 @@ const Model = {
 				[
 					'1.mp4',
 					'Tangible interface to not forget a pill',
-					'Some people have a whole set of pills, that have to be taken in different intervals. The radial interface might help you to setup alarms the intuitiv way. This ring scan the packaging, so it knows the drug. <span>Idea, moviemaking and CGI at Bauhaus in 2017</span>',
+					'Some people have a whole set of pills that have to be taken in different intervals. The radial interface might help you to setup alarms the intuitive way. This ring scans the packaging, so it knows the medicine. <span>Idea, filmmaking and CGI at Bauhaus in 2017</span>',
 				],
 				[
 					'2.mp4',
-					'The tangible interface is like alive',
+					'The tangible interface is almost alive',
 					'The ring blinks and vibrates to get your attention. As you lift it, it displays the name of the drug.',
 				],
 				[
 					'3.mp4',
 					'Take it everywhere',
-					'It might be shaped as a fitness band, so you can weare it. And yes... we used a tape for the mockup &#129323;',
+					'It might be shaped as a fitness band, so you can wear it. And yes... we used a tape for the mockup &#129323;',
 				],
 				[
 					'4.mov',
@@ -274,12 +273,12 @@ const Model = {
 				[
 					'3.jpg',
 					'Digital presenter for the industry brand showroom',
-					`MESO and Tisch13 designed a massive showroom with a lot of interactive exponates. <span>Concept, storyboards and software at MESO in 2016</span>`,
+					`MESO and Tisch13 designed a massive showroom with a lot of interactive exhibits. <span>Concept, storyboards and software at MESO in 2016</span>`,
 				],
 				[
 					'1.jpg',
 					'Orange Intelligenz presenter',
-					`This presenter combines analog and digital. The tangible ring-pointer is made in a shape of the brand logo and is tracked by table's touchscreen.`,
+					`This presenter combines analog and digital. The tangible ring-pointer is made in the shape of the brand logo and is tracked by the table's touchscreen.`,
 				],
 				[
 					'4.jpg',
@@ -289,7 +288,7 @@ const Model = {
 				[
 					'2.mov',
 					'Debug mode',
-					`Floating categories shouldn't collide, so a custom collision detection was programmed, besides the actual application logic. This has been my first project by MESO and also very first experience with the famous <i>VVVV</i> software, which is, by the way, was co-created by MESO back in the days.`,
+					`Floating categories shouldn't collide, so a custom collision detection was programmed, besides the actual application logic. This was my first project with MESO and also my very first experience with the famous <i>VVVV</i> software, which is, by the way, was co-created by MESO back in the days.`,
 				],
 			],
 			['dark', 'rgb(175, 48, 0)', false, true],
@@ -303,7 +302,7 @@ const Model = {
 			[
 				[
 					'1.jpg',
-					'Digital brand communication for Frankfurt International Aeroport',
+					'Digital brand communication for Frankfurt International Airport',
 					'MESO developed an adaptive real-time media data feed for the 435m LED stripe to form a harmonic impression with the advertisment.<span>Generative animation and video cut at MESO in 2016',
 				],
 				[
@@ -314,7 +313,7 @@ const Model = {
 				[
 					'2.jpg',
 					'LED opening animation',
-					'Animation sequences has been created for the LED stripe and synced to the ceremony footage. The generative animation was done in <i>VVVV</i>.',
+					'Animation sequences were created for the LED stripe and synced to the ceremony footage. The generative animation was done in <i>VVVV</i>.',
 				],
 			],
 			['dark', 'rgb(38, 43, 88)', false, true],
@@ -334,11 +333,11 @@ const Model = {
 				[
 					'3.mp4',
 					'Walls, screens, orchestra',
-					'Beautiful walls open a window into various worlds of nature, created with generative design. The whole experience is supported by a settle generativ background sound.',
+					'Beautiful walls open a window into various worlds of nature, created with generative design. The whole experience is supported by a settled generative background sound.',
 				],
 				[
 					'2.mp4',
-					'Water, Wind, Light',
+					'Water, wind, light',
 					`Flux can dynamically switch between three themes. I've been helping Neoanalog team to program some parts of this beautiful generative installation. Flux was implemented in <i>OpenFrameworks</i>.`,
 				],
 				[
@@ -356,12 +355,12 @@ const Model = {
 				[
 					'7.mov',
 					'Calendar against procrastination',
-					'This interface was a digital remake of a tangible object, created in a research, lead by prof. dr. Marc Hassenzahl. It was realized as a video concept and a Progressive Web App using <i>JavaScript</i>. <span>Idea, CGI, software at Folkwang in 2014</span>',
+					'This interface was a digital remake of a tangible object, created in a research, led by prof. dr. Marc Hassenzahl. It was realized as a video concept and a Progressive Web App using <i>JavaScript</i>. <span>Idea, CGI, software at Folkwang in 2014</span>',
 				],
 				[
 					'1.jpg',
 					'Ring rotates, pucks are falling',
-					`Pucks are user's todos, and the ring is a "one month" clock. Once the right day hits, the puck falls on the floor and forces you to engage into decision process - do it now or later. ReMind in depth <a href="http://www.pleasurabletroublemakers.com/remind-en" target="blank">here</a>.`,
+					`Pucks are user's todos, and the ring is a "one month" clock. Once the right day hits, the puck falls on the floor and forces you to engage into the decision process - do it now or later. ReMind in depth <a href="http://www.pleasurabletroublemakers.com/remind-en" target="blank">here</a>.`,
 				],
 				[
 					'2.jpg',
@@ -371,12 +370,12 @@ const Model = {
 				[
 					'3.jpg',
 					'Bluescreen',
-					'Once the ReMind concept was adapted, it was time to express it in the video. First time using bluescreen in this context. <i>Adobe After Effects</i> has been used to create the concept video.',
+					'Once the ReMind concept was adapted, it was time to express it in a video. It was the first time using bluescreen in this context. <i>Adobe After Effects</i> was used to create the concept video.',
 				],
 				[
 					'6.mov',
 					'You just put pucks on the timeline, like in reality',
-					'Zoomable timeline allows user to overcome constrains of the small smartphone viewport.',
+					'Zoomable timeline allows users to overcome constraints of the small smartphone viewport.',
 				],
 				[
 					'4.mov',
@@ -398,22 +397,22 @@ const Model = {
 				[
 					'1.mp4',
 					'Bachelor Thesis: Smart suit produces music to your dance moves',
-					'Imagine, you could play music without mastering an instrument. But what could be the interface? We all have it - our body. <span>Idea, software, music, moviemaking, CGI at Folkwang in 2015</span>',
+					'Imagine, you could play music without mastering an instrument. But what could be the interface? We all have it - our body. <span>Idea, software, music, filmmaking, CGI at Folkwang in 2015</span>',
 				],
 				[
 					'4.mp4',
 					'You dance, you compose the music',
-					'Selfmade generative algorhythm inteprets your body expressions and composes structured music. Like you listening the radio.',
+					'Selfmade generative algorithm interprets your body expressions and composes structured music. Like if you were listening to the radio.',
 				],
 				[
 					'3.mp4',
 					`Disco, Funk, Electro...Halftime, Doubletime...`,
-					`I've used pseudo random noise generator, with current time as a seed, fed through math formulas, based on modulo operation, to generate cyclic loops. These formulas described probable occurence of a note in time and pitch for a particular genre. So drums, bass lines, chords and solos can be generated with infinite variations.`,
+					`I've used a pseudo random noise generator, with current time as a seed, fed through math formulas, based on modulo operation, to generate cyclic loops. These formulas described probable occurrence of a note in time and pitch for a particular genre. So drums, bass lines, chords and solos can be generated with infinite variations.`,
 				],
 				[
 					'2.mp4',
 					'Setup',
-					`The suit based on <i>Arduino Mega</i> sends users's motion data via <i>Bluetooth</i> to the <i>C++</i> appication. Selfmade algorhythm matches rhythm, harmony and genre to dance moves. It generates composition note for note as <i>MIDI</i> commands and send them to <i>Ableton Live</i>. So music comes to life.`,
+					`The suit based on <i>Arduino Mega</i> sends user's motion data via <i>Bluetooth</i> to the <i>C++</i> application. Selfmade algorithm matches rhythm, harmony and genre to dance moves. It generates composition note for note as <i>MIDI</i> commands and send them to <i>Ableton Live</i>. So music comes to life.`,
 				],
 			],
 			['light', 'rgb(215, 239, 255)', true, false],
@@ -425,12 +424,12 @@ const Model = {
 				[
 					'2.mp4',
 					'Make music while cooking',
-					`Modern live is about acceleration. But sometimes you want to enjoy the process. Location - kitchen, task - deceleration. What about DJ'ing while cooking? Project was made in cooperation with Siemens and Bosch. <span>Idea, software, hardware, music, filmmaking, CGI at Folkwang in 2014</span>`,
+					`Modern life is about acceleration. But sometimes you want to enjoy the process. Location - kitchen, task - deceleration. What about DJ'ing while cooking? Project was made in cooperation with Siemens and Bosch. <span>Idea, software, hardware, music, filmmaking, CGI at Folkwang in 2014</span>`,
 				],
 				[
 					'1.mp4',
 					'The whole kitchen is your DJ set',
-					'Food items are intruments. Tools are modifiers. The final dish is the highest point in the composition. Can you play solo with your knife? What happens, if you close the pot?',
+					'Food items are instruments. Tools are modifiers. The final dish is the highest point in the composition. Can you play solo with your knife? What happens, if you close the pot?',
 				],
 				[
 					'4.mp4',
@@ -439,8 +438,8 @@ const Model = {
 				],
 				[
 					'3.mp4',
-					'Moviemaking and CGI',
-					`We've filmed the video during the night. The cut was made in <i>Final Cut Pro</i>. In order to show exactly, what's under the hood of the <i>MaxMSP</i> patch, i've put explanational graphics onto the concept video, made with <i>Illustrator</i> and <i>After Effects</i>.`,
+					'Filmmaking and CGI',
+					`We've filmed the video during the night. The cut was made in <i>Final Cut Pro</i>. In order to show exactly what's under the hood of the <i>MaxMSP</i> patch, i've put explanational graphics onto the concept video, made with <i>Illustrator</i> and <i>After Effects</i>.`,
 				],
 			],
 			['dark', 'rgb(38, 43, 88)', false, false],
@@ -456,13 +455,13 @@ const Model = {
 				],
 				[
 					'3.jpg',
-					'What if Apple Inc. would reinvent a powersocket?',
-					'Excercise using <i>Rhinoceros</i> for modeling, <i>Keyshot</i> for texturing and <i>Photoshop</i> for layout. Full size <a href="./projects/3D Graphics/3_full.jpg" target="blank">here</a>. <span>3D animation at Folkwang in 2012</span>',
+					'What if Apple Inc. would reinvent a power socket?',
+					'Exercise using <i>Rhinoceros</i> for modeling, <i>Keyshot</i> for texturing and <i>Photoshop</i> for layout. Full size <a href="./projects/3D Graphics/3_full.jpg" target="blank">here</a>. <span>3D animation at Folkwang in 2012</span>',
 				],
 				[
 					'5.mov',
 					'Opening animation for the summit of Boehringer Ingelheim',
-					'Custom materials were made to let globe appear more realistic. Animation in <i>Cinema 4D</i>, composing in <i>Adobe After Effects</i>. <span>3D animation and composing at MESO in 2017</span>',
+					'Custom materials were made to let the glob appear more realistic. Animation in <i>Cinema 4D</i>, composing in <i>Adobe After Effects</i>. <span>3D animation and composing at MESO in 2017</span>',
 				],
 				[
 					'2.mov',
@@ -482,13 +481,13 @@ const Model = {
 			[
 				[
 					'2.mov',
-					'Generative grids and motiongraphics',
-					'Some logotypes are using grid systems for consistency and precision. This grids are static. Can we make a storytelling of the grid creation? Or even create own framework to make the design process easier and faster?<span>Software and motiongraphics at home in 2014</span>',
+					'Generative grids and motion graphics',
+					'Some logotypes are using grid systems for consistency and precision. These grids are static. Can we make a storytelling of grid creation? Or even create your own framework to make the design process easier and faster?<span>Software and motion graphics at home in 2014</span>',
 				],
 				[
 					'4.mov',
 					'Mathematical universe',
-					`The animation shows the creation process of my very first logotype. I've tried to reflect the way i see the world. Something like a mathematical universe.`,
+					`The animation shows the creation process of my very first logotype. I've tried to reflect the way I see the world, something like a mathematical universe.`,
 				],
 				[
 					'3.mov',
@@ -498,12 +497,12 @@ const Model = {
 				[
 					'5.mov',
 					'Reward at the end',
-					'The video finally resolves into a logotype and the viewer understands, what was it about.',
+					'The video finally resolves into a logotype and the viewer understands what was it about.',
 				],
 				[
 					'1.mov',
 					'Grid Factory',
-					'I even programmed own framework in <i>OpenFrameworks</i> to create geometrically precise grids for logotype manufacturing programmatically. The source code was like a cooking recipe for a logo. Moreover i could change any circle position and radius that caused change in logotype proportion or stroke width.',
+					'I even programmed my own framework in <i>OpenFrameworks</i> to create geometrically precise grids for logotype manufacturing programmatically. The source code was like a cooking recipe for a logo. Moreover I could change any circle position and radius that caused change in logotype proportion or stroke width.',
 				],
 			],
 			['light', 'rgb(233, 233, 233)', false, false],
@@ -514,18 +513,18 @@ const Model = {
 			[
 				[
 					'1.mp4',
-					'Movimaking class',
-					'We had to make a promo video about an artificial product. Here we go! <span>Acting, movimaking, CGI at Folkwang in 2013</span>',
+					'Filmmaking class',
+					'We had to make a promo video about an artificial product. Here we go! <span>Acting, filmmaking, CGI at Folkwang in 2013</span>',
 				],
 				[
 					'5.mov',
 					'First CGI in my life',
-					`At this point i didn't really know the methods of digital special effects. So we just used the common sense and <i>Final Cut Pro</i>. Yes, all the effects and compositing are without AE.`,
+					`At this point I didn't really know the methods of digital special effects. So we just used common sense and <i>Final Cut Pro</i>. Yes, all the effects and compositing are without AE.`,
 				],
 				[
 					'3.mp4',
-					'First motiongraphics too',
-					`The effect of depth of field i've faked with a blur effect. Due to the lag of experience for the ring rotation i've used <i>KeyShot</i>, key out the background and put in <i>Final Cut Pro</i>.`,
+					'First motion graphics too',
+					`The effect of depth of field was imitated with a blur effect. Due to the lag of experience for the ring rotation i've used <i>KeyShot</i>, key out the background and put in <i>Final Cut Pro</i>.`,
 				],
 				[
 					'2.jpg',
@@ -542,7 +541,7 @@ const Model = {
 				[
 					'9.jpg',
 					'A bit of analog craft',
-					'Shaver with soap inside for man and women. Result after one week of <i>Wacom</i> usage. <span>Sketching at Folkwang in 2014</span>',
+					'Shaver with soap inside for men and women. These are the results after one week of <i>Wacom</i> usage. <span>Sketching at Folkwang in 2014</span>',
 				],
 				[
 					'5.jpg',
@@ -558,37 +557,37 @@ const Model = {
 				[
 					'2.jpg',
 					'Container system for tool organization',
-					`I didn't have a proper system to store all my tools in a small appartment. So i decided to make my own.<span>Crafting at home in 2014</span>`,
+					`I didn't have a proper system to store all my tools in a small apartment. So I decided to make my own.<span>Crafting at home in 2014</span>`,
 				],
 				[
 					'1.jpg',
 					'Multiplex',
-					`I've build 3 different box sizes for different kind of stuff. Holes on both sides of the box allow to handle the box comfortably.`,
+					`I've built 3 different box sizes for different kinds of stuff. Holes on both sides of the box allow you to handle the box comfortably.`,
 				],
 				[
 					'5.jpg',
 					'Miter cut',
-					'It allows to stack boxes on each other. The floor of the top box is a cover for the bottom one. Additional locks allow to fix the stack and use it as the whole.',
+					'It allows you to stack boxes on top of each other. The floor of the top box is a cover for the bottom one. Additionally, the locks fix the stack, allowing you to use the stack as a whole.',
 				],
 				[
 					'7.jpg',
 					'Cover',
-					'It interacts tightly with the miter cut. The cover is made for the very top box to close the stack. It also has additional functionality - carring.',
+					'It interacts tightly with the miter cut. The cover is made for the very top box to close the stack. It also has an additional functionality - carrying it.',
 				],
 				[
 					'6.jpg',
 					'Pencils, soldering iron, camera rigs...',
-					`For small stuff i've put separators to keep order inside. For bigger stuff like camera, i've cut negativ foam forms to protect hardware from shaking.`,
+					`For small stuff I've put separators to keep order inside. For bigger stuff like cameras, I've cut negativ foam forms to protect hardware from shaking.`,
 				],
 				[
 					'3.jpg',
-					'Carring a whole stack around?',
-					`I've created a transport module for the heavy stack in case i want to move some tools to the lab for a bigger project.`,
+					'Carrying a whole stack around?',
+					`I've created a transport module for the heavy stack in case I want to move some tools to the lab for a bigger project.`,
 				],
 				[
 					'4.jpg',
 					'Trolley',
-					`A trolley from eBay <br/> has been utilized for this duity.`,
+					`A trolley from eBay <br/> has been utilized for this duty.`,
 				],
 			],
 			['light', 'rgb(250, 220, 112)', false, false],
@@ -599,32 +598,32 @@ const Model = {
 				[
 					'4.jpg',
 					'Selfmade replica of the Table from Apple Stores.',
-					`As i've seen them for the first time, i wanted one. Massive wooden table costs thousands of dollars. So i've decided to create my own. <span>Crafting at home in 2013</span>`,
+					`As I've seen it for the first time, I wanted one. Massive wooden table costs thousands of dollars. So I've decided to create my own. <span>Crafting at home in 2013</span>`,
 				],
 				[
 					'6.jpg',
 					'No CAD',
-					`I've been building this table at very beginning of my industrial design study. At this time i've got no experience in CAD engineering, so pensil, paper and a bit of math were my tools.`,
+					`I've been building this table since the very beginning of my industrial design study. At that time I didn't have any experience in CAD engineering, so pensil, paper and a bit of math were my tools.`,
 				],
 				[
 					'5.jpg',
 					'Final touches',
-					'After build the table has been polished and oiled. It dries and waits to be disassambled and brought home.',
+					'After building the table, it was polished and oiled. It dries and waits to be disassembled and brought home.',
 				],
 				[
 					'2.jpg',
 					'Extra large',
-					'With 2 meter wide this table is just huge, so it can handle a lot of disorder and creativity. But in case of transport, you can just disassamble the legs.',
+					'With 2 meter wide this table is just huge, so it can handle a lot of disorder and creativity. But in case of transport, you can just disassemble the legs.',
 				],
 				[
 					'7.jpg',
 					'Right ergonomy',
-					'The thick table top plate at wrong height could be the danger for ergonomy, because it creates space between forearms and thighs and influences angles. The hight of this table has been choosen correctly, so i can work for hours.',
+					'The thick table top plate at wrong height could be the danger for ergonomy, because it creates space between forearms and thighs and influences angles. The hight of this table has been chosen correctly, so I can work for hours.',
 				],
 				[
 					'1.jpg',
 					'Surprise inside',
-					`In reality the table is built out of multiplex and is not massive but hollow. So the obvious choice was to use the inner space for cables and hardware, that shouldn't been seen all the time.`,
+					`In reality, the table is built out of multiplex and is not massive but hollow. So the obvious choice was to use the inner space for cables and hardware that shouldn't be seen all the time.`,
 				],
 			],
 			['light', 'rgb(200, 208, 215)', false, false],
