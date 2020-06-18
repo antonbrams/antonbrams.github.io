@@ -10,8 +10,8 @@ const scroller = Lerp(
 		(contents.style.transform = `
 			rotateX(${rx}deg)
 			rotateY(${ry}deg)
-			translateX(${tx}%)
-			translateY(${ty}%)
+			translateX(${tx}vw)
+			translateY(${ty}vh)
 		`)
 )
 
