@@ -34,18 +34,15 @@ const Lerp = (fn, speed = 0.05, threshold = 1) => {
 }
 
 const preload = url => {
-	let element = null
 	if (url.search('.jpg') > -1) {
-		element = document.createElement('img')
-		element.src = url
-		element.onload = () => document.body.removeChild(element)
+		document.createElement('img').src = url
 	} else {
-		element = document.createElement('video')
-		element.src = url
-		element.preload = true
-		element.oncanplaythrough = () =>
-			document.body.removeChild(element)
+		const video = document.createElement('video')
+		video.src = url
+		video.preload = true
+		video.classList.add('preload')
+		document.body.appendChild(video)
+		video.oncanplaythrough = () =>
+			document.body.removeChild(video)
 	}
-	element.classList.add('preload')
-	document.body.appendChild(element)
 }
