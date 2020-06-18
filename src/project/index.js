@@ -65,7 +65,7 @@ const mapContent = (project, file, n) => {
 				loop="true"
 				playsinline="true"
 				preload="auto"
-				poster="./src/project/loader.gif"
+				oncanplaythrough="this.classList.add('loaded')"
 			>
 				Sorry, your browser doesn't support embedded videos.
 			</video>`
