@@ -8,7 +8,7 @@ const dummy = {
 const Model = {
 	intro: [
 		`From experience design down to tiny bits in the CPU`,
-		`"I develop concepts. My superpower is a broad understanding, from experience design down to tiny bits in the CPU and a wide skill set, to design each aspect of a product in harmony. I have a good intuition for aesthetics, as well as, for the technological domain. I like to drill down to the very essence of things, therefore, my design is simple, functional and emotional. I hunt for good principles anytime, anywhere. So, I can integrate them into my design system, to create great products in a fast, precise and consistent way."`,
+		`"I develop concepts. My superpower is broad understanding, from experience design down to bits in the CPU with a wide skill set, which allows me to design each aspect of a product in harmony. I have good intuition for both aesthetics and technology. I like to drill down to the very essence of things, therefore, my design is simple, functional and emotional. I hunt for good principles at all times, everywhere. So that I can integrate them into my system of design, creating great products in a fast, precise and consistent way."`,
 	],
 	about: [
 		[
