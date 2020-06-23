@@ -19,11 +19,11 @@ const Model = {
 		],
 		[
 			'Fields',
-			'Vision, Concept Development, Usability, UX, UI, Modeling, Mechanics, Software Engineering, Hardware Design, Generative Design, Presentation, motion graphics, Film, CGI, Sound Design, Choreography...',
+			'vision, concept development, usability, UX, UI, modeling, mechanics, software engineering, hardware design, generative design, presentation, motion graphics, film, CGI, sound design, choreography...',
 		],
 		[
 			'Tools',
-			'React, Node JS, Sketching, Figma, Photoshop, After Effects, Premiere, Arduino, Raspberry Pi, PCB Development, 3D Printing, Three JS, OpenFrameworks, Processing, Unity 3D, Rhinoceros, Cinema 4D, Ableton Live, GIT, Workshop Tools...',
+			'React, Node JS, Sketching, Figma, Photoshop, After Effects, Premiere, Arduino, Raspberry Pi, PCB Development, 3D Printing, Three JS, OpenFrameworks, Processing, Unity 3D, Rhinoceros, Cinema 4D, Ableton Live, GIT, workshop tools...',
 		],
 		[
 			'Languages',
