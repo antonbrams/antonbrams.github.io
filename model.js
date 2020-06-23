@@ -7,7 +7,7 @@ const Model = {
 		My superpower is multi&shy;disciplinarity. From aesthetics, down to bits and bytes, I bring various aspects of the product in harmony.
 		<br/><br/>
 
-		An eye for details, and the ability to drill down to the very essence of things make my design simple, functional and emotional.
+		An eye for detail, and the ability to drill down to the very essence of things make my design simple, functional and emotional.
 		<br/><br/>
 
 		My passion keeps me up late at night exploring useful mechanisms. I  integrate them into my design framework to stay at the cutting edge of innovation.`,
