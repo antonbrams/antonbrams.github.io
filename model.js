@@ -1,14 +1,16 @@
-const dummy = {
-	title:
-		'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-	description:
-		"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-}
-
 const Model = {
 	intro: [
-		`From experience design down to tiny bits in the CPU`,
-		`"I develop concepts. My superpower is broad understanding, from experience design down to bits in the CPU with a wide skill set, which allows me to design each aspect of a product in harmony. I have good intuition for both aesthetics and technology. I like to drill down to the very essence of things, therefore, my design is simple, functional and emotional. I hunt for good principles at all times, everywhere. So that I can integrate them into my system of design, creating great products in a fast, precise and consistent way."`,
+		`From experience design down to zeros and ones`,
+		`I develop concepts.
+		<br/><br/>
+
+		My superpower is multi&shy;disciplinarity. From aesthetics, down to bits and bytes, I bring various aspects of the product in harmony.
+		<br/><br/>
+
+		An eye for details, and the ability to drill down to the very essence of things make my design simple, functional and emotional.
+		<br/><br/>
+
+		My passion keeps me up late at night exploring useful mechanisms. I  integrate them into my design framework to to stay at the cutting edge of innovation.`,
 	],
 	about: [
 		[
