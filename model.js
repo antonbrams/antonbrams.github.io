@@ -195,8 +195,8 @@ const Model = {
 			[
 				[
 					'4.mp4',
-					'Intuitive digital system for collective brainstoms using multiple devices',
-					'BASF provides expert support for their customers in selecting the best materials for their application. Therefore, it comes to collective brainstorms. <span>Concept, software prototyping, filmmaking and CGI at MESO in 2018</span>',
+					'Intuitive digital system for collective brainstomings using multiple devices',
+					'BASF provides expert support for their customers in selecting the best materials for their application. Therefore, it comes to collective brainstomings. <span>Concept, software prototyping, filmmaking and CGI at MESO in 2018</span>',
 				],
 				[
 					'1.mov',
@@ -205,12 +205,12 @@ const Model = {
 				],
 				[
 					'2.mp4',
-					'The coach logs in and the brainstorm starts',
+					'The coach logs in and the brainstoming starts',
 					'The system reads <i>RFID</i> tags, and automatically logs participants into the meeting room.',
 				],
 				[
 					'3.mp4',
-					'Brainstorm happens directly on the wall or from your device',
+					'brainstoming happens directly on the wall or from your device',
 					'The movie mockup was made with <i>green screen</i> technique, <i>2D tracking</i>, <i>Adobe After Effects</i> and <i>Adobe Premiere</i>. The functional prototype was implemented in <i>JavaScript</i> and <i>Node Js</i>, communicating via <i>WebSocket</i>.',
 				],
 			],
