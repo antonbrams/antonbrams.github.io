@@ -19,7 +19,7 @@ const Model = {
 		],
 		[
 			'Fields',
-			'vision, concept development, usability, UX, UI, modeling, mechanics, software engineering, hardware design, generative design, presentation, motion graphics, film, CGI, sound design, choreography...',
+			'Vision, concept development, usability, UX, UI, modeling, mechanics, software engineering, hardware design, generative design, presentation, motion graphics, film, CGI, sound design, choreography...',
 		],
 		[
 			'Tools',
