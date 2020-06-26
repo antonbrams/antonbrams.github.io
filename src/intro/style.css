@@ -33,10 +33,6 @@ body.loaded > .intro {
 	transform: translateX(0vw);
 }
 
-.intro .header {
-	max-width: 20ch;
-}
-
 .indicator {
 	position: fixed;
 	top: calc(100vh - var(--space-00));
@@ -69,5 +65,11 @@ body.loaded > .intro {
 	.intro {
 		align-content: center;
 		justify-content: flex-start;
+	}
+
+	.intro .header {
+		font-size: 72px;
+		max-width: 18ch;
+		line-height: calc(var(--line-height) * 4);
 	}
 }

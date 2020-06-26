@@ -1,6 +1,6 @@
 const Model = {
 	intro: [
-		`From experience design down to zeros and ones`,
+		`Experience design down to zeros and ones`,
 		`I develop concepts.
 		<br/><br/>
 
