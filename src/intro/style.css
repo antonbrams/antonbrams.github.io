@@ -61,6 +61,13 @@ body.loaded > .intro {
 	}
 }
 
+@media screen and (max-width: 815px) {
+	.intro .header {
+		line-height: calc(var(--line-height) * 2.5);
+		letter-spacing: -2px;
+	}
+}
+
 @media screen and (min-width: 815px) {
 	.intro {
 		align-content: center;
@@ -70,6 +77,7 @@ body.loaded > .intro {
 	.intro .header {
 		font-size: 72px;
 		max-width: 18ch;
-		line-height: calc(var(--line-height) * 4);
+		line-height: calc(var(--line-height) * 3.5);
+		letter-spacing: -3px;
 	}
 }
