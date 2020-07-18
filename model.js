@@ -63,7 +63,7 @@ const Model = {
 				[
 					'1.jpg',
 					'You can see the touch',
-					'eSkin acts as a low res screen, so you can see where your eSkin partner touches himself.',
+					'eSkin acts as a low res screen, so you can see which region your eSkin partner is touching.',
 				],
 				[
 					'6.jpg',
