@@ -66,6 +66,9 @@ body.loaded > .intro {
 		line-height: calc(var(--line-height) * 2.5);
 		letter-spacing: -2px;
 	}
+	.indicator {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 815px) {

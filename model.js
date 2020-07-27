@@ -57,8 +57,8 @@ const Model = {
 				],
 				[
 					'4.mp4',
-					'One Unit speaks to another, wirelessly.',
-					`The Main Unit based on an <i>Arduino Feather</i> transfers user's touch wirelessly via <i>433Mhz Antenna</i>.`,
+					'One unit speaks to another, wirelessly.',
+					`The main unit based on an <i>Arduino Feather</i> transfers user's touch wirelessly via <i>433Mhz Antenna</i>.`,
 				],
 				[
 					'1.jpg',
@@ -68,7 +68,7 @@ const Model = {
 				[
 					'6.jpg',
 					'Materials that feel natural',
-					'We used the <i>Dragon Skin</i> Silicone to mimic the human skin. We 3d-printed forms to mold the eSkin casing.',
+					'We used the <i>Dragon Skin</i> silicone to mimic the human skin. We 3d-printed forms to mold the eSkin casing.',
 				],
 			],
 			['dark', 'rgb(209, 112, 67)', false, false],
@@ -89,7 +89,7 @@ const Model = {
 				[
 					'2.mov',
 					'The system recognizes automatically, who is in front of the caretaker',
-					'We use Bluetooth Low Energy Trackers, to give our system a context.',
+					'We use Bluetooth Low Energy trackers, to give our system a context.',
 				],
 				[
 					'3.mov',
